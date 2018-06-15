@@ -1,0 +1,8 @@
+.Python
+.DS_Store
+*.pyc
+.vscode
+*.env
+*.swp
+*.swo
+*.swn
