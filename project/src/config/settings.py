@@ -13,12 +13,15 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
+    'src.actions',
 ]
 
 MIDDLEWARE = [
@@ -79,3 +82,9 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+
+# Admin config
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Bienal Alt',
+}
