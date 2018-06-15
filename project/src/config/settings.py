@@ -82,3 +82,9 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+
+# Admin config
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Bienal Alt',
+}

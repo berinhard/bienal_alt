@@ -9,6 +9,9 @@ class QuestionTag(models.Model):
         verbose_name = _('Pergunta')
         verbose_name_plural = _('Perguntas')
 
+    def __str__(self):
+        return self.title
+
 
 class Action(models.Model):
     slug = models.SlugField(max_length=100, unique=True, verbose_name=_('Slug'))
@@ -17,8 +20,11 @@ class Action(models.Model):
     js_code = models.TextField(blank=True, default='', verbose_name=_('Código Javascript'))
     custom_css = models.TextField(blank=True, default='', verbose_name=_('CSS Customizado'))
     extra_head = models.TextField(blank=True, default='', verbose_name=_('Extra head'))
-    questions = models.ManyToManyField(QuestionTag, related_name='actions', verbose_name=_('Conteúdo HTML'))
+    questions = models.ManyToManyField(QuestionTag, related_name='actions', verbose_name=_('Perguntas'))
 
     class Meta:
         verbose_name = _('Ação')
         verbose_name_plural = _('Ações')
+
+    def __str__(self):
+        return self.title
