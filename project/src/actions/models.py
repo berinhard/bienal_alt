@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext as _
+from django.urls import reverse
 
 
 class QuestionTag(models.Model):
@@ -28,3 +29,7 @@ class Action(models.Model):
 
     def __str__(self):
         return self.title
+
+    @property
+    def detail_url(self):
+        return reverse('detail', args=[self.slug])

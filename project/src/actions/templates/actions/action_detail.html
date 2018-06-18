@@ -1,0 +1,14 @@
+{% extends "app_base.html" %}
+
+{% block custom_css %}
+  {{ action.custom_css }}
+{% endblock %}
+
+{% block content %}
+  <h1>{{ action.title }}</h1>
+  {{ action.body|safe }}
+{% endblock %}
+
+{% block custom_js %}
+  {{ action.js_code|safe }}
+{% endblock %}
