@@ -1,0 +1,7 @@
+{% extends "app_base.html" %}
+
+{% block content %}
+  {% for action in actions %}
+    <p>{{ action.title }} - <a href="{{ action.detail_url }}">detail</a></p>
+  {% endfor %}
+{% endblock %}
