@@ -19,6 +19,10 @@
           color: #111;
           background-color: #fff;
       }
+
+      .activeLink {
+          font-weight: bold;
+      }
     </style>
 
     <style>
@@ -44,9 +48,12 @@
         <div class="clearfix block">
           <div class="col col-6 inline-block">
                 <ul class="list-reset">
-                    <li><a class="regular" href="{% url "index" %}">Ações</a></li>
-                    <li><a class="regular" href="{% url "about" %}">Sobre</a></li>
-                    <li><a class="regular" href="{% url "contact" %}">Contato</a></li>
+                    {% url "index" as index_url %}
+                    {% url "about" as about_url %}
+                    {% url "contact" as contact_url %}
+                    <li><a class="regular{% if request.path == index_url %} activeLink{%endif%}" href="{{ index_url }}">Ações</a></li>
+                    <li><a class="regular{% if request.path == about_url %} activeLink{%endif%}" href="{{about_url }}">Sobre</a></li>
+                    <li><a class="regular{% if request.path == contact_url %} activeLink{%endif%}" href="{{ contact_url }}">Contato</a></li>
                 </ul>
           </div>
           <div class="col col-6 inline-block">
