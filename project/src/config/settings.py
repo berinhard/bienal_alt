@@ -9,7 +9,7 @@ SRC_DIR = BASE_DIR.child('src')
 DEBUG = config('DEBUG', cast=bool)
 SECRET_KEY = config('SECRET_KEY')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bienal-alt.herokuapp.com']
 
 
 INSTALLED_APPS = [
@@ -103,3 +103,6 @@ TINYMCE_DEFAULT_CONFIG = {
     'toolbar': "forecolor backcolor"
 }
 TINYMCE_COMPRESSOR = True
+
+import django_heroku
+django_heroku.settings(locals())

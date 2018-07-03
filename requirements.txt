@@ -6,3 +6,5 @@ django-suit==0.2.26
 python-decouple==3.1
 ipython==6.4.0
 django-tinymce==2.7.0
+gunicorn==19.9.0
+django-heroku==0.3.1
