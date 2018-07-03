@@ -16,7 +16,18 @@ class QuestionTag(models.Model):
         return self.title
 
 
+class ActionQuerySet(models.QuerySet):
+
+    def search(self, search_query):
+        return self.filter(
+            models.Q(title__icontains=search_query) |
+            models.Q(body__icontains=search_query)
+        )
+
+
 class Action(models.Model):
+    objects = ActionQuerySet.as_manager()
+
     slug = models.SlugField(max_length=100, unique=True, verbose_name=_('Slug'))
     title = models.CharField(max_length=100, verbose_name=_("Título"))
     body = HTMLField()

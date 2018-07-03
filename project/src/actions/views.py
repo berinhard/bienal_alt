@@ -9,7 +9,11 @@ class ListActionsView(ListView):
     template_name = 'actions/list_actions.html'
 
     def get_queryset(self, *args, **kwrags):
-        return Action.objects.all()
+        q = self.request.GET.get('q', None)
+        if q:
+            return Action.objects.search(q)
+        else:
+            return Action.objects.all()
 
 
 def action_detail_view(request, slug):
