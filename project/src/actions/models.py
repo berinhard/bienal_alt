@@ -2,6 +2,8 @@ from django.db import models
 from django.utils.translation import gettext as _
 from django.urls import reverse
 
+from tinymce.models import HTMLField
+
 
 class QuestionTag(models.Model):
     title = models.CharField(max_length=30, verbose_name=_("Texto da pergunta"))
@@ -17,7 +19,7 @@ class QuestionTag(models.Model):
 class Action(models.Model):
     slug = models.SlugField(max_length=100, unique=True, verbose_name=_('Slug'))
     title = models.CharField(max_length=100, verbose_name=_("Título"))
-    body = models.TextField(verbose_name=_('Conteúdo HTML'), null=False, blank=False)
+    body = HTMLField()
     js_code = models.TextField(blank=True, default='', verbose_name=_('Código Javascript'))
     custom_css = models.TextField(blank=True, default='', verbose_name=_('CSS Customizado'))
     extra_head = models.TextField(blank=True, default='', verbose_name=_('Extra head'))

@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import gettext as _
 
+from src.actions.forms import ActionAdminForm
 from src.actions.models import QuestionTag, Action
 
 
@@ -12,9 +13,10 @@ class QuestionTagAdmin(admin.ModelAdmin):
 
 
 class ActionAdmin(admin.ModelAdmin):
+    form = ActionAdminForm
     fieldsets = (
         (None, {
-            'fields': ('title', 'questions', 'body', 'slug')
+            'fields': ('title', 'body', 'questions', 'slug')
         }),
         (_('Advanced options'), {
             'classes': ('collapse',),

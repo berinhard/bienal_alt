@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'tinymce',
     'src.actions',
 ]
 
@@ -88,3 +89,17 @@ STATIC_URL = '/static/'
 SUIT_CONFIG = {
     'ADMIN_NAME': 'Bienal Alt',
 }
+
+
+# TinyMCE
+#TINYMCE_JS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.13/jquery.tinymce.min.js'
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,paste,searchreplace,colorpicker,textcolor",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+    'height': 600,
+    'width': 600,
+    'toolbar': "forecolor backcolor"
+}
+TINYMCE_COMPRESSOR = True
