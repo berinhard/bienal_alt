@@ -24,6 +24,7 @@ class Action(models.Model):
     custom_css = models.TextField(blank=True, default='', verbose_name=_('CSS Customizado'))
     extra_head = models.TextField(blank=True, default='', verbose_name=_('Extra head'))
     questions = models.ManyToManyField(QuestionTag, related_name='actions', verbose_name=_('Perguntas'))
+    date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = _('Ação')
