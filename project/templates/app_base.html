@@ -19,6 +19,30 @@
           color: #111;
           background-color: #fff;
       }
+      a, a:link, a:visited {
+        color: #000;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #000;
+        text-decoration: underline;
+      }
+
+      .menu-block {
+        height: 90px;
+        position: relative;
+        margin-bottom: 10px;
+      }
+
+      .search {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      #search_form {
+        margin-top: 1em;
+      }
 
     </style>
 
@@ -43,15 +67,17 @@
           </div>
         </div>
         <div class="clearfix block">
-          <div class="col col-6 inline-block">
+          <div class="col col-6 inline-block menu-block">
                 <ul class="list-reset">
                     <li><a class="regular" href="{% url "index" %}">Ações</a></li>
                     <li><a class="regular" href="#">Sobre</a></li>
                     <li><a class="regular" href="#">Contato</a></li>
                 </ul>
           </div>
-          <div class="col col-6 inline-block">
-              <p class="right-align align-bottom">Filter</p>
+          <div class="col col-6 inline-block menu-block">
+            <div class=" search right-align align-bottom">
+              <span> Filter </span>
+            </div>
           </div>
         </div>
         <div style="border-bottom: 1px solid black;"></div>
