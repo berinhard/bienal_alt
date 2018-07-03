@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, reverse
 from django.views.generic import ListView
 
 from src.actions.models import Action
@@ -14,4 +14,17 @@ class ListActionsView(ListView):
 
 def action_detail_view(request, slug):
     action = get_object_or_404(Action, slug=slug)
-    return render(request, 'actions/action_detail.html', {'action': action})
+    prev, next = None, None
+    prev_id, next_id = action.id - 1, action.id + 1
+    if prev_id:
+        prev = Action.objects.get(id=prev_id)
+    try:
+        next = Action.objects.get(id=next_id)
+    except Action.DoesNotExist:
+        pass
+    context = {
+        'action': action,
+        'prev': prev,
+        'next': next
+    }
+    return render(request, 'actions/action_detail.html', context)
