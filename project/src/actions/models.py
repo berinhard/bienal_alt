@@ -6,7 +6,7 @@ from tinymce.models import HTMLField
 
 
 class QuestionTag(models.Model):
-    title = models.CharField(max_length=30, verbose_name=_("Texto da pergunta"))
+    title = models.CharField(max_length=50, verbose_name=_("Texto da pergunta"))
 
     class Meta:
         verbose_name = _('Pergunta')
