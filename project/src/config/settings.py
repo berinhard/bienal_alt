@@ -9,7 +9,7 @@ SRC_DIR = BASE_DIR.child('src')
 DEBUG = config('DEBUG', cast=bool)
 SECRET_KEY = config('SECRET_KEY')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bienal-alt.herokuapp.com']
 
 
 INSTALLED_APPS = [
