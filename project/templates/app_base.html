@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="keywords" content="33 Bienal de Artes de São Paulo, Bienal de Artes de São Paulo, Bienal São Paulo, Bienal, alternativa, ações bienal">
     <meta name="description" content="Diretório de ações realizadas durante a Bienal de São Paulo">
-    <title>33ª Bienal de Artes de São Paulo</title>
+    <title>Outra 33ª Bienal de Artes de São Paulo</title>
     <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
 
     {% block extra_head %}
@@ -19,7 +19,6 @@
           color: #111;
           background-color: #fff;
       }
-
     </style>
 
     <style>
@@ -32,7 +31,7 @@
       <header class="py1 px4">
         <div class="clearfix">
           <div class="col col-6">
-              <p class="regular">33ª Bienal de São Paulo</p>
+              <p class="regular"><a href='http://www.bienal.org.br/' target='_blank'>33ª Bienal de São Paulo</a></p>
           </div>
           <div class="col col-6">
               {% if not q %}
@@ -45,9 +44,12 @@
         <div class="clearfix block">
           <div class="col col-6 inline-block">
                 <ul class="list-reset">
-                    <li><a class="regular" href="{% url "index" %}">Ações</a></li>
-                    <li><a class="regular" href="#">Sobre</a></li>
-                    <li><a class="regular" href="#">Contato</a></li>
+                    {% url "index" as index_url %}
+                    {% url "about" as about_url %}
+                    {% url "contact" as contact_url %}
+                    <li><a class="{% if request.path == index_url %}bold{%endif%}" href="{{ index_url }}">Ações</a></li>
+                    <li><a class="{% if request.path == about_url %}bold{%endif%}" href="{{about_url }}">Sobre</a></li>
+                    <li><a class="{% if request.path == contact_url %}bold{%endif%}" href="{{ contact_url }}">Contato</a></li>
                 </ul>
           </div>
           <div class="col col-6 inline-block">
