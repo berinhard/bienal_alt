@@ -103,3 +103,6 @@ TINYMCE_DEFAULT_CONFIG = {
     'toolbar': "forecolor backcolor"
 }
 TINYMCE_COMPRESSOR = True
+
+import django_heroku
+django_heroku.settings(locals())
