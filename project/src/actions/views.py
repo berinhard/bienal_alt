@@ -28,8 +28,10 @@ def action_detail_view(request, slug):
     action = get_object_or_404(Action, slug=slug)
     prev, next = None, None
     prev_id, next_id = action.id - 1, action.id + 1
-    if prev_id:
+    try:
         prev = Action.objects.get(id=prev_id)
+    except Action.DoesNotExist:
+        pass
     try:
         next = Action.objects.get(id=next_id)
     except Action.DoesNotExist:
