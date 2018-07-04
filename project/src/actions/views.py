@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render, reverse
 from django.views.generic import ListView
 
-from src.actions.models import Action
+from src.actions.models import Action, QuestionTag
 
 
 class ListActionsView(ListView):
@@ -12,15 +12,24 @@ class ListActionsView(ListView):
     def search_query(self):
         return self.request.GET.get('q', None)
 
+    @property
+    def question_id(self):
+        return int(self.request.GET.get('question', 0) or 0)
+
     def get_queryset(self, *args, **kwrags):
         if self.search_query:
             return Action.objects.search(self.search_query)
+        elif self.question_id:
+            tag = QuestionTag.objects.get(id=self.question_id)
+            return tag.actions.all()
         else:
             return Action.objects.all()
 
     def get_context_data(self):
         context = super().get_context_data()
         context['q'] = self.search_query
+        context['questions'] = QuestionTag.objects.values('id', 'title')
+        context['question_id'] = self.question_id
         return context
 
 
