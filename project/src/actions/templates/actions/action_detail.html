@@ -2,21 +2,41 @@
 
 {% block custom_css %}
   {{ action.custom_css }}
+.action-list {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 40px;
+
+}
 {% endblock %}
 
 {% block content %}
-  <p>
-      {% if prev %}
-      <a href="{{ prev.detail_url }}">Prev</a>
-      {% endif %}
-       |
-      {% if next %}
-      <a href="{{ next.detail_url }}">Next</a>
-      {% endif %}
-  </p>
+  <div class="actionsNav center">
+    <span>
+        {% if prev %}
+        <a href="{{ prev.detail_url }}">&lt</a>
+        {% endif %}
+         |
+        {% if next %}
+        <a href="{{ next.detail_url }}">&gt</a>
+        {% endif %}
+    </span>
+  </div>
 
-  <h1>{{ action.title }}</h1>
-  {{ action.body|safe }}
+  <article>
+    <div class="actionContent">
+    <h4 class="m0">{{ action.title }}</h4>
+    <span class="m0">{{ action.date_added|date:"F o" }}</span>
+
+    <div class="action_entry action-list">
+        {{ action.bodystrip|safe }}
+    </div>
+    </div>
+  </article>
 {% endblock %}
 
 {% block custom_js %}
