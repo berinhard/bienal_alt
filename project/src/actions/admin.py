@@ -27,5 +27,5 @@ class ActionAdmin(admin.ModelAdmin):
     list_filter = ['questions']
 
 
-admin.site.register(QuestionTag, QuestionTagAdmin)
+#admin.site.register(QuestionTag, QuestionTagAdmin)
 admin.site.register(Action, ActionAdmin)
