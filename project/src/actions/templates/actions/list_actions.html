@@ -20,8 +20,8 @@
   <div class="title"></div>
   <div class="action-list">
     {% for action in actions %}
-      <div class="action flex">
-        <div class="action-title flex-auto">{{ action.title }} </div> <div class="action-date"><a href="{{ action.detail_url }}">detail</a></div>
+      <div class="action_entry flex">
+          <div class="action-title flex-auto"><a href="{{ action.detail_url }}">{{ action.title }}</a></div><div class="action-date">{{ action.date_added.date|date:"M o"}}</div>
       </div>
     {% endfor %}
   </div>
