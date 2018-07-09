@@ -24,6 +24,9 @@ class ActionQuerySet(models.QuerySet):
             models.Q(body__icontains=search_query)
         )
 
+    def published(self):
+        return self.filter(published=True)
+
 
 class Action(models.Model):
     objects = ActionQuerySet.as_manager()
@@ -36,6 +39,7 @@ class Action(models.Model):
     extra_head = models.TextField(blank=True, default='', verbose_name=_('Extra head'))
     questions = models.ManyToManyField(QuestionTag, related_name='actions', verbose_name=_('Perguntas'))
     action_date = models.DateField(verbose_name=_('Data da ação'))
+    published = models.BooleanField(default=False, verbose_name=_('Publicar?'))
 
     class Meta:
         verbose_name = _('Ação')

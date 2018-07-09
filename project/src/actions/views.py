@@ -32,7 +32,7 @@ class ListActionsView(ListView):
         else:
             qs = Action.objects.all()
 
-        return qs.order_by(self.ordering)
+        return qs.published().order_by(self.ordering)
 
     def get_context_data(self):
         context = super().get_context_data()
@@ -43,7 +43,7 @@ class ListActionsView(ListView):
 
 
 def action_detail_view(request, slug):
-    action = get_object_or_404(Action, slug=slug)
+    action = get_object_or_404(Action.objects.published(), slug=slug)
     prev, next = None, None
     prev_id, next_id = action.id - 1, action.id + 1
     try:
