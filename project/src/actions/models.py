@@ -24,6 +24,9 @@ class ActionQuerySet(models.QuerySet):
             models.Q(body__icontains=search_query)
         )
 
+    def published(self):
+        return self.filter(published=True)
+
 
 class Action(models.Model):
     objects = ActionQuerySet.as_manager()
@@ -35,7 +38,8 @@ class Action(models.Model):
     custom_css = models.TextField(blank=True, default='', verbose_name=_('CSS Customizado'))
     extra_head = models.TextField(blank=True, default='', verbose_name=_('Extra head'))
     questions = models.ManyToManyField(QuestionTag, related_name='actions', verbose_name=_('Perguntas'))
-    date_added = models.DateTimeField(auto_now_add=True)
+    action_date = models.DateField(verbose_name=_('Data da ação'))
+    published = models.BooleanField(default=False, verbose_name=_('Publicada'))
 
     class Meta:
         verbose_name = _('Ação')
@@ -47,3 +51,7 @@ class Action(models.Model):
     @property
     def detail_url(self):
         return reverse('detail', args=[self.slug])
+
+    @property
+    def preview_url(self):
+        return reverse('preview', args=[self.slug])
