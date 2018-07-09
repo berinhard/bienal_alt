@@ -26,7 +26,7 @@
     <div class="action-list">
     {% for action in actions %}
       <div class="action_entry flex">
-          <div class="action-title flex-auto"><a href="{{ action.detail_url }}">{{ action.title }}</a></div><div class="action-date">{{ action.date_added.date|date:"M o"}}</div>
+          <div class="action-title flex-auto"><a href="{{ action.detail_url }}">{{ action.title }}</a></div><div class="action-date">{{ action.action_date|date:"M o"}}</div>
       </div>
     {% endfor %}
   </div>

@@ -16,7 +16,7 @@ class ActionAdmin(admin.ModelAdmin):
     form = ActionAdminForm
     fieldsets = (
         (None, {
-            'fields': ('title', 'body', 'questions', 'slug')
+            'fields': ('title', 'body', 'questions', 'action_date', 'slug')
         }),
         (_('Advanced options'), {
             'classes': ('collapse',),
