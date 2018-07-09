@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render, reverse
 from django.views.generic import ListView
 
@@ -59,4 +60,11 @@ def action_detail_view(request, slug):
         'prev': prev,
         'next': next
     }
+    return render(request, 'actions/action_detail.html', context)
+
+
+@login_required
+def action_preview_view(request, slug):
+    action = get_object_or_404(Action, slug=slug)
+    context = {'action': action}
     return render(request, 'actions/action_detail.html', context)

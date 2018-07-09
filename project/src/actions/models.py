@@ -39,7 +39,7 @@ class Action(models.Model):
     extra_head = models.TextField(blank=True, default='', verbose_name=_('Extra head'))
     questions = models.ManyToManyField(QuestionTag, related_name='actions', verbose_name=_('Perguntas'))
     action_date = models.DateField(verbose_name=_('Data da ação'))
-    published = models.BooleanField(default=False, verbose_name=_('Publicar?'))
+    published = models.BooleanField(default=False, verbose_name=_('Publicada'))
 
     class Meta:
         verbose_name = _('Ação')
@@ -51,3 +51,7 @@ class Action(models.Model):
     @property
     def detail_url(self):
         return reverse('detail', args=[self.slug])
+
+    @property
+    def preview_url(self):
+        return reverse('preview', args=[self.slug])
