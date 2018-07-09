@@ -16,14 +16,23 @@ class ListActionsView(ListView):
     def question_id(self):
         return int(self.request.GET.get('question', 0) or 0)
 
+    @property
+    def ordering(self):
+        ordering_key = self.request.GET.get('order', 'random').lower()
+        if ordering_key == 'time':
+            return 'action_date'
+        return '?'
+
     def get_queryset(self, *args, **kwrags):
         if self.search_query:
-            return Action.objects.search(self.search_query)
+            qs = Action.objects.search(self.search_query)
         elif self.question_id:
             tag = QuestionTag.objects.get(id=self.question_id)
-            return tag.actions.all()
+            qs = tag.actions.all()
         else:
-            return Action.objects.all()
+            qs = Action.objects.all()
+
+        return qs.order_by(self.ordering)
 
     def get_context_data(self):
         context = super().get_context_data()
