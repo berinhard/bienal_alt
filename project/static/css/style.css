@@ -12,12 +12,14 @@ a {
   a:link, a:visited {
     text-decoration: none; }
 
-header a:hover {
-  padding-bottom: 0.4em;
-  border-bottom: 1px solid #111; }
-header a.active {
-  padding-bottom: 0.4em;
-  border-bottom: 1px solid #111; }
+header {
+  font-weight: bold; }
+  header a:hover {
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid #111; }
+  header a.active {
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid #111; }
 
 input {
   width: 100%; }

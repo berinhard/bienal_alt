@@ -25,7 +25,7 @@
     {% url "contact" as contact_url %}
     <header class="py3 px4">
       <div class="clearfix">
-          <div class="col col-3"><span>(OUTRA) 33ª Bienal de São Paulo</span></div>
+          <div class="col col-3"><span><a href="{{ index_url }}">(OUTRA) 33ª Bienal de São Paulo</a></span></div>
           <div class="col col-1 center">
             <a class="{% if request.path == index_url or action %}active{%endif%}" href="{{ index_url }}">Ações</a>
           </div>
@@ -42,7 +42,7 @@
             <div class="col col-2 center">
               <input id="id_search" type="text" name="q" placeholder="Busca"/>
             </div>
-            <div class="col col-3 right-align">
+            <div class="col col-3 center">
               <span>Questões</span>
               <select name="question" id="id_question">
                 <option value="0">selecione</option>
