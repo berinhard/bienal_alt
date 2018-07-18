@@ -27,13 +27,13 @@
       <div class="clearfix">
           <div class="col col-3"><span>(OUTRA) 33ª Bienal de São Paulo</span></div>
           <div class="col col-1 center">
-            <a class="{% if request.path == index_url or action %}active_page{%endif%}" href="{{ index_url }}">Ações</a>
+            <a class="{% if request.path == index_url or action %}active{%endif%}" href="{{ index_url }}">Ações</a>
           </div>
           <div class="col col-1 center">
-            <a class="{% if request.path == about_url %}active_page{%endif%}" href="{{about_url }}">Sobre</a>
+            <a class="{% if request.path == about_url %}active{%endif%}" href="{{about_url }}">Sobre</a>
           </div>
           <div class="col col-1 center">
-            <a class="{% if request.path == contact_url %}active_page{%endif%}" href="{{ contact_url }}">Contato</a>
+            <a class="{% if request.path == contact_url %}active{%endif%}" href="{{ contact_url }}">Contato</a>
           </div>
           <div class="col col-1 center">
             <a href="http://www.bienal.org.br/" target="_blank">Bienal</a>

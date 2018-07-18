@@ -7,51 +7,28 @@ body {
     background-color: #fff;
 }
 
-a, a:link, a:visited {
+a {
     color: #000;
     text-decoration: none;
-}
-a:hover{
-    color: #000;
-    text-decoration: underline;
+    &:link, &:visited {
+        color: #000;
+        text-decoration: none;
+    }
+    &:hover {
+        color: #000;
+        padding-bottom: 0.4em;
+        border-bottom: 2px solid #111;
+    }
+    &.active {
+        padding-bottom: 0.4em;
+        border-bottom: 2px solid #111;
+    }
 }
 
 input {
     width: 100%;
 }
 
-.menu-block {
-    height: 60px;
-    position: relative;
-    margin-bottom: 10px;
-}
-
-.search {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-#search_form {
-    margin-top: 1em;
-}
-
 #action_filter_form {
     margin-bottom: 0em;
 }
-
-.action-list {
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
-  column-count: 3;
-
-  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-  -moz-column-gap: 40px; /* Firefox */
-  column-gap: 40px;
-
-}
-
-#id_search {
-  font-size: 20px;
-}
-
