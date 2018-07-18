@@ -33,6 +33,13 @@ header {
         }
     }
     font-weight: bold;
+
+    #id_search {
+        border-color: transparent;
+        border-bottom: $border_size solid $black;
+        margin: 0;
+        font-size: 1em;
+    }
 }
 
 input {
