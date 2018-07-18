@@ -1,0 +1,57 @@
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    margin: 0;
+    color: #111;
+    background-color: #fff;
+}
+
+a, a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+
+input {
+    width: 100%;
+}
+
+.menu-block {
+    height: 60px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.search {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#search_form {
+    margin-top: 1em;
+}
+
+#action_filter_form {
+    margin-bottom: 0em;
+}
+
+.action-list {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 40px;
+
+}
+
+#id_search {
+  font-size: 20px;
+}
+
