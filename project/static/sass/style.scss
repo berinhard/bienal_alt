@@ -39,11 +39,15 @@ header {
         border-bottom: $border_size solid $black;
         margin: 0;
         font-size: 1em;
+        width: 60%;
     }
-}
 
-input {
-    width: 100%;
+    #id_question {
+        border: $border_size solid $black;
+        background: transparent;
+        width: 70%;
+        font-size: 1em;
+    }
 }
 
 hr {
