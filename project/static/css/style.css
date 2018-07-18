@@ -39,20 +39,16 @@ hr {
       -webkit-margin-before: 0.3em;
       -webkit-margin-after: 0.3em; }
 
-#action_content {
+.text_content, #action_nav, #about_content {
   text-align: center; }
-  #action_content hr {
+  .text_content hr, #action_nav hr, #about_content hr {
     width: 15%; }
-  #action_content p {
+  .text_content p, #action_nav p, #about_content p {
     font-size: 1rem; }
 
-#action_nav {
-  text-align: center; }
-  #action_nav hr {
-    width: 15%; }
-  #action_nav .nav_link_container {
-    font-size: 1rem; }
-  #action_nav a {
-    text-decoration: underline; }
+#about_content h4 {
+  margin-bottom: 0px; }
+#about_content .profile {
+  margin-top: 0.5em; }
 
 /*# sourceMappingURL=style.css.map */

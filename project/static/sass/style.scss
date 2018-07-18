@@ -62,7 +62,7 @@ hr {
     }
 }
 
-#action_content {
+%centralized_content {
     text-align: center;
     hr {
         width: 15%
@@ -73,17 +73,22 @@ hr {
     }
 }
 
+.text_content {
+    @extend %centralized_content;
+}
+
 #action_nav {
-    text-align: center;
-    hr {
-        width: 15%
+    @extend %centralized_content;
+}
+
+#about_content {
+    @extend %centralized_content;
+
+    h4 {
+        margin-bottom: 0px;
     }
 
-    .nav_link_container {
-        font-size: $scaled_font;
-    }
-
-    a {
-        text-decoration: underline;
+    .profile {
+        margin-top: 0.5em;
     }
 }
