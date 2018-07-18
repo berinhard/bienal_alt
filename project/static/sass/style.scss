@@ -79,8 +79,11 @@ hr {
         width: 15%
     }
 
-    .action_question {
+    .nav_link_container {
         font-size: $scaled_font;
+    }
+
+    a {
         text-decoration: underline;
     }
 }

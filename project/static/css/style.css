@@ -50,8 +50,9 @@ hr {
   text-align: center; }
   #action_nav hr {
     width: 15%; }
-  #action_nav .action_question {
-    font-size: 1rem;
+  #action_nav .nav_link_container {
+    font-size: 1rem; }
+  #action_nav a {
     text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */
