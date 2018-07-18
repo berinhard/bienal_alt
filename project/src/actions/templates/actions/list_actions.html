@@ -2,19 +2,16 @@
 
 {% block content %}
 <div class="main-content">
-    <div class="flex flex-wrap">
-      <a href="?order=time" class="center col-4"><h5>ordem cronológica</h5></a>
-      <h5 class="center col-4">Diretório de ações</h5>
-      <a href="?order=random" class="center col-4"><h5>ordem randômica</h5></a>
-    </div>
+    <div id="actions_list">
+        <h2>Ações</h2>
+        <hr/>
 
-    <div class="action-list">
-    {% for action in actions %}
-      <div class="action_entry flex">
-          <div class="action-title flex-auto"><a href="{{ action.detail_url }}">{{ action.title }}</a></div><div class="action-date">{{ action.action_date|date:"M o"}}</div>
-      </div>
-    {% endfor %}
-  </div>
+        <div class="actions">
+            {% for action in actions %}
+                <p><a class="action_link" href="{{ action.detail_url }}">{{ action.title }}</a></p>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 {% endblock %}

@@ -11,17 +11,32 @@ a {
   text-decoration: none; }
   a:link, a:visited {
     text-decoration: none; }
-  a:hover {
-    padding-bottom: 0.4em;
-    border-bottom: 2px solid #111; }
-  a.active {
-    padding-bottom: 0.4em;
-    border-bottom: 2px solid #111; }
+
+header a:hover {
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #111; }
+header a.active {
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #111; }
 
 input {
   width: 100%; }
 
+hr {
+  border-top: 1px solid #111; }
+
 #action_filter_form {
   margin-bottom: 0em; }
+
+#actions_list {
+  text-align: center; }
+  #actions_list hr {
+    width: 15%; }
+  #actions_list .actions {
+    margin-top: 1.5em; }
+    #actions_list .actions p {
+      font-size: 1.5em;
+      -webkit-margin-before: 0.3em;
+      -webkit-margin-after: 0.3em; }
 
 /*# sourceMappingURL=style.css.map */

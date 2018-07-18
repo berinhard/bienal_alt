@@ -17,13 +17,18 @@ a {
     &:link, &:visited {
         text-decoration: none;
     }
-    &:hover {
-        padding-bottom: 0.4em;
-        border-bottom: 2px solid $black;
-    }
-    &.active {
-        padding-bottom: 0.4em;
-        border-bottom: 2px solid $black;
+}
+
+header {
+    a {
+        &:hover {
+            padding-bottom: 0.4em;
+            border-bottom: 1px solid $black;
+        }
+        &.active {
+            padding-bottom: 0.4em;
+            border-bottom: 1px solid $black;
+        }
     }
 }
 
@@ -31,6 +36,26 @@ input {
     width: 100%;
 }
 
+hr {
+    border-top: 1px solid $black;
+}
+
 #action_filter_form {
     margin-bottom: 0em;
+}
+
+#actions_list {
+    text-align: center;
+    hr {
+        width: 15%
+    }
+
+    .actions {
+        margin-top: 1.5em;
+        p {
+            font-size:1.5em;
+            -webkit-margin-before: 0.3em;
+            -webkit-margin-after: 0.3em;
+        }
+    }
 }
