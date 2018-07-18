@@ -39,4 +39,19 @@ hr {
       -webkit-margin-before: 0.3em;
       -webkit-margin-after: 0.3em; }
 
+#action_content {
+  text-align: center; }
+  #action_content hr {
+    width: 15%; }
+  #action_content p {
+    font-size: 1rem; }
+
+#action_nav {
+  text-align: center; }
+  #action_nav hr {
+    width: 15%; }
+  #action_nav .action_question {
+    font-size: 1rem;
+    text-decoration: underline; }
+
 /*# sourceMappingURL=style.css.map */

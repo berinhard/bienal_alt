@@ -5,28 +5,30 @@
 {% endblock %}
 
 {% block content %}
-  <div class="actionsNav center">
-    <span>
-        {% if prev %}
-        <a href="{{ prev.detail_url }}">&lt</a>
-        {% endif %}
-         |
-        {% if next %}
-        <a href="{{ next.detail_url }}">&gt</a>
-        {% endif %}
-    </span>
-  </div>
+    <div class="clearfix">
+        <div class="col-4 mx-auto" id="action_content">
+            <h3 class="mb0 mt4">{{ action.title }}</h3>
+            <h5 class="m0 regular">{{ action.action_date|date:"F o" }}</h5>
+            <hr/>
 
-  <article>
-    <div class="actionContent">
-    <h4 class="m0">{{ action.title }}</h4>
-    <span class="m0">{{ action.date_added|date:"F o" }}</span>
+            <div>
+                {{ action.body|safe }}
+            </div>
+        </div>
+    </div>
 
-    <div class="action_entry action-list pt2">
-        {{ action.body|safe }}
+    <div class="clearfix">
+        <div class="col-4 mx-auto" id="action_nav">
+            <h3 class="mb0 mt3">Questões Relacionadas</h3>
+            <hr/>
+            {% for question in action.questions.all %}
+            <p class="action_question"><span>- </span>{{ question.title|upper }}</p>
+            {% endfor %}
+        </div>
     </div>
-    </div>
-  </article>
+
+
+
 {% endblock %}
 
 {% block custom_js %}

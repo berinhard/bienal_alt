@@ -1,5 +1,7 @@
 $black: #111;
 $white: #fff;
+$border_size: 1px;
+$scaled_font: 1rem;
 
 
 body {
@@ -23,11 +25,11 @@ header {
     a {
         &:hover {
             padding-bottom: 0.4em;
-            border-bottom: 1px solid $black;
+            border-bottom: $border_size solid $black;
         }
         &.active {
             padding-bottom: 0.4em;
-            border-bottom: 1px solid $black;
+            border-bottom: $border_size solid $black;
         }
     }
 }
@@ -37,7 +39,7 @@ input {
 }
 
 hr {
-    border-top: 1px solid $black;
+    border-top: $border_size solid $black;
 }
 
 #action_filter_form {
@@ -57,5 +59,28 @@ hr {
             -webkit-margin-before: 0.3em;
             -webkit-margin-after: 0.3em;
         }
+    }
+}
+
+#action_content {
+    text-align: center;
+    hr {
+        width: 15%
+    }
+
+    p {
+        font-size: $scaled_font;
+    }
+}
+
+#action_nav {
+    text-align: center;
+    hr {
+        width: 15%
+    }
+
+    .action_question {
+        font-size: $scaled_font;
+        text-decoration: underline;
     }
 }
