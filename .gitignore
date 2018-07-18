@@ -7,3 +7,5 @@
 *.swo
 *.swn
 *.sqlite3
+*.map
+.sass-cache/
