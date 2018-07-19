@@ -22,7 +22,7 @@
             <h3 class="mb0 mt3">Questões Relacionadas</h3>
             <hr/>
             {% for question in action.questions.all %}
-                <p class="nav_link_container"><span>- </span><a href="#">{{ question.title|upper }}</a></p>
+              <p class="nav_link_container"><span>- </span><a href="{{ question.filter_url }}">{{ question.title|upper }}</a></p>
             {% endfor %}
             <div class="mt4">
                 <hr/>
