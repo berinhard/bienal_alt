@@ -6,7 +6,7 @@
 
 {% block content %}
     <div class="clearfix">
-        <div class="col-4 mx-auto text_content">
+        <div class="md-col-4 sm-col-12 mx-auto text_content">
             <h3 class="mb0 mt4">{{ action.title }}</h3>
             <h5 class="m0 regular">{{ action.action_date|date:"F o" }}</h5>
             <hr/>
@@ -18,11 +18,11 @@
     </div>
 
     <div class="clearfix">
-        <div class="col-4 mx-auto" id="action_nav">
+        <div class="md-col-4 sm-col-12 mx-auto" id="action_nav">
             <h3 class="mb0 mt3">Questões Relacionadas</h3>
             <hr/>
             {% for question in action.questions.all %}
-                <p class="nav_link_container"><span>- </span><a href="#">{{ question.title|upper }}</a></p>
+              <p class="nav_link_container"><span>- </span><a href="{{ question.filter_url }}">{{ question.title|upper }}</a></p>
             {% endfor %}
             <div class="mt4">
                 <hr/>

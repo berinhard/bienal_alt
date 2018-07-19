@@ -15,6 +15,10 @@ class QuestionTag(models.Model):
     def __str__(self):
         return self.title
 
+    @property
+    def filter_url(self):
+        return reverse('index') + '?question={}'.format(self.id)
+
 
 class ActionQuerySet(models.QuerySet):
 

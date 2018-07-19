@@ -121,3 +121,35 @@ hr {
         margin-top: 0.5em;
     }
 }
+
+.main_container{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.header_item {
+    text-align: center;
+}
+
+@media only screen and (max-width: 64em) {
+    .main_container{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .main_title {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .header_item {
+        margin-bottom: 0.5rem;
+    }
+}
