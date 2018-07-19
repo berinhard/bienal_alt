@@ -3,6 +3,11 @@ $white: #fff;
 $border_size: 1px;
 $scaled_font: 1rem;
 
+@font-face{
+    font-family: "BienalMono";
+    src: url('/static/fonts/ibm_plex_mono.ttf');
+}
+
 
 body {
     font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
@@ -83,6 +88,10 @@ hr {
     p {
         font-size: $scaled_font;
     }
+
+    span {
+        font-size: $scaled_font;
+    }
 }
 
 .text_content {
@@ -91,6 +100,14 @@ hr {
 
 #action_nav {
     @extend %centralized_content;
+
+    a {
+        text-decoration: underline;
+    }
+
+    p, span {
+        font-family: "BienalMono";
+    }
 }
 
 #about_content {
