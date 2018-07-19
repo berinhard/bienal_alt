@@ -1,0 +1,123 @@
+$black: #111;
+$white: #fff;
+$border_size: 1px;
+$scaled_font: 1rem;
+
+@font-face{
+    font-family: "BienalMono";
+    src: url('/static/fonts/ibm_plex_mono.ttf');
+}
+
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    margin: 0;
+    color: $black;
+    background-color: $white;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+    &:link, &:visited {
+        text-decoration: none;
+    }
+}
+
+header {
+    a {
+        &:hover {
+            padding-bottom: 0.4em;
+            border-bottom: $border_size solid $black;
+        }
+        &.active {
+            padding-bottom: 0.4em;
+            border-bottom: $border_size solid $black;
+        }
+    }
+    font-weight: bold;
+
+    #id_search {
+        border-color: transparent;
+        border-bottom: $border_size solid $black;
+        margin: 0;
+        font-size: 1em;
+        width: 60%;
+    }
+
+    #id_question {
+        border: $border_size solid $black;
+        background: transparent;
+        width: 70%;
+        font-size: 1em;
+    }
+}
+
+hr {
+    border-top: $border_size solid $black;
+}
+
+#action_filter_form {
+    margin-bottom: 0em;
+}
+
+#actions_list {
+    text-align: center;
+    hr {
+        width: 15%
+    }
+
+    .actions {
+        margin-top: 1.5em;
+        p {
+            font-size:1.5em;
+            -webkit-margin-before: 0.3em;
+            -webkit-margin-after: 0.3em;
+        }
+    }
+}
+
+%centralized_content {
+    text-align: center;
+    hr {
+        width: 15%
+    }
+
+    p {
+        font-size: $scaled_font;
+    }
+
+    span {
+        font-size: $scaled_font;
+    }
+}
+
+.text_content {
+    @extend %centralized_content;
+}
+
+#action_nav {
+    @extend %centralized_content;
+
+    a {
+        text-decoration: underline;
+    }
+
+    p, span {
+        font-family: "BienalMono";
+    }
+}
+
+#about_content {
+    @extend %centralized_content;
+
+    h4 {
+        margin-bottom: 0px;
+    }
+
+    .profile {
+        margin-top: 0.5em;
+    }
+}

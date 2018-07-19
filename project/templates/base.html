@@ -1,0 +1,74 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <base href="">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="33 Bienal de Artes de São Paulo, Bienal de Artes de São Paulo, Bienal São Paulo, Bienal, alternativa, ações bienal">
+    <meta name="description" content="Diretório de ações realizadas durante a Bienal de São Paulo">
+    <title>(Outra|33ª) Bienal de Artes de São Paulo</title>
+    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    {% block extra_head %}
+    {% endblock %}
+
+    <style>
+      {% block custom_css %}
+      {% endblock %}
+    </style>
+  </head>
+
+  <body>
+    {% url "index" as index_url %}
+    {% url "about" as about_url %}
+    {% url "contact" as contact_url %}
+    <header class="py3 px4">
+      <div class="clearfix">
+          <div class="col col-3"><span><a href="{{ index_url }}">(OUTRA) 33ª Bienal de São Paulo</a></span></div>
+          <div class="col col-1 center">
+            <a class="{% if request.path == index_url or action %}active{%endif%}" href="{{ index_url }}">Ações</a>
+          </div>
+          <div class="col col-1 center">
+            <a class="{% if request.path == about_url %}active{%endif%}" href="{{about_url }}">Sobre</a>
+          </div>
+          <div class="col col-1 center">
+            <a class="{% if request.path == contact_url %}active{%endif%}" href="{{ contact_url }}">Contato</a>
+          </div>
+          <div class="col col-1 center">
+            <a href="http://www.bienal.org.br/" target="_blank">Bienal</a>
+          </div>
+          <form id="action_filter_form" method="GET" action='{% url "index" %}'>
+            <div class="col col-2 center">
+              <input id="id_search" type="text" name="q" placeholder="Busca"/>
+            </div>
+            <div class="col col-3 center">
+              <span>Questões</span>
+              <select name="question" id="id_question">
+                <option value="0">selecione</option>
+                  {% for question in questions %}
+                  <option {% if question.id == question_id %}selected{% endif %} value="{{ question.id }}">{{ question.title }}</option>
+                  {% endfor %}
+              </select>
+            </div>
+          </form>
+      </div>
+    </header>
+
+    <div class="px4 py1 container">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <script type="text/javascript">
+      {% block custom_js %}
+      {% endblock %}
+
+      $(document).ready(function(){
+          $("#id_question").change(function(){
+              $("#action_filter_form").submit();
+          });
+      });
+    </script>
+  <body>
+</html>

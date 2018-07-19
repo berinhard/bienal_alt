@@ -53,6 +53,8 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_DIRS = [BASE_DIR.child("static")]
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -89,7 +91,6 @@ STATIC_URL = '/static/'
 SUIT_CONFIG = {
     'ADMIN_NAME': 'Bienal Alt',
 }
-
 
 # TinyMCE
 #TINYMCE_JS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.13/jquery.tinymce.min.js'

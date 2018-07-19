@@ -1,42 +1,46 @@
-{% extends "app_base.html" %}
+{% extends "base.html" %}
 
 {% block custom_css %}
   {{ action.custom_css }}
-.action-list {
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
-  column-count: 3;
-
-  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-  -moz-column-gap: 40px; /* Firefox */
-  column-gap: 40px;
-
-}
 {% endblock %}
 
 {% block content %}
-  <div class="actionsNav center">
-    <span>
-        {% if prev %}
-        <a href="{{ prev.detail_url }}">&lt</a>
-        {% endif %}
-         |
-        {% if next %}
-        <a href="{{ next.detail_url }}">&gt</a>
-        {% endif %}
-    </span>
-  </div>
+    <div class="clearfix">
+        <div class="col-4 mx-auto text_content">
+            <h3 class="mb0 mt4">{{ action.title }}</h3>
+            <h5 class="m0 regular">{{ action.action_date|date:"F o" }}</h5>
+            <hr/>
 
-  <article>
-    <div class="actionContent">
-    <h4 class="m0">{{ action.title }}</h4>
-    <span class="m0">{{ action.date_added|date:"F o" }}</span>
+            <div>
+                {{ action.body|safe }}
+            </div>
+        </div>
+    </div>
 
-    <div class="action_entry action-list pt2">
-        {{ action.body|safe }}
+    <div class="clearfix">
+        <div class="col-4 mx-auto" id="action_nav">
+            <h3 class="mb0 mt3">Questões Relacionadas</h3>
+            <hr/>
+            {% for question in action.questions.all %}
+                <p class="nav_link_container"><span>- </span><a href="#">{{ question.title|upper }}</a></p>
+            {% endfor %}
+            <div class="mt4">
+                <hr/>
+                <span class="nav_link_container">
+                    {% if prev %}
+                    <span>&lt <a href="{{ prev.detail_url }}">AÇÃO ANTERIOR</a></span>
+                    {% endif %}
+                     |
+                    {% if next %}
+                    <span><a href="{{ next.detail_url }}">PRÓXIMA AÇÃO</a> &gt</span>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
     </div>
-    </div>
-  </article>
+
+
+
 {% endblock %}
 
 {% block custom_js %}
