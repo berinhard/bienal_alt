@@ -43,6 +43,8 @@ class ListActionsView(ListView):
         context = super().get_context_data()
         context['q'] = self.search_query
         context['question_id'] = self.question_id
+        if getattr(self, 'tag', None):
+            context['question'] = self.tag
         return context
 
 
