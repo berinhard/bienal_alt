@@ -27,11 +27,15 @@ class ListActionsView(ListView):
     def get_queryset(self, *args, **kwrags):
         if self.search_query:
             qs = Action.objects.search(self.search_query)
-        elif self.question_id:
-            tag = QuestionTag.objects.get(id=self.question_id)
-            qs = tag.actions.all()
         else:
             qs = Action.objects.all()
+
+        if self.question_id:
+            try:
+                self.tag = QuestionTag.objects.get(id=self.question_id)
+                qs = self.tag.actions.all()
+            except QuestionTag.DoesNotExist:
+                pass
 
         return qs.published().order_by(self.ordering)
 
