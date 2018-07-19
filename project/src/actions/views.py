@@ -38,7 +38,6 @@ class ListActionsView(ListView):
     def get_context_data(self):
         context = super().get_context_data()
         context['q'] = self.search_query
-        context['questions'] = QuestionTag.objects.values('id', 'title')
         context['question_id'] = self.question_id
         return context
 
