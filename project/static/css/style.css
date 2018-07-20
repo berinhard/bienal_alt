@@ -55,10 +55,9 @@ hr {
   text-align: center; }
   .text_content hr, #action_nav hr, #about_content hr {
     width: 15%; }
-  .text_content p, #action_nav p, #about_content p {
-    font-size: 1rem; }
-  .text_content span, #action_nav span, #about_content span {
-    font-size: 1rem; }
+  .text_content p, #action_nav p, #about_content p, .text_content span, #action_nav span, #about_content span {
+    font-size: 1rem;
+    line-height: 1.25em; }
 
 #action_nav a {
   text-decoration: underline;

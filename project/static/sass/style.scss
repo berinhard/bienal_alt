@@ -84,12 +84,9 @@ hr {
         width: 15%
     }
 
-    p {
+    p, span {
         font-size: $scaled_font;
-    }
-
-    span {
-        font-size: $scaled_font;
+        line-height: 1.25em;
     }
 }
 
