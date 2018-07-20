@@ -1,12 +1,57 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h3>Ainda precisamos criar este texto.</h3>
-  <p>Aqui vai entrar alguma informação de <b>contato</b>.</p>
+<div class="clearfix mt4">
+  <div class="md-col-4 sm-col-12 mx-auto" id="contact_session">
 
-  <form action="." method="POST" enctype="multipart/form-data">
+    <div class="mb4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus lacus eget malesuada malesuada. Praesent congue ipsum eget fermentum scelerisque. Pellentesque sit amet ornare lectus. Nulla facilisi. Vestibulum dictum gravida lacus non varius. Nunc vel erat nec quam varius finibus. Quisque condimentum turpis vitae viverra suscipit.</p>
+
+        <p>Donec non purus sed diam imperdiet condimentum. Nam tempus mi tempor, aliquam nisi ac, vehicula metus. Aliquam sapien dui, tempor commodo risus ut, suscipit ultrices est. Maecenas ullamcorper, orci vitae pharetra congue, lorem tortor volutpat lectus, sed cursus tortor velit nec nunc. Integer placerat, est in gravida fringilla, nunc dolor mollis nulla, sit amet placerat lorem sem id sem. Nunc ut dolor nec justo maximus gravida. Vivamus vestibulum ex vitae accumsan rutrum. Nam eu nibh est. Curabitur vulputate fringilla facilisis. Sed mattis ante vitae purus consectetur, eu blandit lorem aliquet. Fusce porta efficitur quam in auctor. Praesent dignissim tincidunt vehicula. Cras dignissim imperdiet est, at porttitor erat aliquam dictum. Nulla molestie ullamcorper placerat. Nulla eget nibh in odio vehicula finibus.</p>
+    </div>
+
+    <hr/>
+
+    <form id="contact_form" action="." method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="ENVIAR"/>
-  </form>
+      {% for field in form %}
+          {% if field.id_for_label == "id_upload" %}
+            <hr/>
+          {% endif %}
+          <p>
+              {% if field.id_for_label == "id_upload" %}
+                <label>ENVIO DE ARQUIVO</label>
+                <label for="{{ field.id_for_label }}">selecionar...</label>
+                {{ field }}
+
+              {% else %}
+
+              <label for="{{ field.id_for_label }}">
+                  {{ field.label }}
+                  {% if field.errors %}
+                    {% for error in field.errors %}
+                      <small>*{{ error }}</small>
+                    {% endfor %}
+                  {% endif %}
+              </label>
+                {{ field }}
+              {% endif %}
+          </p>
+      {% endfor %}
+    <hr>
+      <input type="submit" style="display: none" value="ENVIAR"/>
+      <p><label id="submit_button">ENVIAR</label></p>
+    </form>
+
+    <hr>
+  </div>
+</div>
+{% endblock %}
+
+{% block custom_js %}
+$(document).ready(function(){
+  $("#submit_button").click(function(){
+    $("#contact_form").submit();
+  });
+});
 {% endblock %}
