@@ -63,6 +63,7 @@ STATICFILES_DIRS = [BASE_DIR.child("static")]
 STATICFILES_STORAGE = config('STATICFILES_STORAGE', default='whitenoise.django.GzipManifestStaticFilesStorage')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
+FILE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 10  # 10 MB
 
 
 if PRODUCTION:
