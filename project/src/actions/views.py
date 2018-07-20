@@ -1,8 +1,10 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import get_object_or_404, render, reverse
-from django.views.generic import ListView
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView
 
-from src.actions.models import Action, QuestionTag
+from src.actions.forms import ContactForm
+from src.actions.models import Action, QuestionTag, Contact
 
 
 class ListActionsView(ListView):
@@ -73,3 +75,10 @@ def action_preview_view(request, slug):
     action = get_object_or_404(Action, slug=slug)
     context = {'action': action}
     return render(request, 'actions/action_detail.html', context)
+
+
+class AddContactView(CreateView):
+    model = Contact
+    form_class = ContactForm
+    template_name = 'actions/contact.html'
+    success_url = reverse_lazy('index')
