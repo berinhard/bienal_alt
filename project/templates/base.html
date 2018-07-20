@@ -45,9 +45,8 @@
                 <input id="id_search" type="text" name="q" placeholder="Busca"/>
               </div>
               <div class="sm-col sm-col-12 md-col-12 lg-col-3 header_item">
-                <span>Questões</span>
                 <select name="question" id="id_question">
-                  <option value="0">selecione</option>
+                  <option value="0">Questões</option>
                     {% for question in questions %}
                     <option {% if question.id == question_id %}selected{% endif %} value="{{ question.id }}">{{ question.title }}</option>
                     {% endfor %}
