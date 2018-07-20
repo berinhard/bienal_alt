@@ -4,7 +4,7 @@
 body {
   font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
   font-size: 1.25em;
-  line-height: 1.25em;
+  line-height: 1.5em;
   margin: 0;
   color: #111;
   background-color: #fff; }
@@ -49,8 +49,7 @@ hr {
     margin-top: 1.5em; }
     #actions_list .actions p {
       font-size: 1.5em;
-      -webkit-margin-before: 0.3em;
-      -webkit-margin-after: 0.3em; }
+      margin: 0.3em; }
 
 .text_content, #action_nav, #about_content {
   text-align: center; }
@@ -62,7 +61,8 @@ hr {
     font-size: 1rem; }
 
 #action_nav a {
-  text-decoration: underline; }
+  text-decoration: underline;
+  font-size: 0.9em; }
 #action_nav p, #action_nav span {
   font-family: "BienalMono"; }
 

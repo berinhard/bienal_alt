@@ -12,7 +12,7 @@ $scaled_font: 1rem;
 body {
     font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
     font-size: 1.25em;
-    line-height: 1.25em;
+    line-height: 1.5em;
     margin: 0;
     color: $black;
     background-color: $white;
@@ -73,8 +73,7 @@ hr {
         margin-top: 1.5em;
         p {
             font-size:1.5em;
-            -webkit-margin-before: 0.3em;
-            -webkit-margin-after: 0.3em;
+            margin: 0.3em;
         }
     }
 }
@@ -103,6 +102,7 @@ hr {
 
     a {
         text-decoration: underline;
+        font-size: 0.9em;
     }
 
     p, span {

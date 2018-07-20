@@ -3,7 +3,11 @@
 {% block content %}
 <div class="main-content">
     <div id="actions_list">
+        {% if question %}
+        <h2>{{ question.title }}</h2>
+        {% else %}
         <h2>Ações</h2>
+        {% endif %}
         <hr/>
 
         <div class="actions">
