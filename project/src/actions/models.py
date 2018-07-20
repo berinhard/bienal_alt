@@ -63,9 +63,9 @@ class Action(models.Model):
 
 class Contact(models.Model):
     name = models.CharField(max_length=100, verbose_name=_('Nome'))
-    email = models.EmailField(verbose_name=_('Email'))
+    email = models.EmailField(verbose_name=_('E-mail'))
     message = models.TextField(verbose_name=_('Mensagem'))
-    upload = models.FileField(upload_to='contacts/', null=True, blank=True)
+    upload = models.FileField(upload_to='contacts/', null=True, blank=True, verbose_name=_('Envio de Arquivo'))
 
     class Meta:
         verbose_name = _('Contato')

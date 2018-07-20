@@ -19,6 +19,11 @@ class ActionAdminForm(forms.ModelForm):
 
 class ContactForm(forms.ModelForm):
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.label = field.label.upper()
+
     class Meta:
         model = Contact
         fields = '__all__'
