@@ -8,6 +8,7 @@ SRC_DIR = BASE_DIR.child('src')
 
 DEBUG = config('DEBUG', cast=bool)
 SECRET_KEY = config('SECRET_KEY')
+PRODUCTION = config('PRODUCTION', default=False)
 
 ALLOWED_HOSTS = ['bienal-alt.herokuapp.com']
 
@@ -60,6 +61,17 @@ TEMPLATES = [
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR.child("static")]
 STATICFILES_STORAGE = config('STATICFILES_STORAGE', 'whitenoise.django.GzipManifestStaticFilesStorage')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR.child('media')
+
+
+if PRODUCTION:
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+    S3_URL = '{}.s3.amazonaws.com/'.format(AWS_STORAGE_BUCKET_NAME)
+    MEDIA_URL = S3_URL
 
 DATABASES = {
     'default': {
