@@ -105,7 +105,7 @@ USE_TZ = True
 
 # Admin config
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'Bienal Alt',
+    'ADMIN_NAME': 'Outra Bienal',
 }
 
 # TinyMCE
