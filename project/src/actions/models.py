@@ -63,9 +63,9 @@ class Action(models.Model):
 
 
 class AnalyzedImage(models.Model):
-    action = models.ForeignKey(Action, related_name='carousel', on_delete='CASCADE')
+    action = models.ForeignKey(Action, related_name='carousel', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='carousel/', null=False, blank=False, verbose_name=_('Imagem'))
-    info = YAMLField(default='')
+    info = YAMLField(default='', verbose_name=_('Resultados da Análise'))
     order = models.PositiveIntegerField(verbose_name=_('Posição'))
 
     class Meta:
