@@ -72,10 +72,12 @@ class Contact(models.Model):
     email = models.EmailField(verbose_name=_('E-mail'))
     message = models.TextField(verbose_name=_('Mensagem'))
     upload = models.FileField(upload_to='contacts/', null=True, blank=True, verbose_name=_('Envio de Arquivo'))
+    date = models.DateField(auto_now_add=True, verbose_name=_('Data'))
 
     class Meta:
         verbose_name = _('Contato')
         verbose_name_plural = _('Contatos')
+        ordering = ['-date']
 
     def __str__(self):
         return "{} - {}".format(self.name, self.email)

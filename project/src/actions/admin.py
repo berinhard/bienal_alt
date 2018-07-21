@@ -40,7 +40,7 @@ class ActionAdmin(admin.ModelAdmin):
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'truncated_message', 'upload']
-    readonly_fields = ['name', 'email', 'message', 'upload']
+    readonly_fields = ['name', 'email', 'message', 'date', 'upload']
 
     def truncated_message(self, obj):
         msg = obj.message
