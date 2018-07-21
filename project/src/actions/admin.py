@@ -25,6 +25,9 @@ class AnalyzedImageInline(SortableTabularInline):
 
 class ActionAdmin(admin.ModelAdmin):
     suit_form_tabs = (('acao', _('Ação')), ('carousel', _('Carrossel de Imagens')))
+    suit_form_includes = (
+        ('admin/carousel_helper.html', 'top', 'carousel'),
+    )
     list_display = ['title', 'published', 'show_preview_url']
     inlines = [AnalyzedImageInline]
     actions = ['make_published']
