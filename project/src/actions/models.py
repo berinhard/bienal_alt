@@ -3,6 +3,7 @@ from django.utils.translation import gettext as _
 from django.urls import reverse
 
 from tinymce.models import HTMLField
+from yamlfield.fields import YAMLField
 
 
 class QuestionTag(models.Model):
@@ -59,6 +60,11 @@ class Action(models.Model):
     @property
     def preview_url(self):
         return reverse('preview', args=[self.slug])
+
+
+class AnalyzedImage(models.Model):
+    action = models.ForeignKey(Action, related_name='carousel', on_delete='CASCADE')
+    info = YAMLField(default=dict)
 
 
 class Contact(models.Model):
