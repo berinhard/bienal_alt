@@ -29,7 +29,15 @@ class AnalyzedImageAdminForm(forms.ModelForm):
             info = yaml.load(self.cleaned_data['info'])
             if not isinstance(info, dict):
                 raise forms.ValidationError(self.error_messages['info'])
-        except yaml.scanner.ScannerError:
+
+            msg = _("Está faltando o campo: {}")
+            if 'analise' not in info:
+                raise forms.ValidationError(msg.format('analise'))
+            if 'produtos' not in info:
+                raise forms.ValidationError(msg.format('produtos'))
+            if 'categoria' not in info:
+                raise forms.ValidationError(msg.format('categoria'))
+        except (yaml.scanner.ScannerError, yaml.parser.ParserError):
             raise forms.ValidationError(self.error_messages['info'])
         return info
 
