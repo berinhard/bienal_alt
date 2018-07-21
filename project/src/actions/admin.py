@@ -2,8 +2,10 @@ from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.translation import gettext as _
 
+from suit.admin import SortableTabularInline
+
 from src.actions.forms import ActionAdminForm
-from src.actions.models import QuestionTag, Action, Contact
+from src.actions.models import QuestionTag, Action, Contact, AnalyzedImage
 
 
 class QuestionTagAdmin(admin.ModelAdmin):
@@ -13,8 +15,13 @@ class QuestionTagAdmin(admin.ModelAdmin):
         return False
 
 
+class AnalyzedImageInline(SortableTabularInline):
+    model = AnalyzedImage
+    sortable = 'order'
+    extra = 1
 class ActionAdmin(admin.ModelAdmin):
     list_display = ['title', 'published', 'show_preview_url']
+    inlines = [AnalyzedImageInline]
     actions = ['make_published']
     form = ActionAdminForm
     fieldsets = (
