@@ -4,7 +4,7 @@ from django.utils.translation import gettext as _
 
 from suit.admin import SortableTabularInline
 
-from src.actions.forms import ActionAdminForm
+from src.actions.forms import ActionAdminForm, AnalyzedImageAdminForm
 from src.actions.models import QuestionTag, Action, Contact, AnalyzedImage
 
 
@@ -20,6 +20,7 @@ class AnalyzedImageInline(SortableTabularInline):
     sortable = 'order'
     extra = 1
     suit_classes = 'suit-tab suit-tab-carousel'
+    form = AnalyzedImageAdminForm
 
 
 class ActionAdmin(admin.ModelAdmin):
