@@ -64,7 +64,14 @@ class Action(models.Model):
 
 class AnalyzedImage(models.Model):
     action = models.ForeignKey(Action, related_name='carousel', on_delete='CASCADE')
-    info = YAMLField(default=dict)
+    image = models.ImageField(upload_to='carousel/', null=False, blank=False, verbose_name=_('Imagem'))
+    info = YAMLField(default='')
+    order = models.PositiveIntegerField(verbose_name=_('Posição'))
+
+    class Meta:
+        verbose_name = _('Imagem Analisada')
+        verbose_name_plural = _('Imagens Analisadas')
+        ordering = ['order']
 
 
 class Contact(models.Model):
