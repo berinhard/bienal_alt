@@ -84,12 +84,9 @@ hr {
         width: 15%
     }
 
-    p {
+    p, span {
         font-size: $scaled_font;
-    }
-
-    span {
-        font-size: $scaled_font;
+        line-height: 1.25em;
     }
 }
 
@@ -119,6 +116,62 @@ hr {
 
     .profile {
         margin-top: 0.5em;
+    }
+}
+
+#contact_session {
+    @extend %centralized_content;
+
+    hr {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        border: $border_size solid $black;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 100%;
+        border-color: transparent;
+        background: transparent;
+        border-bottom: $border_size solid $black;
+        align:center;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    input[type="submit"] {
+        border-bottom: $border_size solid $black;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    label {
+        line-height: 1.25em;
+        font-size: 0.9em;
+        font-family: "BienalMono";
+        margin-bottom: 1em;
+        display: block;
+    }
+
+    label[for="id_upload"] {
+        line-height: 1.25em;
+        font-size: 0.9em;
+        border-bottom: $border_size solid $black;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    label[id="submit_button"] {
+        line-height: 1.25em;
+        font-size: 0.9em;
+        margin-top: 1em;
+        border-bottom: $border_size solid $black;
+        display: inline-block;
+        cursor: pointer;
     }
 }
 

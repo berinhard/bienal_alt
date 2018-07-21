@@ -2,7 +2,7 @@ from tinymce.widgets import TinyMCE
 
 from django import forms
 
-from src.actions.models import Action
+from src.actions.models import Action, Contact
 
 
 class ActionAdminForm(forms.ModelForm):
@@ -14,4 +14,16 @@ class ActionAdminForm(forms.ModelForm):
 
     class Meta:
         model = Action
+        fields = '__all__'
+
+
+class ContactForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.label = field.label.upper()
+
+    class Meta:
+        model = Contact
         fields = '__all__'

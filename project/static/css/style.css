@@ -51,14 +51,13 @@ hr {
       font-size: 1.5em;
       margin: 0.3em; }
 
-.text_content, #action_nav, #about_content {
+.text_content, #action_nav, #about_content, #contact_session {
   text-align: center; }
-  .text_content hr, #action_nav hr, #about_content hr {
+  .text_content hr, #action_nav hr, #about_content hr, #contact_session hr {
     width: 15%; }
-  .text_content p, #action_nav p, #about_content p {
-    font-size: 1rem; }
-  .text_content span, #action_nav span, #about_content span {
-    font-size: 1rem; }
+  .text_content p, #action_nav p, #about_content p, #contact_session p, .text_content span, #action_nav span, #about_content span, #contact_session span {
+    font-size: 1rem;
+    line-height: 1.25em; }
 
 #action_nav a {
   text-decoration: underline;
@@ -70,6 +69,43 @@ hr {
   margin-bottom: 0px; }
 #about_content .profile {
   margin-top: 0.5em; }
+
+#contact_session hr {
+  width: 100%; }
+#contact_session textarea {
+  width: 100%;
+  border: 1px solid #111; }
+#contact_session input[type="text"], #contact_session input[type="email"] {
+  width: 100%;
+  border-color: transparent;
+  background: transparent;
+  border-bottom: 1px solid #111;
+  align: center; }
+#contact_session input[type="file"] {
+  display: none; }
+#contact_session input[type="submit"] {
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  cursor: pointer; }
+#contact_session label {
+  line-height: 1.25em;
+  font-size: 0.9em;
+  font-family: "BienalMono";
+  margin-bottom: 1em;
+  display: block; }
+#contact_session label[for="id_upload"] {
+  line-height: 1.25em;
+  font-size: 0.9em;
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  cursor: pointer; }
+#contact_session label[id="submit_button"] {
+  line-height: 1.25em;
+  font-size: 0.9em;
+  margin-top: 1em;
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  cursor: pointer; }
 
 .main_container {
   padding-left: 4rem;

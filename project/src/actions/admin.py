@@ -3,7 +3,7 @@ from django.utils.html import format_html
 from django.utils.translation import gettext as _
 
 from src.actions.forms import ActionAdminForm
-from src.actions.models import QuestionTag, Action
+from src.actions.models import QuestionTag, Action, Contact
 
 
 class QuestionTagAdmin(admin.ModelAdmin):
@@ -38,5 +38,18 @@ class ActionAdmin(admin.ModelAdmin):
     make_published.short_description = _('Publica as ações')
 
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email', 'truncated_message', 'upload']
+    readonly_fields = ['name', 'email', 'message', 'upload']
+
+    def truncated_message(self, obj):
+        msg = obj.message
+        if len(msg) > 140:
+            msg = msg[:140] + '...'
+        return msg
+    truncated_message.short_description = _("Mensagem")
+
+
 #admin.site.register(QuestionTag, QuestionTagAdmin)
 admin.site.register(Action, ActionAdmin)
+admin.site.register(Contact, ContactAdmin)

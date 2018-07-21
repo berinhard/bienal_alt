@@ -59,3 +59,17 @@ class Action(models.Model):
     @property
     def preview_url(self):
         return reverse('preview', args=[self.slug])
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100, verbose_name=_('Nome'))
+    email = models.EmailField(verbose_name=_('E-mail'))
+    message = models.TextField(verbose_name=_('Mensagem'))
+    upload = models.FileField(upload_to='contacts/', null=True, blank=True, verbose_name=_('Envio de Arquivo'))
+
+    class Meta:
+        verbose_name = _('Contato')
+        verbose_name_plural = _('Contatos')
+
+    def __str__(self):
+        return "{} - {}".format(self.name, self.email)

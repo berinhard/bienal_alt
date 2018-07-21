@@ -63,6 +63,7 @@ STATICFILES_DIRS = [BASE_DIR.child("static")]
 STATICFILES_STORAGE = config('STATICFILES_STORAGE', default='whitenoise.django.GzipManifestStaticFilesStorage')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
+FILE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 10  # 10 MB
 
 
 if PRODUCTION:
@@ -70,6 +71,10 @@ if PRODUCTION:
     AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+    AWS_S3_HOST = config('AWS_S3_HOST')
+    AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME')
+    AWS_S3_SIGNATURE_VERSION = 's3v4'
+
     S3_URL = '{}.s3.amazonaws.com/'.format(AWS_STORAGE_BUCKET_NAME)
     MEDIA_URL = S3_URL
 
