@@ -19,19 +19,28 @@ class AnalyzedImageInline(SortableTabularInline):
     model = AnalyzedImage
     sortable = 'order'
     extra = 1
+    suit_classes = 'suit-tab suit-tab-carousel'
+
+
 class ActionAdmin(admin.ModelAdmin):
+    suit_form_tabs = (('acao', _('Ação')), ('carousel', _('Carrossel de Imagens')))
     list_display = ['title', 'published', 'show_preview_url']
     inlines = [AnalyzedImageInline]
     actions = ['make_published']
     form = ActionAdminForm
     fieldsets = (
         (None, {
-            'fields': ('title', 'body', 'questions', 'action_date', 'slug', 'published')
+            'fields': ('title', 'body', 'questions', 'action_date', 'slug', 'published'),
+            'classes': ('suit-tab', 'suit-tab-acao',),
         }),
-        (_('Advanced options'), {
-            'classes': ('collapse',),
+        (_('Avançados'), {
+            'classes': ('collapse', 'suit-tab', 'suit-tab-acao',),
             'fields': ('custom_css', 'js_code', 'extra_head'),
         }),
+        (_('Carrossel de Imagens'), {
+            'classes': ('suit-tab', 'suit-tab-carousel',),
+            'fields': []
+        })
     )
     prepopulated_fields = {'slug': ['title']}
     list_filter = ['questions', 'published']
