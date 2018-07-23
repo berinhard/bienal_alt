@@ -65,10 +65,15 @@ hr {
 #action_nav p, #action_nav span {
   font-family: "BienalMono"; }
 
-#about_content h4 {
-  margin-bottom: 0px; }
-#about_content .profile {
-  margin-top: 0.5em; }
+#about_content {
+  /* u {
+       font-size:1em;
+       font-family: "BienalMono";
+   } */ }
+  #about_content h4 {
+    margin-bottom: 0px; }
+  #about_content .profile {
+    margin-top: 0.5em; }
 
 #contact_session hr {
   width: 100%; }
@@ -84,6 +89,10 @@ hr {
 #contact_session input[type="file"] {
   display: none; }
 #contact_session input[type="submit"] {
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  cursor: pointer; }
+#contact_session input[type="checkbox"] {
   border-bottom: 1px solid #111;
   display: inline-block;
   cursor: pointer; }
