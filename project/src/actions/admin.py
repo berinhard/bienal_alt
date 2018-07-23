@@ -2,8 +2,10 @@ from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.translation import gettext as _
 
-from src.actions.forms import ActionAdminForm
-from src.actions.models import QuestionTag, Action, Contact
+from suit.admin import SortableTabularInline
+
+from src.actions.forms import ActionAdminForm, AnalyzedImageAdminForm
+from src.actions.models import QuestionTag, Action, Contact, AnalyzedImage
 
 
 class QuestionTagAdmin(admin.ModelAdmin):
@@ -13,18 +15,36 @@ class QuestionTagAdmin(admin.ModelAdmin):
         return False
 
 
+class AnalyzedImageInline(SortableTabularInline):
+    model = AnalyzedImage
+    sortable = 'order'
+    extra = 1
+    suit_classes = 'suit-tab suit-tab-carousel'
+    form = AnalyzedImageAdminForm
+
+
 class ActionAdmin(admin.ModelAdmin):
+    suit_form_tabs = (('acao', _('Ação')), ('carousel', _('Carrossel de Imagens')))
+    suit_form_includes = (
+        ('admin/carousel_helper.html', 'top', 'carousel'),
+    )
     list_display = ['title', 'published', 'show_preview_url']
+    inlines = [AnalyzedImageInline]
     actions = ['make_published']
     form = ActionAdminForm
     fieldsets = (
         (None, {
-            'fields': ('title', 'body', 'questions', 'action_date', 'slug', 'published')
+            'fields': ('title', 'body', 'questions', 'action_date', 'slug', 'published'),
+            'classes': ('suit-tab', 'suit-tab-acao',),
         }),
-        (_('Advanced options'), {
-            'classes': ('collapse',),
+        (_('Avançados'), {
+            'classes': ('collapse', 'suit-tab', 'suit-tab-acao',),
             'fields': ('custom_css', 'js_code', 'extra_head'),
         }),
+        (_('Carrossel de Imagens'), {
+            'classes': ('suit-tab', 'suit-tab-carousel',),
+            'fields': []
+        })
     )
     prepopulated_fields = {'slug': ['title']}
     list_filter = ['questions', 'published']
@@ -40,7 +60,7 @@ class ActionAdmin(admin.ModelAdmin):
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'truncated_message', 'upload']
-    readonly_fields = ['name', 'email', 'message', 'upload']
+    readonly_fields = ['name', 'email', 'message', 'date', 'upload']
 
     def truncated_message(self, obj):
         msg = obj.message

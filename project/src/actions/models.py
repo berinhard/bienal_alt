@@ -3,6 +3,7 @@ from django.utils.translation import gettext as _
 from django.urls import reverse
 
 from tinymce.models import HTMLField
+from yamlfield.fields import YAMLField
 
 
 class QuestionTag(models.Model):
@@ -61,15 +62,32 @@ class Action(models.Model):
         return reverse('preview', args=[self.slug])
 
 
+class AnalyzedImage(models.Model):
+    title = models.CharField(max_length=100, verbose_name=_("Nome"))
+    author = models.CharField(max_length=100, verbose_name=_("Autor"))
+    date = models.DateField(verbose_name=_("Data"))
+    action = models.ForeignKey(Action, related_name='carousel', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='carousel/', null=False, blank=False, verbose_name=_('Imagem'))
+    info = YAMLField(default='', verbose_name=_('Resultados da Análise'))
+    order = models.PositiveIntegerField(verbose_name=_('Posição'))
+
+    class Meta:
+        verbose_name = _('Imagem Analisada')
+        verbose_name_plural = _('Imagens Analisadas')
+        ordering = ['order']
+
+
 class Contact(models.Model):
     name = models.CharField(max_length=100, verbose_name=_('Nome'))
     email = models.EmailField(verbose_name=_('E-mail'))
     message = models.TextField(verbose_name=_('Mensagem'))
     upload = models.FileField(upload_to='contacts/', null=True, blank=True, verbose_name=_('Envio de Arquivo'))
+    date = models.DateField(auto_now_add=True, verbose_name=_('Data'))
 
     class Meta:
         verbose_name = _('Contato')
         verbose_name_plural = _('Contatos')
+        ordering = ['-date']
 
     def __str__(self):
         return "{} - {}".format(self.name, self.email)
