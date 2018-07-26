@@ -88,6 +88,14 @@ hr {
         font-size: $scaled_font;
         line-height: 1.25em;
     }
+
+
+    a {
+        text-decoration: underline;
+        &:link, &:visited {
+            text-decoration: underline;
+        }
+    }
 }
 
 .text_content {
@@ -98,7 +106,6 @@ hr {
     @extend %centralized_content;
 
     a {
-        text-decoration: underline;
         font-size: 0.9em;
     }
 
