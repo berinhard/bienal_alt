@@ -44,7 +44,9 @@ hr {
 #actions_list {
   text-align: center; }
   #actions_list hr {
-    width: 15%; }
+    width: 40%; }
+  #actions_list .text_content {
+    max-width: 60%; }
   #actions_list .actions {
     margin-top: 1.5em; }
     #actions_list .actions p {
@@ -68,15 +70,10 @@ hr {
 #action_nav p, #action_nav span {
   font-family: "BienalMono"; }
 
-#about_content {
-  /* u {
-       font-size:1em;
-       font-family: "BienalMono";
-   } */ }
-  #about_content h4 {
-    margin-bottom: 0px; }
-  #about_content .profile {
-    margin-top: 0.5em; }
+#about_content h4 {
+  margin-bottom: 0px; }
+#about_content .profile {
+  margin-top: 0.5em; }
 
 #contact_session hr {
   width: 100%; }
@@ -142,6 +139,9 @@ hr {
     margin-bottom: 0.5rem; }
 
   .header_item {
-    margin-bottom: 0.5rem; } }
+    margin-bottom: 0.5rem; }
+
+  #actions_list .text_content {
+    max-width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

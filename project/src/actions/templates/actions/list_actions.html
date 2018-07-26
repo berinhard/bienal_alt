@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="main-content">
-    <div id="actions_list">
+<div class="clearfix">
+    <div class="md-col-5 sm-col-12 mx-auto" id="actions_list">
         {% if question %}
         <h2>{{ question.title }}</h2>
+        <hr/>
+        <div class="mx-auto text_content">
+          <p>{% lorem 1 %}</p>
+        </div>
         {% else %}
         <h2>Ações</h2>
         {% endif %}
