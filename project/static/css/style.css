@@ -53,16 +53,16 @@ hr {
       font-size: 1.5em;
       margin: 0.3em; }
 
-.text_content, #action_nav, #about_content, #contact_session {
+.text_content, #action_nav, #about_content, #contact_session, .carousel_element .carousel_text {
   text-align: center; }
-  .text_content hr, #action_nav hr, #about_content hr, #contact_session hr {
+  .text_content hr, #action_nav hr, #about_content hr, #contact_session hr, .carousel_element .carousel_text hr {
     width: 15%; }
-  .text_content p, #action_nav p, #about_content p, #contact_session p, .text_content span, #action_nav span, #about_content span, #contact_session span {
+  .text_content p, #action_nav p, #about_content p, #contact_session p, .carousel_element .carousel_text p, .text_content span, #action_nav span, #about_content span, #contact_session span, .carousel_element .carousel_text span {
     font-size: 1rem;
     line-height: 1.25em; }
-  .text_content a, #action_nav a, #about_content a, #contact_session a {
+  .text_content a, #action_nav a, #about_content a, #contact_session a, .carousel_element .carousel_text a {
     text-decoration: underline; }
-    .text_content a:link, #action_nav a:link, #about_content a:link, #contact_session a:link, .text_content a:visited, #action_nav a:visited, #about_content a:visited, #contact_session a:visited {
+    .text_content a:link, #action_nav a:link, #about_content a:link, #contact_session a:link, .carousel_element .carousel_text a:link, .text_content a:visited, #action_nav a:visited, #about_content a:visited, #contact_session a:visited, .carousel_element .carousel_text a:visited {
       text-decoration: underline; }
 
 #action_nav a {
@@ -143,5 +143,31 @@ hr {
 
   #actions_list .text_content {
     max-width: 100%; } }
+.carousel_element .carousel_padding {
+  padding: 1em; }
+  .carousel_element .carousel_padding:first-child {
+    padding-left: 0; }
+  .carousel_element .carousel_padding:last-child {
+    padding-right: 0;
+    padding-left: 0; }
+  @media only screen and (max-width: 64em) {
+    .carousel_element .carousel_padding {
+      padding: 1em 0; } }
+.carousel_element img {
+  display: block;
+  width: 100%;
+  box-sizing: border-box; }
+.carousel_element .carousel_text hr {
+  width: 100%; }
+.carousel_element .carousel_text p {
+  margin: 0; }
+.carousel_element p.title {
+  font-family: "BienalMono";
+  margin-bottom: 0.6em; }
+
+.carousel_wrapper {
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */

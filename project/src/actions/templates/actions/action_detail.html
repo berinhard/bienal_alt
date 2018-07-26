@@ -17,6 +17,18 @@
         </div>
     </div>
 
+    {% if action.has_carousel %}
+    <div class="clearfix">
+        <div class="sm-col-12 md-col-8 mx-auto">
+            <div class="carousel_wrapper">
+            {% for analysis in action.carousel.all %}
+              {% include "actions/carousel_image.html" with analysis=analysis %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
     <div class="clearfix">
         <div class="md-col-5 sm-col-12 mx-auto" id="action_nav">
             <h3 class="mb0 mt3">Questões Relacionadas</h3>

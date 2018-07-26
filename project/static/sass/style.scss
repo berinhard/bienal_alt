@@ -230,3 +230,42 @@ hr {
         }
     }
 }
+
+.carousel_element {
+    .carousel_padding {
+        padding: 1em;
+        &:first-child {padding-left: 0}
+        &:last-child {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        @media only screen and (max-width: 64em) {
+            & { padding: 1em 0; }
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .carousel_text {
+        @extend %centralized_content;
+
+        hr { width: 100%; }
+        p {margin: 0;}
+    }
+
+    p.title {
+        font-family: "BienalMono";
+        margin-bottom: 0.6em;
+    }
+}
+
+.carousel_wrapper {
+    border-top: $border_size solid $black;
+    border-bottom: $border_size solid $black;
+    overflow: hidden;
+}
