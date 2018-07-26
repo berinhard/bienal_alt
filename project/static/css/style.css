@@ -58,9 +58,12 @@ hr {
   .text_content p, #action_nav p, #about_content p, #contact_session p, .text_content span, #action_nav span, #about_content span, #contact_session span {
     font-size: 1rem;
     line-height: 1.25em; }
+  .text_content a, #action_nav a, #about_content a, #contact_session a {
+    text-decoration: underline; }
+    .text_content a:link, #action_nav a:link, #about_content a:link, #contact_session a:link, .text_content a:visited, #action_nav a:visited, #about_content a:visited, #contact_session a:visited {
+      text-decoration: underline; }
 
 #action_nav a {
-  text-decoration: underline;
   font-size: 0.9em; }
 #action_nav p, #action_nav span {
   font-family: "BienalMono"; }
