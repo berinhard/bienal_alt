@@ -157,14 +157,23 @@ hr {
     @media only screen and (max-width: 64em) {
       .carousel_element .carousel_padding {
         padding: 1em 0; } }
-  .carousel_element img {
+  .carousel_element .carousel_img img {
     display: block;
-    width: 100%;
-    box-sizing: border-box; }
+    width: 100%; }
   .carousel_element .carousel_text hr {
     width: 100%; }
   .carousel_element .carousel_text p {
     margin: 0; }
+  .carousel_element .carousel_text .carousel_text_nav {
+    padding-top: 1em;
+    font-family: "BienalMono"; }
+    .carousel_element .carousel_text .carousel_text_nav span {
+      vertical-align: middle; }
+    .carousel_element .carousel_text .carousel_text_nav .nav_counter {
+      font-size: 0.8rem; }
+    .carousel_element .carousel_text .carousel_text_nav .prev, .carousel_element .carousel_text .carousel_text_nav .next {
+      font-size: 2.5rem;
+      cursor: pointer; }
   .carousel_element p.title {
     font-family: "BienalMono";
     margin-bottom: 0.6em; }

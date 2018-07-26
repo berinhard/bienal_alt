@@ -251,10 +251,11 @@ hr {
         }
     }
 
-    img {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
+    .carousel_img {
+        img {
+            display: block;
+            width: 100%;
+        }
     }
 
     .carousel_text {
@@ -262,6 +263,19 @@ hr {
 
         hr { width: 100%; }
         p {margin: 0;}
+
+        .carousel_text_nav {
+          padding-top: 1em;
+          font-family: "BienalMono";
+
+          span { vertical-align: middle }
+
+          .nav_counter { font-size: .8rem }
+          .prev, .next {
+            font-size: 2.5rem;
+            cursor: pointer;
+          }
+        }
     }
 
     p.title {

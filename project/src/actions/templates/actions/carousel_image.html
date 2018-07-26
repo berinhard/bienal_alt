@@ -1,5 +1,7 @@
+{% load static %}
+
 <div class="carousel_element{% if counter == 1 %} active{% endif %}" data-position="{{ counter }}">
-  <div class="sm-col md-col-8 sm-col-12 carousel_padding">
+  <div class="sm-col md-col-8 sm-col-12 carousel_img carousel_padding">
       <img src="{{ analysis.image.url }}" alt="{{ analysis.title }}" title="{{ analysis.title }}"/>
   </div>
   <div class="sm-col md-col-4 sm-col-12 carousel_padding carousel_text">
@@ -19,9 +21,9 @@
           <p>{{ analysis.category }}</p>
       </div>
       <div class="carousel_text_nav">
-        <span class="prev">&lt;</span>
+        <span class="prev"><img src="{% static 'img/left.png' %}"/></span>
         <span class="nav_counter">{{ counter }}/{{ total }}</span>
-        <span class="next">&gt;</span>
+        <span class="next"><img src="{% static 'img/right.png' %}"/></span>
       </div>
   </div>
 </div>
