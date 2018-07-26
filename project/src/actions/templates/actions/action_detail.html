@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block custom_css %}
   {{ action.custom_css }}
@@ -22,7 +23,7 @@
         <div class="sm-col-12 md-col-8 mx-auto">
             <div class="carousel_wrapper">
             {% for analysis in action.carousel.all %}
-              {% include "actions/carousel_image.html" with analysis=analysis %}
+              {% include "actions/carousel_image.html" with counter=forloop.counter total=action.carousel.all|length %}
             {% endfor %}
             </div>
         </div>
@@ -51,8 +52,7 @@
         </div>
     </div>
 
-
-
+<script type="text/javascript" src="{% static "js/images_carousel.js"%}"/>
 {% endblock %}
 
 {% block custom_js %}

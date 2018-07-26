@@ -143,27 +143,31 @@ hr {
 
   #actions_list .text_content {
     max-width: 100%; } }
-.carousel_element .carousel_padding {
-  padding: 1em; }
-  .carousel_element .carousel_padding:first-child {
-    padding-left: 0; }
-  .carousel_element .carousel_padding:last-child {
-    padding-right: 0;
-    padding-left: 0; }
-  @media only screen and (max-width: 64em) {
-    .carousel_element .carousel_padding {
-      padding: 1em 0; } }
-.carousel_element img {
-  display: block;
-  width: 100%;
-  box-sizing: border-box; }
-.carousel_element .carousel_text hr {
-  width: 100%; }
-.carousel_element .carousel_text p {
-  margin: 0; }
-.carousel_element p.title {
-  font-family: "BienalMono";
-  margin-bottom: 0.6em; }
+.carousel_element {
+  display: none; }
+  .carousel_element.active {
+    display: block; }
+  .carousel_element .carousel_padding {
+    padding: 1em; }
+    .carousel_element .carousel_padding:first-child {
+      padding-left: 0; }
+    .carousel_element .carousel_padding:last-child {
+      padding-right: 0;
+      padding-left: 0; }
+    @media only screen and (max-width: 64em) {
+      .carousel_element .carousel_padding {
+        padding: 1em 0; } }
+  .carousel_element img {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; }
+  .carousel_element .carousel_text hr {
+    width: 100%; }
+  .carousel_element .carousel_text p {
+    margin: 0; }
+  .carousel_element p.title {
+    font-family: "BienalMono";
+    margin-bottom: 0.6em; }
 
 .carousel_wrapper {
   border-top: 1px solid #111;

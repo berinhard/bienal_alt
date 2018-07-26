@@ -1,20 +1,27 @@
-<div class="carousel_element" data-position="{{ analysis.order }}">
+<div class="carousel_element{% if counter == 1 %} active{% endif %}" data-position="{{ counter }}">
   <div class="sm-col md-col-8 sm-col-12 carousel_padding">
       <img src="{{ analysis.image.url }}" alt="{{ analysis.title }}" title="{{ analysis.title }}"/>
   </div>
   <div class="sm-col md-col-4 sm-col-12 carousel_padding carousel_text">
-      <p class="title">IMAGEM, AUTOR, DATA</p>
-      <p>{{ analysis.title }}. {{ analysis.author }}. {{ analysis.date|date:"d.m.Y" }}</p>
-      <hr/>
-      <p class="title">ANÁLISE</p>
-      {% for text in analysis.analysis %}
-        <p>{{ text }}</p>
-      {% endfor %}
-      <hr/>
-      <p class="title">PRODUTOS</p>
-      <p>{{ analysis.products|join:", " }}</p>
-      <hr/>
-      <p class="title">CATEGORIA</p>
-      <p>{{ analysis.category }}</p>
+      <div class="carousel_text_content">
+          <p class="title">IMAGEM, AUTOR, DATA</p>
+          <p>{{ analysis.title }}. {{ analysis.author }}. {{ analysis.date|date:"d.m.Y" }}</p>
+          <hr/>
+          <p class="title">ANÁLISE</p>
+          {% for text in analysis.analysis %}
+            <p>{{ text }}</p>
+          {% endfor %}
+          <hr/>
+          <p class="title">PRODUTOS</p>
+          <p>{{ analysis.products|join:", " }}</p>
+          <hr/>
+          <p class="title">CATEGORIA</p>
+          <p>{{ analysis.category }}</p>
+      </div>
+      <div class="carousel_text_nav">
+        <span class="prev">&lt;</span>
+        <span class="nav_counter">{{ counter }}/{{ total }}</span>
+        <span class="next">&gt;</span>
+      </div>
   </div>
 </div>

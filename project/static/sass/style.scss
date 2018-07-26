@@ -232,6 +232,12 @@ hr {
 }
 
 .carousel_element {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
     .carousel_padding {
         padding: 1em;
         &:first-child {padding-left: 0}
