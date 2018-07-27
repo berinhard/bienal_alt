@@ -10,7 +10,7 @@ $scaled_font: 1rem;
 
 
 body {
-    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+    font-family: "Neutral Regular";
     font-size: 1.25em;
     line-height: 1.5em;
     margin: 0;
@@ -229,4 +229,63 @@ hr {
             max-width: 100%;
         }
     }
+}
+
+.carousel_element {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    .carousel_padding {
+        padding: 1em;
+        &:first-child {padding-left: 0}
+        &:last-child {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        @media only screen and (max-width: 64em) {
+            & { padding: 1em 0; }
+        }
+    }
+
+    .carousel_img {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .carousel_text {
+        @extend %centralized_content;
+
+        hr { width: 100%; }
+        p {margin: 0;}
+
+        .carousel_text_nav {
+          padding-top: 1em;
+          font-family: "BienalMono";
+
+          span { vertical-align: middle }
+
+          .nav_counter { font-size: .8rem }
+          .prev, .next {
+            font-size: 2.5rem;
+            cursor: pointer;
+          }
+        }
+    }
+
+    p.title {
+        font-family: "BienalMono";
+        margin-bottom: 0.6em;
+    }
+}
+
+.carousel_wrapper {
+    border-top: $border_size solid $black;
+    border-bottom: $border_size solid $black;
+    overflow: hidden;
 }

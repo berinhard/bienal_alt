@@ -61,6 +61,10 @@ class Action(models.Model):
     def preview_url(self):
         return reverse('preview', args=[self.slug])
 
+    @property
+    def has_carousel(self):
+        return self.carousel.exists()
+
 
 class AnalyzedImage(models.Model):
     title = models.CharField(max_length=100, verbose_name=_("Nome"))
@@ -75,6 +79,18 @@ class AnalyzedImage(models.Model):
         verbose_name = _('Imagem Analisada')
         verbose_name_plural = _('Imagens Analisadas')
         ordering = ['order']
+
+    @property
+    def analysis(self):
+        return self.info['analise']
+
+    @property
+    def products(self):
+        return self.info['produtos']
+
+    @property
+    def category(self):
+        return self.info['categoria']
 
 
 class Contact(models.Model):
