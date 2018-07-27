@@ -114,15 +114,18 @@ SUIT_CONFIG = {
 }
 
 # TinyMCE
-#TINYMCE_JS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.13/jquery.tinymce.min.js'
+TINYMCE_JS_URL = STATIC_URL + 'js/tiny_mce/tiny_mce.js'
+TINYMCE_JS_ROOT = STATICFILES_DIRS[0].child('js', 'tiny_mce')
 TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "table,paste,searchreplace,colorpicker,textcolor",
+    'plugins': "table,paste,searchreplace",
     'theme': "advanced",
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
     'height': 600,
     'width': 600,
-    'toolbar': "forecolor backcolor"
+    "theme_advanced_buttons1": "fontsizeselect,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect",
+    'theme_advanced_buttons2': "bullist,numlist,|,outdent,indent,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code",
+    'theme_advanced_buttons3': "hr,removeformat,visualaid,|,sub,sup,|,charmap",
 }
 TINYMCE_COMPRESSOR = True
 
