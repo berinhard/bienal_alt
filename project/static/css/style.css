@@ -3,8 +3,8 @@
   src: url("/static/fonts/ibm_plex_mono.ttf"); }
 body {
   font-family: "Neutral Regular";
-  font-size: 1.25em;
-  line-height: 1.5em;
+  font-size: 1em;
+  line-height: 1em;
   margin: 0;
   color: #111;
   background-color: #fff; }
@@ -16,7 +16,9 @@ a {
     text-decoration: none; }
 
 header {
-  font-weight: bold; }
+  font-weight: bold;
+  line-height: 1.5em;
+  font-size: 1.25em; }
   header a:hover {
     padding-bottom: 0.4em;
     border-bottom: 1px solid #111; }
@@ -45,21 +47,23 @@ hr {
   text-align: center; }
   #actions_list hr {
     width: 40%; }
-  #actions_list .text_content {
-    max-width: 60%; }
+  #actions_list h2 {
+    line-height: 1em;
+    font-size: 1.85rem; }
   #actions_list .actions {
+    font-size: 1.25rem;
+    line-height: 1.35rem;
     margin-top: 1.5em; }
     #actions_list .actions p {
-      font-size: 1.5em;
-      margin: 0.3em; }
+      font-size: 1.5em; }
 
 .text_content, #action_nav, #about_content, #contact_session, .carousel_element .carousel_text {
   text-align: center; }
   .text_content hr, #action_nav hr, #about_content hr, #contact_session hr, .carousel_element .carousel_text hr {
     width: 15%; }
   .text_content p, #action_nav p, #about_content p, #contact_session p, .carousel_element .carousel_text p, .text_content span, #action_nav span, #about_content span, #contact_session span, .carousel_element .carousel_text span {
-    font-size: 1rem;
-    line-height: 1.25em; }
+    font-size: 1em;
+    line-height: 1.6em; }
   .text_content a, #action_nav a, #about_content a, #contact_session a, .carousel_element .carousel_text a {
     text-decoration: underline; }
     .text_content a:link, #action_nav a:link, #about_content a:link, #contact_session a:link, .carousel_element .carousel_text a:link, .text_content a:visited, #action_nav a:visited, #about_content a:visited, #contact_session a:visited, .carousel_element .carousel_text a:visited {

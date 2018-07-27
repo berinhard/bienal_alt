@@ -1,7 +1,7 @@
 $black: #111;
 $white: #fff;
 $border_size: 1px;
-$scaled_font: 1rem;
+$scaled_font: 1em;
 
 @font-face{
     font-family: "BienalMono";
@@ -11,8 +11,8 @@ $scaled_font: 1rem;
 
 body {
     font-family: "Neutral Regular";
-    font-size: 1.25em;
-    line-height: 1.5em;
+    font-size: 1em;
+    line-height: 1em;
     margin: 0;
     color: $black;
     background-color: $white;
@@ -38,6 +38,8 @@ header {
         }
     }
     font-weight: bold;
+    line-height: 1.5em;
+    font-size: 1.25em;
 
     #id_search {
         border-color: transparent;
@@ -65,20 +67,18 @@ hr {
 
 #actions_list {
     text-align: center;
-    hr {
-        width: 40%
-    }
+    hr { width: 40% }
 
-    .text_content {
-        max-width: 60%;
+    h2 {
+        line-height:1em;
+        font-size:1.85rem;
     }
 
     .actions {
+        font-size:1.25rem;
+        line-height:1.35rem;
         margin-top: 1.5em;
-        p {
-            font-size:1.5em;
-            margin: 0.3em;
-        }
+        p { font-size:1.5em; }
     }
 }
 
@@ -90,7 +90,7 @@ hr {
 
     p, span {
         font-size: $scaled_font;
-        line-height: 1.25em;
+        line-height: 1.6em;
     }
 
 
