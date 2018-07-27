@@ -22,6 +22,7 @@ var displayToNext = function(current){
 }
 
 $(document).ready(function(){
+    $('.text_content *').removeAttr('style');
     $(".carousel_text_nav .prev").click(function(){
         var current = getEnabled();
         displayToPrevious(current);

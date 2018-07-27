@@ -52,12 +52,9 @@
         </div>
     </div>
 
-<script type="text/javascript" src="{% static "js/images_carousel.js"%}"/>
+    <script src="{% static "js/action_detail.js"%}"></script>
 {% endblock %}
 
 {% block custom_js %}
-  $(document).ready(function(){
-    $('.text_content *').removeAttr('style');
-  });
   {{ action.js_code|safe }}
 {% endblock %}
