@@ -56,5 +56,8 @@
 {% endblock %}
 
 {% block custom_js %}
+  $(document).ready(function(){
+    $('.text_content *').removeAttr('style');
+  });
   {{ action.js_code|safe }}
 {% endblock %}
