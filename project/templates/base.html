@@ -20,6 +20,17 @@
     </style>
   </head>
 
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $("#id_question").change(function(){
+            $("#action_filter_form").submit();
+        });
+    });
+
+    {% block custom_js %}
+    {% endblock %}
+  </script>
+
   <body>
     {% url "index" as index_url %}
     {% url "about" as about_url %}
@@ -62,16 +73,5 @@
         {% endblock %}
       </div>
     </div>
-
-    <script type="text/javascript">
-      {% block custom_js %}
-      {% endblock %}
-
-      $(document).ready(function(){
-          $("#id_question").change(function(){
-              $("#action_filter_form").submit();
-          });
-      });
-    </script>
   <body>
 </html>
