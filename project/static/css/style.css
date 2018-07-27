@@ -2,7 +2,7 @@
   font-family: "BienalMono";
   src: url("/static/fonts/ibm_plex_mono.ttf"); }
 body {
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+  font-family: "Neutral Regular";
   font-size: 1.25em;
   line-height: 1.5em;
   margin: 0;
