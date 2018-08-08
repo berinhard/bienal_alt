@@ -8,6 +8,7 @@ from yamlfield.fields import YAMLField
 
 class QuestionTag(models.Model):
     title = models.CharField(max_length=50, verbose_name=_("Texto da pergunta"))
+    description = models.TextField(default='', verbose_name=_("Descrição"))
 
     class Meta:
         verbose_name = _('Pergunta')
