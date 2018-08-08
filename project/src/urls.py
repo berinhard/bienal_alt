@@ -9,6 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^sobre/$', TemplateView.as_view(template_name='about.html'), name='about'),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^mce_filebrowser/', include('src.mce_filebrowser.urls')),
     path('', include('src.actions.urls')),
 ]
 

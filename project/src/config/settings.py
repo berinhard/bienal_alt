@@ -24,7 +24,9 @@ INSTALLED_APPS = [
     'django_extensions',
     'tinymce',
     'storages',
+    'sorl.thumbnail',
     'src.actions',
+    'src.mce_filebrowser',
 ]
 
 MIDDLEWARE = [
