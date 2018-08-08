@@ -22,6 +22,10 @@ var displayToNext = function(current){
 }
 
 $(document).ready(function(){
+    $('.text_content a').click(function() {
+        window.open($(this).attr('href'));
+        return false;
+    });
     $(".carousel_text_nav .prev").click(function(){
         var current = getEnabled();
         displayToPrevious(current);
