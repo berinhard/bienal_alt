@@ -82,15 +82,15 @@ class AnalyzedImage(models.Model):
 
     @property
     def analysis(self):
-        return self.info['analise']
+        return self.info.get('analise') or []
 
     @property
     def products(self):
-        return self.info['produtos']
+        return self.info.get('produtos') or []
 
     @property
     def category(self):
-        return self.info['categoria']
+        return self.info.get('categoria') or ''
 
 
 class Contact(models.Model):
