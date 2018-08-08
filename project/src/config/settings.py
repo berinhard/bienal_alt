@@ -134,5 +134,7 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 TINYMCE_COMPRESSOR = True
 
+GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
+
 import django_heroku
 django_heroku.settings(locals())

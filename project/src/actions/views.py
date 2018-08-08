@@ -1,10 +1,14 @@
 from django.contrib.auth.decorators import login_required
+from django.forms.forms import NON_FIELD_ERRORS
+from django.forms.utils import ErrorList
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
+from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView
 
 from src.actions.forms import ContactForm
 from src.actions.models import Action, QuestionTag, Contact
+from src.actions.recaptcha import validate_captcha
 
 
 class ListActionsView(ListView):
@@ -77,3 +81,10 @@ class AddContactView(CreateView):
     form_class = ContactForm
     template_name = 'actions/contact.html'
     success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        if not validate_captcha(self.request.POST):
+            errors = form._errors.setdefault(NON_FIELD_ERRORS, ErrorList())
+            errors.append(_("Erro na validação do Captcha"))
+            return self.form_invalid(form)
+        return super().form_valid(form)
