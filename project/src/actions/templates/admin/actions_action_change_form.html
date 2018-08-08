@@ -14,3 +14,11 @@
     {% endif %}
   </div>
 {% endblock %}
+
+{% block object-tools-items %}
+  {{ block.super }}
+  <li>
+    <a target="_blank" href="{% url 'mce-filebrowser-documents' %}"><i class="icon-plus-sign icon-alpha75"></i>Upload de Arquivo</a>
+    <a target="_blank" href="{% url 'mce-filebrowser-images' %}"><i class="icon-plus-sign icon-alpha75"></i>Upload de Imagem</a>
+  </li>
+{% endblock %}

@@ -7,31 +7,6 @@
 </head>
 <body id="filebrowser">
   <div class="tabs">
-    <ul>
-      {% if is_images_dialog %}
-        <li id="images_tab" class="{% if not upload_tab_active %}current{% endif %}">
-          <span>
-            <a href="javascript:mcTabs.displayTab('images_tab','images_panel');" onmousedown="return false;">
-              {% trans "Images list" %}
-            </a>
-          </span>
-        </li>
-      {% endif %}
-      {% if is_documents_dialog %}
-        <li id="documents_tab" class="{% if not upload_tab_active %}current{% endif %}">
-          <span>
-            <a href="javascript:mcTabs.displayTab('documents_tab','documents_panel');" onmousedown="return false;">
-              {% trans "Documents list" %}
-            </a>
-          </span>
-        </li>
-      {% endif %}
-      <li id="upload_tab" class="{% if upload_tab_active %}current{% endif %}">
-        <span>
-          <a href="javascript:mcTabs.displayTab('upload_tab','upload_panel');" onmousedown="return false;">{% trans "Upload new" %}</a>
-        </span>
-      </li>
-    </ul>
   </div>
   <form action="./" method="post" enctype="multipart/form-data" name="upload_form">
     {% csrf_token %}
