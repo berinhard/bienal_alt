@@ -20,7 +20,7 @@
                 {% for img in object_list %}
                   <li>
                     {% thumbnail img.uploaded_file "100x100" crop="center" as im %}
-                      <a href="{{ img.uploaded_file.url }}">
+                      <a href="{{ img.clean_url }}">
                         <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" border="0" />
                       </a>
                     {% endthumbnail %}
@@ -43,7 +43,7 @@
               <ul class="documents_list">
                 {% for doc in object_list %}
                   <li>
-                    <a href="{{ doc.uploaded_file.url }}">
+                    <a href="{{ doc.clean_url }}">
                       {{ doc }}
                     </a>&nbsp;
                     <a href="{% url 'mce-filebrowser-remove-document' doc.id %}" title="{% trans 'Remove' %}" class="rm">x</a>
