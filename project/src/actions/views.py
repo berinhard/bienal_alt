@@ -19,13 +19,6 @@ class ListActionsView(ListView):
     def question_id(self):
         return int(self.request.GET.get('question', 0) or 0)
 
-    @property
-    def ordering(self):
-        ordering_key = self.request.GET.get('order', 'random').lower()
-        if ordering_key == 'time':
-            return 'action_date'
-        return '?'
-
     def get_queryset(self, *args, **kwrags):
         if self.search_query:
             qs = Action.objects.search(self.search_query)
@@ -39,7 +32,7 @@ class ListActionsView(ListView):
             except QuestionTag.DoesNotExist:
                 pass
 
-        return qs.published().order_by(self.ordering)
+        return qs.published()
 
     def get_context_data(self):
         context = super().get_context_data()

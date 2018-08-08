@@ -49,6 +49,7 @@ class Action(models.Model):
     class Meta:
         verbose_name = _('Ação')
         verbose_name_plural = _('Ações')
+        ordering = ['title']
 
     def __str__(self):
         return self.title
