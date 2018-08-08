@@ -44,16 +44,18 @@ class ListActionsView(ListView):
 
 
 def action_detail_view(request, slug):
-    action = get_object_or_404(Action.objects.published(), slug=slug)
+    published_actions = Action.objects.published()
+    action = get_object_or_404(published_actions, slug=slug)
+
+    action_index = list(published_actions).index(action)
     prev, next = None, None
-    prev_id, next_id = action.id - 1, action.id + 1
+    prev_id, next_id = action_index - 1, action_index + 1
+
+    if prev_id >= 0:
+        prev = published_actions[prev_id]
     try:
-        prev = Action.objects.get(id=prev_id)
-    except Action.DoesNotExist:
-        pass
-    try:
-        next = Action.objects.get(id=next_id)
-    except Action.DoesNotExist:
+        next = published_actions[next_id]
+    except IndexError:
         pass
     context = {
         'action': action,
