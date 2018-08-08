@@ -112,7 +112,7 @@ USE_TZ = True
 
 # Admin config
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'Outra Bienal',
+    'ADMIN_NAME': '(OUTRA) 33ª Bienal de São Paulo',
 }
 
 # TinyMCE
