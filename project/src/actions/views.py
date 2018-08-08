@@ -1,10 +1,14 @@
 from django.contrib.auth.decorators import login_required
+from django.forms.forms import NON_FIELD_ERRORS
+from django.forms.utils import ErrorList
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
+from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView
 
 from src.actions.forms import ContactForm
 from src.actions.models import Action, QuestionTag, Contact
+from src.actions.recaptcha import validate_captcha
 
 
 class ListActionsView(ListView):
@@ -19,13 +23,6 @@ class ListActionsView(ListView):
     def question_id(self):
         return int(self.request.GET.get('question', 0) or 0)
 
-    @property
-    def ordering(self):
-        ordering_key = self.request.GET.get('order', 'random').lower()
-        if ordering_key == 'time':
-            return 'action_date'
-        return '?'
-
     def get_queryset(self, *args, **kwrags):
         if self.search_query:
             qs = Action.objects.search(self.search_query)
@@ -39,7 +36,7 @@ class ListActionsView(ListView):
             except QuestionTag.DoesNotExist:
                 pass
 
-        return qs.published().order_by(self.ordering)
+        return qs.published()
 
     def get_context_data(self):
         context = super().get_context_data()
@@ -51,16 +48,18 @@ class ListActionsView(ListView):
 
 
 def action_detail_view(request, slug):
-    action = get_object_or_404(Action.objects.published(), slug=slug)
+    published_actions = Action.objects.published()
+    action = get_object_or_404(published_actions, slug=slug)
+
+    action_index = list(published_actions).index(action)
     prev, next = None, None
-    prev_id, next_id = action.id - 1, action.id + 1
+    prev_id, next_id = action_index - 1, action_index + 1
+
+    if prev_id >= 0:
+        prev = published_actions[prev_id]
     try:
-        prev = Action.objects.get(id=prev_id)
-    except Action.DoesNotExist:
-        pass
-    try:
-        next = Action.objects.get(id=next_id)
-    except Action.DoesNotExist:
+        next = published_actions[next_id]
+    except IndexError:
         pass
     context = {
         'action': action,
@@ -82,3 +81,10 @@ class AddContactView(CreateView):
     form_class = ContactForm
     template_name = 'actions/contact.html'
     success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        if not validate_captcha(self.request.POST):
+            errors = form._errors.setdefault(NON_FIELD_ERRORS, ErrorList())
+            errors.append(_("Erro na validação do Captcha"))
+            return self.form_invalid(form)
+        return super().form_valid(form)

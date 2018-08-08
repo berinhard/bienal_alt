@@ -1,4 +1,6 @@
-from django.contrib import admin
+from django.contrib import admin, messages
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import gettext as _
 
@@ -32,6 +34,7 @@ class ActionAdmin(admin.ModelAdmin):
     inlines = [AnalyzedImageInline]
     actions = ['make_published']
     form = ActionAdminForm
+    change_form_template = 'admin/actions_action_change_form.html'
     fieldsets = (
         (None, {
             'fields': ('title', 'body', 'questions', 'action_date', 'slug', 'published'),
@@ -56,6 +59,22 @@ class ActionAdmin(admin.ModelAdmin):
     def make_published(self, request, queryset):
         queryset.update(published=True)
     make_published.short_description = _('Publica as ações')
+
+    def response_change(self, request, obj):
+        response = super().response_change(request, obj)
+        if "_preview" in request.POST:
+            return HttpResponseRedirect(obj.preview_url)
+        if "_publish" in request.POST:
+            obj.published = True
+            obj.save()
+            self.message_user(
+                request,
+                'A ação "{}" foi salva e publicada com sucesso!'.format(obj.title),
+                messages.SUCCESS
+            )
+            return HttpResponseRedirect(reverse('admin:actions_action_changelist'))
+        else:
+            return response
 
 
 class ContactAdmin(admin.ModelAdmin):

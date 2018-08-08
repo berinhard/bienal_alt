@@ -8,6 +8,7 @@ from yamlfield.fields import YAMLField
 
 class QuestionTag(models.Model):
     title = models.CharField(max_length=50, verbose_name=_("Texto da pergunta"))
+    description = models.TextField(default='', verbose_name=_("Descrição"))
 
     class Meta:
         verbose_name = _('Pergunta')
@@ -49,6 +50,7 @@ class Action(models.Model):
     class Meta:
         verbose_name = _('Ação')
         verbose_name_plural = _('Ações')
+        ordering = ['title']
 
     def __str__(self):
         return self.title
@@ -82,15 +84,15 @@ class AnalyzedImage(models.Model):
 
     @property
     def analysis(self):
-        return self.info['analise']
+        return self.info.get('analise') or []
 
     @property
     def products(self):
-        return self.info['produtos']
+        return self.info.get('produtos') or []
 
     @property
     def category(self):
-        return self.info['categoria']
+        return self.info.get('categoria') or ''
 
 
 class Contact(models.Model):

@@ -24,7 +24,9 @@ INSTALLED_APPS = [
     'django_extensions',
     'tinymce',
     'storages',
+    'sorl.thumbnail',
     'src.actions',
+    'src.mce_filebrowser',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +76,9 @@ if PRODUCTION:
     AWS_S3_HOST = config('AWS_S3_HOST')
     AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME')
     AWS_S3_SIGNATURE_VERSION = 's3v4'
+    AWS_S3_OBJECT_PARAMETERS = {
+        'CacheControl': 'max-age=864000',  # 10 days cache
+    }
 
     S3_URL = '{}.s3.amazonaws.com/'.format(AWS_STORAGE_BUCKET_NAME)
     MEDIA_URL = S3_URL
@@ -110,7 +115,7 @@ USE_TZ = True
 
 # Admin config
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'Outra Bienal',
+    'ADMIN_NAME': '(OUTRA) 33ª Bienal de São Paulo',
 }
 
 # TinyMCE
@@ -128,6 +133,8 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme_advanced_buttons3': "hr,removeformat,visualaid,|,sub,sup,|,charmap",
 }
 TINYMCE_COMPRESSOR = True
+
+GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
 
 import django_heroku
 django_heroku.settings(locals())

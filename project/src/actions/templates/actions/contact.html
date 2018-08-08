@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<style>
+    .g-recaptcha {
+        display: inline-block;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
+
 <div class="clearfix mt4">
   <div class="md-col-5 sm-col-12 mx-auto" id="contact_session">
 
@@ -51,6 +61,9 @@
           </p>
       {% endfor %}
     <hr>
+      <div style='text-align: center;'>
+        <div class="g-recaptcha" data-sitekey="6LceCWkUAAAAAJbYyCluVNj5y_L-CSQwBgVQR_fa" data-callback="enableBtn"></div>
+      </div>
       <input type="submit" style="display: none" value="ENVIAR"/>
       <p><label id="submit_button">ENVIAR</label></p>
     </form>
@@ -61,9 +74,18 @@
 {% endblock %}
 
 {% block custom_js %}
+function enableBtn(){
+  $("#submit_button").prop("disabled", false);
+  $("#submit_button").show();
+}
+
 $(document).ready(function(){
+  $("#submit_button").prop("disabled", true);
+  $("#submit_button").hide();
   $("#submit_button").click(function(){
-    $("#contact_form").submit();
+    if (!$(this).prop("disabled")) {
+      $("#contact_form").submit();
+    }
   });
 });
 {% endblock %}

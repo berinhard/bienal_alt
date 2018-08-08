@@ -1,0 +1,24 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_static admin_modify suit_tags admin_urls %}
+
+{% block submit_buttons_bottom %}
+  <div class="submit-row clearfix">
+    <button type="submit" class="btn btn-high btn-info" name="_continue">Gravar</button>
+    <button type="submit" name="_preview" class=" btn btn-high">Gravar e Preview</button>
+
+    {% if original %}
+      {% if not original.published %}
+        <button type="submit" name="_publish" class="btn btn-success">Gravar e Publicar</button>
+      {% endif %}
+      <a href="{% url 'admin:actions_action_delete' original.pk %}" class="text-error deletelink">Remover</a>
+    {% endif %}
+  </div>
+{% endblock %}
+
+{% block object-tools-items %}
+  {{ block.super }}
+  <li>
+    <a target="_blank" href="{% url 'mce-filebrowser-documents' %}"><i class="icon-plus-sign icon-alpha75"></i>Upload de Arquivo</a>
+    <a target="_blank" href="{% url 'mce-filebrowser-images' %}"><i class="icon-plus-sign icon-alpha75"></i>Upload de Imagem</a>
+  </li>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% load staticfiles i18n thumbnail %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>{% trans "File browser" %}</title>
+  <link rel="stylesheet" href="{% static 'mce_filebrowser/css/mce_filebrowser.css' %}" type="text/css" media="screen, projection" />
+</head>
+<body id="filebrowser">
+  <div class="tabs">
+  </div>
+  <form action="./" method="post" enctype="multipart/form-data" name="upload_form">
+    {% csrf_token %}
+    <div class="panel_wrapper">
+      {% if is_images_dialog %}
+        <div id="images_panel" class="panel{% if not upload_tab_active %} current{% endif %}">
+          <fieldset>
+            <legend>{% trans "Previosly uploaded images" %}</legend>
+            {% if object_list %}
+              <ul class="images_list">
+                {% for img in object_list %}
+                  <li>
+                    {% thumbnail img.uploaded_file "100x100" crop="center" as im %}
+                      <a href="{{ img.clean_url }}">
+                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" border="0" />
+                      </a>
+                    {% endthumbnail %}
+                    <a href="{% url 'mce-filebrowser-remove-image' img.id %}" title="{% trans 'Remove' %}" class="rm">x</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p>{% trans "No images uploaded" %}</p>
+            {% endif %}
+          </fieldset>
+          {% include "_paginator.html" %}
+        </div>
+      {% endif %}
+      {% if is_documents_dialog %}
+        <div id="documents_panel" class="panel{% if not upload_tab_active %} current{% endif %}">
+          <fieldset>
+            <legend>{% trans "Previosly uploaded documents" %}</legend>
+            {% if object_list %}
+              <ul class="documents_list">
+                {% for doc in object_list %}
+                  <li>
+                    <a href="{{ doc.clean_url }}">
+                      {{ doc }}
+                    </a>&nbsp;
+                    <a href="{% url 'mce-filebrowser-remove-document' doc.id %}" title="{% trans 'Remove' %}" class="rm">x</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p>{% trans "No documents uploaded" %}</p>
+            {% endif %}
+          </fieldset>
+          {% include "_paginator.html" %}
+        </div>
+      {% endif %}
+      <div id="upload_panel" class="panel{% if upload_tab_active %} current{% endif %}">
+        <fieldset>
+          <legend>
+            {% trans "Upload file" %}
+          </legend>
+          {{ upload_form }}
+        </fieldset>
+      </div>
+    </div>
+    <div class="mceActionPanel">
+      <input type="submit" id="insert" value="{% trans 'Insert' %}">
+    </div>
+    <input type="hidden" name="selected_file" value="{% if uploaded_file %}{{ uploaded_file.uploaded_file.url }}{% endif %}" />
+  </form>
+</body>
+</html>
