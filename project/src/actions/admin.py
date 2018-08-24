@@ -11,9 +11,11 @@ from src.actions.models import QuestionTag, Action, Contact, AnalyzedImage
 
 
 class QuestionTagAdmin(admin.ModelAdmin):
-    list_display_links = None
 
     def has_delete_permission(self, request, obj=None):
+        return False
+
+    def has_add_permission(self, request, obj=None):
         return False
 
 
@@ -89,6 +91,6 @@ class ContactAdmin(admin.ModelAdmin):
     truncated_message.short_description = _("Mensagem")
 
 
-#admin.site.register(QuestionTag, QuestionTagAdmin)
+admin.site.register(QuestionTag, QuestionTagAdmin)
 admin.site.register(Action, ActionAdmin)
 admin.site.register(Contact, ContactAdmin)
