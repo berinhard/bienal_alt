@@ -159,6 +159,8 @@ hr {
     font-family: "BienalMono"; }
   #carousel_nav span {
     margin-right: 2em; }
+  #carousel_nav .nav:hover {
+    cursor: pointer; }
   #carousel_nav .active {
     text-decoration: underline; }
 

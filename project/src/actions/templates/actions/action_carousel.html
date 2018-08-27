@@ -1,7 +1,7 @@
 {% load static %}
 
 <div class="carousel_wrapper">
-  {% for analysis in action.carousel.all %}
+  {% for analysis in images_analyses %}
   {% with counter=forloop.counter %}
   <div class="carousel_element{% if counter == 1 %} active{% endif %}" data-position="{{ counter }}">
     <div class="sm-col md-col-8 sm-col-12 carousel_img carousel_padding">

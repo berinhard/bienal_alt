@@ -24,9 +24,9 @@
             <hr/>
             <div id="carousel_nav">
                 <span class='title'>VISUALIZAÇÃO</span>
-                <span><a href="#" class="active">Cronológica</a></span>
-                <span><a href="#">Randômica</a></span>
-                <span><a href="#">Filtrar por Edição</a></span>
+                <span url="{% url 'action_carousel' action.slug %}" class="nav refresh-carousel active">Cronológica</span>
+                <span url="{% url 'action_carousel' action.slug %}?order=random" class="nav refresh-carousel">Randômica</span>
+                <span class="nav">Filtrar por Edição</span>
             </div>
             <div id="image-carousel" url="{{action.carousel_url}}"></div>
         </div>

@@ -248,6 +248,10 @@ hr {
         margin-right: 2em;
     }
 
+    .nav:hover {
+        cursor: pointer;
+    }
+
     .active {
         text-decoration: underline;
     }

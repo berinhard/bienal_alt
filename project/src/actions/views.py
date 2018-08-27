@@ -96,8 +96,17 @@ class AddContactView(CreateView):
 
 
 def action_carousel_html(request, slug):
+    order = request.GET.get('order', '') or ''
+
     action = get_object_or_404(Action, slug=slug)
     if not action.has_carousel:
         raise Http404
-    context = {'action': action, 'total': action.carousel.count()}
+    qs = action.carousel.all()
+
+    if not order:
+        qs = qs.order_by('date')
+    elif order == 'random':
+        qs = qs.order_by('?')
+
+    context = {'images_analyses': qs, 'total': action.carousel.count()}
     return render(request, 'actions/action_carousel.html', context)

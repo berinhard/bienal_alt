@@ -52,4 +52,8 @@ $(document).ready(function(){
     if (carouselDiv.length >= 1) {
         refreshCarousel(carouselDiv.attr('url'));
     }
+
+    $(".refresh-carousel").click(function(){
+        refreshCarousel($(this).attr('url'));
+    });
 });
