@@ -237,6 +237,13 @@ hr {
     }
 }
 
+.carousel_wrapper {
+    text-align: center;
+    .no_images {
+        margin: 2em 0 2em 0;
+    }
+}
+
 #carousel_nav {
     padding-bottom: 0.5em;
 
