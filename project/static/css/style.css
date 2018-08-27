@@ -43,6 +43,31 @@ hr {
 #action_filter_form {
   margin-bottom: 0em; }
 
+.text_content, #action_nav, .carousel_element .carousel_text, #about_content, #contact_session {
+  text-align: center; }
+  .text_content hr, #action_nav hr, .carousel_element .carousel_text hr, #about_content hr, #contact_session hr {
+    width: 15%; }
+  .text_content p, #action_nav p, .carousel_element .carousel_text p, #about_content p, #contact_session p, .text_content span, #action_nav span, .carousel_element .carousel_text span, #about_content span, #contact_session span {
+    font-size: 1em;
+    line-height: 1.6em; }
+  .text_content a, #action_nav a, .carousel_element .carousel_text a, #about_content a, #contact_session a {
+    text-decoration: underline; }
+    .text_content a:link, #action_nav a:link, .carousel_element .carousel_text a:link, #about_content a:link, #contact_session a:link, .text_content a:visited, #action_nav a:visited, .carousel_element .carousel_text a:visited, #about_content a:visited, #contact_session a:visited {
+      text-decoration: underline; }
+
+.main_container {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+.container {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
+.header_item {
+  text-align: center; }
+
 #actions_list {
   text-align: center; }
   #actions_list hr {
@@ -63,96 +88,11 @@ hr {
   #system_log_list hr {
     width: 60%; }
 
-.text_content, #action_nav, #about_content, #contact_session, .carousel_element .carousel_text {
-  text-align: center; }
-  .text_content hr, #action_nav hr, #about_content hr, #contact_session hr, .carousel_element .carousel_text hr {
-    width: 15%; }
-  .text_content p, #action_nav p, #about_content p, #contact_session p, .carousel_element .carousel_text p, .text_content span, #action_nav span, #about_content span, #contact_session span, .carousel_element .carousel_text span {
-    font-size: 1em;
-    line-height: 1.6em; }
-  .text_content a, #action_nav a, #about_content a, #contact_session a, .carousel_element .carousel_text a {
-    text-decoration: underline; }
-    .text_content a:link, #action_nav a:link, #about_content a:link, #contact_session a:link, .carousel_element .carousel_text a:link, .text_content a:visited, #action_nav a:visited, #about_content a:visited, #contact_session a:visited, .carousel_element .carousel_text a:visited {
-      text-decoration: underline; }
-
 #action_nav a {
   font-size: 0.9em; }
 #action_nav p, #action_nav span {
   font-family: "BienalMono"; }
 
-#about_content h4 {
-  margin-bottom: 0px; }
-#about_content .profile {
-  margin-top: 0em; }
-
-#contact_session hr {
-  width: 100%; }
-#contact_session textarea {
-  width: 100%;
-  border: 1px solid #111; }
-#contact_session input[type="text"], #contact_session input[type="email"] {
-  width: 100%;
-  border-color: transparent;
-  background: transparent;
-  border-bottom: 1px solid #111;
-  align: center; }
-#contact_session input[type="file"] {
-  display: none; }
-#contact_session input[type="submit"] {
-  border-bottom: 1px solid #111;
-  display: inline-block;
-  cursor: pointer; }
-#contact_session input[type="checkbox"] {
-  border-bottom: 1px solid #111;
-  display: inline-block;
-  cursor: pointer; }
-#contact_session label {
-  line-height: 1.25em;
-  font-size: 0.9em;
-  font-family: "BienalMono";
-  margin-bottom: 1em;
-  display: block; }
-#contact_session label[for="id_upload"] {
-  line-height: 1.25em;
-  font-size: 0.9em;
-  border-bottom: 1px solid #111;
-  display: inline-block;
-  cursor: pointer; }
-#contact_session label[id="submit_button"] {
-  line-height: 1.25em;
-  font-size: 0.9em;
-  margin-top: 1em;
-  border-bottom: 1px solid #111;
-  display: inline-block;
-  cursor: pointer; }
-
-.main_container {
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
-
-.container {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
-
-.header_item {
-  text-align: center; }
-
-@media only screen and (max-width: 64em) {
-  .main_container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem; }
-
-  .main_title {
-    text-align: center;
-    margin-bottom: 0.5rem; }
-
-  .header_item {
-    margin-bottom: 0.5rem; }
-
-  #actions_list .text_content {
-    max-width: 100%; } }
 .carousel_wrapper {
   text-align: center; }
   .carousel_wrapper .no_images {
@@ -220,5 +160,66 @@ hr {
     margin: 2em 0 2em 0; }
     #year-filter .years-list p {
       cursor: pointer; }
+
+#about_content h4 {
+  margin-bottom: 0px; }
+#about_content .profile {
+  margin-top: 0em; }
+
+#contact_session hr {
+  width: 100%; }
+#contact_session textarea {
+  width: 100%;
+  border: 1px solid #111; }
+#contact_session input[type="text"], #contact_session input[type="email"] {
+  width: 100%;
+  border-color: transparent;
+  background: transparent;
+  border-bottom: 1px solid #111;
+  align: center; }
+#contact_session input[type="file"] {
+  display: none; }
+#contact_session input[type="submit"] {
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  cursor: pointer; }
+#contact_session input[type="checkbox"] {
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  cursor: pointer; }
+#contact_session label {
+  line-height: 1.25em;
+  font-size: 0.9em;
+  font-family: "BienalMono";
+  margin-bottom: 1em;
+  display: block; }
+#contact_session label[for="id_upload"] {
+  line-height: 1.25em;
+  font-size: 0.9em;
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  cursor: pointer; }
+#contact_session label[id="submit_button"] {
+  line-height: 1.25em;
+  font-size: 0.9em;
+  margin-top: 1em;
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  cursor: pointer; }
+
+@media only screen and (max-width: 64em) {
+  .main_container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+
+  .main_title {
+    text-align: center;
+    margin-bottom: 0.5rem; }
+
+  .header_item {
+    margin-bottom: 0.5rem; }
+
+  #actions_list .text_content {
+    max-width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

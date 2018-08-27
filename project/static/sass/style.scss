@@ -1,3 +1,7 @@
+//////////
+// BASE
+//////////
+
 $black: #111;
 $white: #fff;
 $border_size: 1px;
@@ -61,31 +65,9 @@ hr {
     border-top: $border_size solid $black;
 }
 
+
 #action_filter_form {
     margin-bottom: 0em;
-}
-
-#actions_list {
-    text-align: center;
-    hr { width: 40% }
-
-    h2 {
-        line-height:1em;
-        font-size:1.85rem;
-    }
-
-    .actions {
-        font-size:1.25rem;
-        line-height:1.35rem;
-        margin-top: 1.5em;
-        p { font-size:1.5em; }
-    }
-}
-
-#system_log_list{
-    text-align: center;
-    hr { width: 60% }
-    font-family: "BienalMono";
 }
 
 %centralized_content {
@@ -112,92 +94,6 @@ hr {
     @extend %centralized_content;
 }
 
-#action_nav {
-    @extend %centralized_content;
-
-    a {
-        font-size: 0.9em;
-    }
-
-    p, span {
-        font-family: "BienalMono";
-    }
-}
-
-#about_content {
-    @extend %centralized_content;
-
-    h4 {
-        margin-bottom: 0px;
-    }
-
-    .profile {
-        margin-top: 0em;
-    }
-}
-
-#contact_session {
-    @extend %centralized_content;
-
-    hr {
-        width: 100%;
-    }
-
-    textarea {
-        width: 100%;
-        border: $border_size solid $black;
-    }
-
-    input[type="text"], input[type="email"] {
-        width: 100%;
-        border-color: transparent;
-        background: transparent;
-        border-bottom: $border_size solid $black;
-        align:center;
-    }
-
-    input[type="file"] {
-        display: none;
-    }
-
-    input[type="submit"] {
-        border-bottom: $border_size solid $black;
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    input[type="checkbox"] {
-        border-bottom: $border_size solid $black;
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    label {
-        line-height: 1.25em;
-        font-size: 0.9em;
-        font-family: "BienalMono";
-        margin-bottom: 1em;
-        display: block;
-    }
-
-    label[for="id_upload"] {
-        line-height: 1.25em;
-        font-size: 0.9em;
-        border-bottom: $border_size solid $black;
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    label[id="submit_button"] {
-        line-height: 1.25em;
-        font-size: 0.9em;
-        margin-top: 1em;
-        border-bottom: $border_size solid $black;
-        display: inline-block;
-        cursor: pointer;
-    }
-}
-
 .main_container{
     padding-left: 4rem;
     padding-right: 4rem;
@@ -214,26 +110,46 @@ hr {
     text-align: center;
 }
 
-@media only screen and (max-width: 64em) {
-    .main_container{
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+///////////////
+// ACTIONS LIST
+///////////////
+
+#actions_list {
+    text-align: center;
+    hr { width: 40% }
+
+    h2 {
+        line-height:1em;
+        font-size:1.85rem;
     }
 
-    .main_title {
-        text-align: center;
-        margin-bottom: 0.5rem;
+    .actions {
+        font-size:1.25rem;
+        line-height:1.35rem;
+        margin-top: 1.5em;
+        p { font-size:1.5em; }
+    }
+}
+
+#system_log_list{
+    text-align: center;
+    hr { width: 60% }
+    font-family: "BienalMono";
+}
+
+/////////////////
+// ACTIONS DETAIL
+/////////////////
+
+#action_nav {
+    @extend %centralized_content;
+
+    a {
+        font-size: 0.9em;
     }
 
-    .header_item {
-        margin-bottom: 0.5rem;
-    }
-
-
-    #actions_list {
-        .text_content {
-            max-width: 100%;
-        }
+    p, span {
+        font-family: "BienalMono";
     }
 }
 
@@ -338,6 +254,115 @@ hr {
 
         p {
             cursor: pointer;
+        }
+    }
+}
+
+////////
+// ABOUT
+////////
+
+#about_content {
+    @extend %centralized_content;
+
+    h4 {
+        margin-bottom: 0px;
+    }
+
+    .profile {
+        margin-top: 0em;
+    }
+}
+
+//////////
+// CONTACT
+//////////
+
+#contact_session {
+    @extend %centralized_content;
+
+    hr {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        border: $border_size solid $black;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 100%;
+        border-color: transparent;
+        background: transparent;
+        border-bottom: $border_size solid $black;
+        align:center;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    input[type="submit"] {
+        border-bottom: $border_size solid $black;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        border-bottom: $border_size solid $black;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    label {
+        line-height: 1.25em;
+        font-size: 0.9em;
+        font-family: "BienalMono";
+        margin-bottom: 1em;
+        display: block;
+    }
+
+    label[for="id_upload"] {
+        line-height: 1.25em;
+        font-size: 0.9em;
+        border-bottom: $border_size solid $black;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    label[id="submit_button"] {
+        line-height: 1.25em;
+        font-size: 0.9em;
+        margin-top: 1em;
+        border-bottom: $border_size solid $black;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+////////////////
+// MEDIA QUERIES
+////////////////
+
+@media only screen and (max-width: 64em) {
+    .main_container{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .main_title {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .header_item {
+        margin-bottom: 0.5rem;
+    }
+
+
+    #actions_list {
+        .text_content {
+            max-width: 100%;
         }
     }
 }
