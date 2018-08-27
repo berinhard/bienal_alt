@@ -323,3 +323,14 @@ hr {
     }
 }
 
+#year-filter {
+    text-align: center;
+
+    .years-list {
+        margin: 2em 0 2em 0;
+
+        p {
+            cursor: pointer;
+        }
+    }
+}

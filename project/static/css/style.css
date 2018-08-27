@@ -209,4 +209,11 @@ hr {
     max-height: 120px;
     padding: 0 0.25em 0 0.25em; }
 
+#year-filter {
+  text-align: center; }
+  #year-filter .years-list {
+    margin: 2em 0 2em 0; }
+    #year-filter .years-list p {
+      cursor: pointer; }
+
 /*# sourceMappingURL=style.css.map */

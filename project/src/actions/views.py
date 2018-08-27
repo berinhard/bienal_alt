@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView
 
+from src.actions.constants import EDITIONS_BY_YEAR
 from src.actions.forms import ContactForm
 from src.actions.models import Action, QuestionTag, Contact
 from src.actions.recaptcha import validate_captcha
@@ -69,7 +70,8 @@ def action_detail_view(request, slug):
     context = {
         'action': action,
         'prev': prev,
-        'next': next
+        'next': next,
+        "editions_by_year": EDITIONS_BY_YEAR.items(),
     }
     return render(request, 'actions/action_detail.html', context)
 
@@ -97,6 +99,7 @@ class AddContactView(CreateView):
 
 def action_carousel_html(request, slug):
     order = request.GET.get('order', '') or ''
+    year = request.GET.get('year', '') or ''
 
     action = get_object_or_404(Action, slug=slug)
     if not action.has_carousel:
@@ -108,5 +111,8 @@ def action_carousel_html(request, slug):
     elif order == 'random':
         qs = qs.order_by('?')
 
-    context = {'images_analyses': qs, 'total': action.carousel.count()}
+    if year:
+        qs = qs.filter(date__year=year)
+
+    context = {'images_analyses': qs, 'total': qs.count()}
     return render(request, 'actions/action_carousel.html', context)

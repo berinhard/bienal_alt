@@ -1,4 +1,5 @@
 CAROUSEL_SELECTOR_ID = "#image-carousel"
+YEAR_FILTER_ID = "#year-filter"
 
 
 var getEnabled = function(){
@@ -31,6 +32,8 @@ var refreshCarousel = function(url){
 
 var displayCarousel = function(data){
     $(CAROUSEL_SELECTOR_ID).html(data)
+    $(CAROUSEL_SELECTOR_ID).show()
+    $(YEAR_FILTER_ID).hide()
 
     $(".carousel_text_nav .prev").click(function(){
         var current = getEnabled();
@@ -54,6 +57,20 @@ $(document).ready(function(){
     }
 
     $(".refresh-carousel").click(function(){
-        refreshCarousel($(this).attr('url'));
+        var link = $(this)
+        refreshCarousel(link.attr('url'));
+    });
+
+    $(".nav").click(function(){
+        var link = $(this)
+        link.siblings().each(function(){
+            $(this).removeClass('active');
+        });
+        link.addClass('active');
+    });
+
+    $('#year-filter-btn').click(function(){
+        $(CAROUSEL_SELECTOR_ID).hide();
+        $(YEAR_FILTER_ID).show();
     });
 });
