@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView
+from django.http import Http404
 
 from src.actions.forms import ContactForm
 from src.actions.models import Action, QuestionTag, Contact
@@ -88,3 +89,11 @@ class AddContactView(CreateView):
             errors.append(_("Erro na validação do Captcha"))
             return self.form_invalid(form)
         return super().form_valid(form)
+
+
+def action_carousel_html(request, slug):
+    action = get_object_or_404(Action, slug=slug)
+    if not action.has_carousel:
+        raise Http404
+    context = {'action': action, 'total': action.carousel.count()}
+    return render(request, 'actions/action_carousel.html', context)

@@ -67,6 +67,12 @@ class Action(models.Model):
     def has_carousel(self):
         return self.carousel.exists()
 
+    @property
+    def carousel_url(self):
+        if not self.has_carousel:
+            return ''
+        return reverse('action_carousel', args=[self.slug])
+
 
 class AnalyzedImage(models.Model):
     title = models.CharField(max_length=100, verbose_name=_("Nome"))

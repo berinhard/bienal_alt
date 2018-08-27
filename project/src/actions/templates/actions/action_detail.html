@@ -21,13 +21,7 @@
     {% if action.has_carousel %}
     <div class="clearfix">
         <div class="sm-col-12 md-col-8 mx-auto">
-            <div class="carousel_wrapper">
-            {% with total=action.carousel.all|length %}
-                {% for analysis in action.carousel.all %}
-                  {% include "actions/carousel_image.html" with counter=forloop.counter  %}
-                {% endfor %}
-            {% endwith %}
-            </div>
+            <div id="image-carousel" url="{{action.carousel_url}}"></div>
         </div>
     </div>
     {% endif %}

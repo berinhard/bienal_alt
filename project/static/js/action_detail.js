@@ -1,3 +1,6 @@
+CAROUSEL_SELECTOR_ID = "#image-carousel"
+
+
 var getEnabled = function(){
     return $(".carousel_element.active")
 }
@@ -21,11 +24,16 @@ var displayToNext = function(current){
     }
 }
 
-$(document).ready(function(){
-    $('.text_content a').click(function() {
-        window.open($(this).attr('href'));
-        return false;
-    });
+
+var refreshCarousel = function(url){
+    $.get(url, displayCarousel);
+}
+
+
+var displayCarousel = function(data){
+    console.log('oh o pai');
+    $(CAROUSEL_SELECTOR_ID).html(data)
+
     $(".carousel_text_nav .prev").click(function(){
         var current = getEnabled();
         displayToPrevious(current);
@@ -34,4 +42,16 @@ $(document).ready(function(){
         var current = getEnabled();
         displayToNext(current);
     });
+}
+
+$(document).ready(function(){
+    $('.text_content a').click(function() {
+        window.open($(this).attr('href'));
+        return false;
+    });
+
+    var carouselDiv = $(CAROUSEL_SELECTOR_ID);
+    if (carouselDiv.length >= 1) {
+        refreshCarousel(carouselDiv.attr('url'));
+    }
 });
