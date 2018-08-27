@@ -177,13 +177,14 @@ hr {
         padding: 1em 0; } }
   .carousel_element .carousel_img img {
     display: block;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 0.5em; }
   .carousel_element .carousel_text hr {
     width: 100%; }
   .carousel_element .carousel_text p {
     margin: 0; }
   .carousel_element .carousel_text .carousel_text_nav {
-    padding-top: 1em;
+    padding-bottom: 1em;
     font-family: "BienalMono"; }
     .carousel_element .carousel_text .carousel_text_nav span {
       vertical-align: middle; }
