@@ -1,3 +1,7 @@
+//////////
+// BASE
+//////////
+
 $black: #111;
 $white: #fff;
 $border_size: 1px;
@@ -61,25 +65,9 @@ hr {
     border-top: $border_size solid $black;
 }
 
+
 #action_filter_form {
     margin-bottom: 0em;
-}
-
-#actions_list {
-    text-align: center;
-    hr { width: 40% }
-
-    h2 {
-        line-height:1em;
-        font-size:1.85rem;
-    }
-
-    .actions {
-        font-size:1.25rem;
-        line-height:1.35rem;
-        margin-top: 1.5em;
-        p { font-size:1.5em; }
-    }
 }
 
 %centralized_content {
@@ -106,6 +94,53 @@ hr {
     @extend %centralized_content;
 }
 
+.main_container{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.header_item {
+    text-align: center;
+}
+
+///////////////
+// ACTIONS LIST
+///////////////
+
+#actions_list {
+    text-align: center;
+    hr { width: 40% }
+
+    h2 {
+        line-height:1em;
+        font-size:1.85rem;
+    }
+
+    .actions {
+        font-size:1.25rem;
+        line-height:1.35rem;
+        margin-top: 1.5em;
+        p { font-size:1.5em; }
+    }
+}
+
+#system_log_list{
+    text-align: center;
+    hr { width: 60% }
+    font-family: "BienalMono";
+}
+
+/////////////////
+// ACTIONS DETAIL
+/////////////////
+
 #action_nav {
     @extend %centralized_content;
 
@@ -118,6 +153,115 @@ hr {
     }
 }
 
+.carousel_wrapper {
+    text-align: center;
+    .no_images {
+        margin: 2em 0 2em 0;
+    }
+}
+
+#carousel_nav {
+    padding-bottom: 0.5em;
+
+    .title {
+        font-family: "BienalMono";
+    }
+
+    span {
+        margin-right: 2em;
+    }
+
+    .nav:hover {
+        cursor: pointer;
+    }
+
+    .active {
+        text-decoration: underline;
+    }
+}
+
+.carousel_wrapper {
+    border-top: $border_size solid $black;
+    border-bottom: $border_size solid $black;
+    overflow: hidden;
+}
+
+.carousel_element {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    .carousel_padding {
+        padding: 1em;
+        &:first-child {padding-left: 0}
+        &:last-child {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        @media only screen and (max-width: 64em) {
+            & { padding: 1em 0; }
+        }
+    }
+
+    .carousel_img {
+        img {
+            display: block;
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    .carousel_text {
+        @extend %centralized_content;
+
+        hr { width: 100%; }
+        p {margin: 0;}
+
+        .carousel_text_nav {
+          padding-bottom: 1em;
+          font-family: "BienalMono";
+
+          span { vertical-align: middle }
+
+          .nav_counter { font-size: .8rem }
+          .prev, .next {
+            font-size: 2.5rem;
+            cursor: pointer;
+          }
+        }
+    }
+
+    p.title {
+        font-family: "BienalMono";
+        margin-bottom: 0.6em;
+    }
+
+    .thumbnail {
+        max-width: 150px;
+        max-height: 120px;
+        padding: 0 0.25em 0 0.25em;
+    }
+}
+
+#year-filter {
+    text-align: center;
+
+    .years-list {
+        margin: 2em 0 2em 0;
+
+        p {
+            cursor: pointer;
+        }
+    }
+}
+
+////////
+// ABOUT
+////////
+
 #about_content {
     @extend %centralized_content;
 
@@ -129,6 +273,10 @@ hr {
         margin-top: 0em;
     }
 }
+
+//////////
+// CONTACT
+//////////
 
 #contact_session {
     @extend %centralized_content;
@@ -192,21 +340,9 @@ hr {
     }
 }
 
-.main_container{
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.container {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-.header_item {
-    text-align: center;
-}
+////////////////
+// MEDIA QUERIES
+////////////////
 
 @media only screen and (max-width: 64em) {
     .main_container{
@@ -229,63 +365,4 @@ hr {
             max-width: 100%;
         }
     }
-}
-
-.carousel_element {
-    display: none;
-
-    &.active {
-        display: block;
-    }
-
-    .carousel_padding {
-        padding: 1em;
-        &:first-child {padding-left: 0}
-        &:last-child {
-            padding-right: 0;
-            padding-left: 0;
-        }
-
-        @media only screen and (max-width: 64em) {
-            & { padding: 1em 0; }
-        }
-    }
-
-    .carousel_img {
-        img {
-            display: block;
-            width: 100%;
-        }
-    }
-
-    .carousel_text {
-        @extend %centralized_content;
-
-        hr { width: 100%; }
-        p {margin: 0;}
-
-        .carousel_text_nav {
-          padding-top: 1em;
-          font-family: "BienalMono";
-
-          span { vertical-align: middle }
-
-          .nav_counter { font-size: .8rem }
-          .prev, .next {
-            font-size: 2.5rem;
-            cursor: pointer;
-          }
-        }
-    }
-
-    p.title {
-        font-family: "BienalMono";
-        margin-bottom: 0.6em;
-    }
-}
-
-.carousel_wrapper {
-    border-top: $border_size solid $black;
-    border-bottom: $border_size solid $black;
-    overflow: hidden;
 }

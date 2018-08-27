@@ -67,11 +67,17 @@ class Action(models.Model):
     def has_carousel(self):
         return self.carousel.exists()
 
+    @property
+    def carousel_url(self):
+        if not self.has_carousel:
+            return ''
+        return reverse('action_carousel', args=[self.slug])
+
 
 class AnalyzedImage(models.Model):
     title = models.CharField(max_length=100, verbose_name=_("Nome"))
     author = models.CharField(max_length=100, verbose_name=_("Autor"))
-    date = models.DateField(verbose_name=_("Data"), auto_now_add=True)
+    date = models.DateField(verbose_name=_("Data"))
     action = models.ForeignKey(Action, related_name='carousel', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='carousel/', null=False, blank=False, verbose_name=_('Imagem'))
     info = YAMLField(default='', verbose_name=_('Resultados da Análise'))
@@ -93,6 +99,10 @@ class AnalyzedImage(models.Model):
     @property
     def category(self):
         return self.info.get('categoria') or ''
+
+    @property
+    def thumbnails(self):
+        return self.info.get('thumbnails') or []
 
 
 class Contact(models.Model):

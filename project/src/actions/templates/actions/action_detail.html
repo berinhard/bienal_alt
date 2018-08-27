@@ -20,11 +20,40 @@
 
     {% if action.has_carousel %}
     <div class="clearfix">
-        <div class="sm-col-12 md-col-8 mx-auto">
-            <div class="carousel_wrapper">
-            {% for analysis in action.carousel.all %}
-              {% include "actions/carousel_image.html" with counter=forloop.counter total=action.carousel.all|length %}
-            {% endfor %}
+        <div class="sm-col-12 md-col-11 mx-auto">
+            <hr/>
+            <div id="carousel_nav">
+                <span class='title'>VISUALIZAÇÃO</span>
+                <span url="{% url 'action_carousel' action.slug %}" class="nav refresh-carousel active">Cronológica</span>
+                <span url="{% url 'action_carousel' action.slug %}?order=random" class="nav refresh-carousel">Randômica</span>
+                <span id="year-filter-btn" class="nav">Filtrar por Edição</span>
+            </div>
+            <div id="image-carousel" url="{{action.carousel_url}}"></div>
+            <div id="year-filter" style="display: none">
+              <hr/>
+              <div class="years-list">
+                  {% for year, edition in editions_by_year %}
+                  <p url="{% url 'action_carousel' action.slug %}?year={{ year }}" class="bienal-year refresh-carousel">{{ year }} - {{ edition}} Bienal de São Paulo</p>
+                  {% endfor %}
+              </div>
+              <hr/>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix">
+        <div class="md-col-5 sm-col-12 mx-auto text_content">
+            <h3 class="mb0 mt3">Metodologia</h3>
+            <h5 class="m1 regular">(subjetiva, como qualquer metodologia)</h5>
+            <hr/>
+
+            <div>
+                <p>Os resultados das imagens da Bienal apresentados aqui seguiram um modo metodológico, que se utiliza de bases pretensamente tecnólogico-científicas, sempre na intenção de destacar os resultados mais inesperados. Estamos interessados nas respostas das Inteligências Artificiais que ampliam os significados das imagens e/ou revelam as categorias das estruturas dessas plataformas.</p>
+
+                <p>Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, visite <a href="https://testingdataviz.github.io/BienalArtDecoder" target="_blank">Bienal Art Decoder</a>, uma plataforma interna construída exclusivamente para o projeto, reunindo todos os resultados produzidos por diferentes Inteligências Artificiais a partir das imagens da mostra.</p>
+
+                <p>Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, provocativo, falsificação e violência – que segue a seguinte ordem: very likely > likely > possible > unlikely > very unlikely. Já o termo Safe To Work é uma expressão utilizada na internet para designar conteúdos adequados para serem vistos em público ou em locais de trabalho.</p>
+
             </div>
         </div>
     </div>

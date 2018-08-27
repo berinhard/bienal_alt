@@ -53,6 +53,7 @@ class ActionAdmin(admin.ModelAdmin):
     )
     prepopulated_fields = {'slug': ['title']}
     list_filter = ['questions', 'published']
+    search_fields = ['title']
 
     def show_preview_url(self, obj):
         return format_html("<a href='{url}' target='_blank'>{url}</a>", url=obj.preview_url)
