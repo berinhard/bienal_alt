@@ -20,7 +20,14 @@
 
     {% if action.has_carousel %}
     <div class="clearfix">
-        <div class="sm-col-12 md-col-8 mx-auto">
+        <div class="sm-col-12 md-col-11 mx-auto">
+            <hr/>
+            <div id="carousel_nav">
+                <span class='title'>VISUALIZAÇÃO</span>
+                <span><a href="#" class="active">Cronológica</a></span>
+                <span><a href="#">Randômica</a></span>
+                <span><a href="#">Filtrar por Edição</a></span>
+            </div>
             <div id="image-carousel" url="{{action.carousel_url}}"></div>
         </div>
     </div>

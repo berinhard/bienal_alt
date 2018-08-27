@@ -231,6 +231,28 @@ hr {
     }
 }
 
+#carousel_nav {
+    padding-bottom: 0.5em;
+
+    .title {
+        font-family: "BienalMono";
+    }
+
+    span {
+        margin-right: 2em;
+    }
+
+    .active {
+        text-decoration: underline;
+    }
+}
+
+.carousel_wrapper {
+    border-top: $border_size solid $black;
+    border-bottom: $border_size solid $black;
+    overflow: hidden;
+}
+
 .carousel_element {
     display: none;
 
@@ -284,8 +306,3 @@ hr {
     }
 }
 
-.carousel_wrapper {
-    border-top: $border_size solid $black;
-    border-bottom: $border_size solid $black;
-    overflow: hidden;
-}

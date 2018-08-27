@@ -147,6 +147,20 @@ hr {
 
   #actions_list .text_content {
     max-width: 100%; } }
+#carousel_nav {
+  padding-bottom: 0.5em; }
+  #carousel_nav .title {
+    font-family: "BienalMono"; }
+  #carousel_nav span {
+    margin-right: 2em; }
+  #carousel_nav .active {
+    text-decoration: underline; }
+
+.carousel_wrapper {
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  overflow: hidden; }
+
 .carousel_element {
   display: none; }
   .carousel_element.active {
@@ -181,10 +195,5 @@ hr {
   .carousel_element p.title {
     font-family: "BienalMono";
     margin-bottom: 0.6em; }
-
-.carousel_wrapper {
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
-  overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */
