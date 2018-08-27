@@ -57,6 +57,12 @@ hr {
     #actions_list .actions p {
       font-size: 1.5em; }
 
+#system_log_list {
+  text-align: center;
+  font-family: "BienalMono"; }
+  #system_log_list hr {
+    width: 60%; }
+
 .text_content, #action_nav, #about_content, #contact_session, .carousel_element .carousel_text {
   text-align: center; }
   .text_content hr, #action_nav hr, #about_content hr, #contact_session hr, .carousel_element .carousel_text hr {

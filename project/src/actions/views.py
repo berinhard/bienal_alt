@@ -1,11 +1,12 @@
+from django.contrib.admin.models import LogEntry
 from django.contrib.auth.decorators import login_required
 from django.forms.forms import NON_FIELD_ERRORS
 from django.forms.utils import ErrorList
+from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from django.views.generic import ListView, CreateView
-from django.http import Http404
 
 from src.actions.forms import ContactForm
 from src.actions.models import Action, QuestionTag, Contact
@@ -41,8 +42,11 @@ class ListActionsView(ListView):
 
     def get_context_data(self):
         context = super().get_context_data()
-        context['q'] = self.search_query
-        context['question_id'] = self.question_id
+        context.update({
+            'q': self.search_query,
+            'question_id': self.question_id,
+            'log_entry': LogEntry.objects.first(),
+        })
         if getattr(self, 'tag', None):
             context['question'] = self.tag
         return context
