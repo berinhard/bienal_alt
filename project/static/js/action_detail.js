@@ -24,14 +24,12 @@ var displayToNext = function(current){
     }
 }
 
-
 var refreshCarousel = function(url){
     $.get(url, displayCarousel);
 }
 
 
 var displayCarousel = function(data){
-    console.log('oh o pai');
     $(CAROUSEL_SELECTOR_ID).html(data)
 
     $(".carousel_text_nav .prev").click(function(){
