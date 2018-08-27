@@ -23,6 +23,11 @@ class AnalyzedImageAdminForm(forms.ModelForm):
     error_messages = {
         "info": _("Este campo precisa estar num formato YAML válido. Teste aqui http://www.yamllint.com/ para entender o erro e corrigí-lo.")
     }
+    info = forms.CharField(
+        widget=forms.Textarea(attrs={
+            'rows': 30,
+        })
+    )
 
     def clean_info(self):
         try:
