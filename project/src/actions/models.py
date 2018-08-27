@@ -100,6 +100,10 @@ class AnalyzedImage(models.Model):
     def category(self):
         return self.info.get('categoria') or ''
 
+    @property
+    def thumbnails(self):
+        return self.info.get('thumbnails') or []
+
 
 class Contact(models.Model):
     name = models.CharField(max_length=100, verbose_name=_('Nome'))

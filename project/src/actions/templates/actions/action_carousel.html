@@ -29,6 +29,14 @@
             <hr/>
             <p class="title">CONTEÚDO</p>
             <p>{{ analysis.category }}</p>
+            <hr/>
+            <p class="title">IMAGES SEMELHANTES</p>
+            <div class="overflow-auto">
+            {% for img_url in analysis.thumbnails %}
+              <img class='thumbnail align-middle' src="{{ img_url }}"/>
+            {% endfor %}
+            </div>
+            </div>
         </div>
     </div>
   </div>
