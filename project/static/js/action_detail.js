@@ -54,8 +54,9 @@ var resizeCarouselImageDimension = function(image){
     var width = image.width;
     var height = image.height;
     var is_landscape = width > height;
+    var has_min_diff = (width - height) > 150;
 
-    if (is_landscape){
+    if (is_landscape && has_min_diff){
         image.className = image.className + ' landscape';
     } else {
         image.className = image.className + ' portrait';
