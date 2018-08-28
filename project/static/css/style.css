@@ -133,10 +133,16 @@ hr {
     @media only screen and (max-width: 64em) {
       .carousel_element .carousel_padding {
         padding: 1em 0; } }
-  .carousel_element .carousel_img img {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.5em; }
+  .carousel_element .carousel_img {
+    text-align: center; }
+    .carousel_element .carousel_img .landscape {
+      width: 100%;
+      height: auto; }
+    .carousel_element .carousel_img .portrait {
+      height: 800px;
+      width: auto; }
+    .carousel_element .carousel_img .credits {
+      font-size: 0.8em; }
   .carousel_element .carousel_text hr {
     width: 100%; }
   .carousel_element .carousel_text p {

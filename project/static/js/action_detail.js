@@ -9,6 +9,8 @@ var getEnabled = function(){
 var hideAndDisplay = function(to_hide, to_display) {
     to_hide.removeClass('active');
     to_display.addClass('active');
+    var img = to_display.find('.carousel_image')[0];
+    resizeCarouselImageDimension(img);
 }
 
 var displayToPrevious = function(current){
@@ -43,6 +45,20 @@ var displayCarousel = function(data){
         var current = getEnabled();
         displayToNext(current);
     });
+}
+
+var resizeCarouselImageDimension = function(image){
+    var width = image.width;
+    var height = image.height;
+    console.log(width, height);
+    var is_landscape = width > height;
+
+    if (is_landscape){
+        image.className = image.className + ' landscape';
+    } else {
+        image.className = image.className + ' portrait';
+    }
+
 }
 
 $(document).ready(function(){
