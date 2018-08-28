@@ -39,7 +39,7 @@ class ActionAdmin(admin.ModelAdmin):
     change_form_template = 'admin/actions_action_change_form.html'
     fieldsets = (
         (None, {
-            'fields': ('title', 'body', 'questions', 'action_date', 'slug', 'published'),
+            'fields': ('title', 'body', 'questions', 'slug', 'published'),
             'classes': ('suit-tab', 'suit-tab-acao',),
         }),
         (_('Avançados'), {
