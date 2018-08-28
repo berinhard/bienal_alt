@@ -74,7 +74,8 @@ hr {
     width: 40%; }
   #actions_list h2 {
     line-height: 1rem;
-    font-size: 1.85rem; }
+    font-size: 1.85rem;
+    padding-top: 1em; }
   #actions_list .actions {
     font-size: 1.25rem;
     line-height: 1.35rem;
