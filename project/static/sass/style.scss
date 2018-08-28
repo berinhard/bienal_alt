@@ -95,8 +95,8 @@ hr {
 }
 
 .main_container{
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -133,7 +133,10 @@ hr {
 
 #system_log_list{
     text-align: center;
-    hr { width: 60% }
+    hr {
+      width: 60%;
+      margin-bottom: 1.5em;
+    }
     font-family: "BienalMono";
 }
 
@@ -143,6 +146,11 @@ hr {
 
 #action_nav {
     @extend %centralized_content;
+    padding-top: 1.5em;
+
+    hr {
+        margin-top: 1.2em;
+    }
 
     a {
         font-size: 0.9em;
@@ -207,10 +215,20 @@ hr {
     }
 
     .carousel_img {
-        img {
-            display: block;
+        text-align: center;
+
+        .landscape {
             width: 100%;
-            margin-bottom: 0.5em;
+            height: auto;
+        }
+
+        .portrait {
+            height: 800px;
+            width: auto;
+        }
+
+        .credits {
+            font-size: 0.8em;
         }
     }
 
@@ -265,12 +283,33 @@ hr {
 #about_content {
     @extend %centralized_content;
 
+    hr {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
     h4 {
         margin-bottom: 0px;
     }
 
     .profile {
         margin-top: 0em;
+    }
+
+    .ampliado {
+        text-decoration: underline;
+    }
+
+    .intro {
+        font-style: italic;
+    }
+
+    .question {
+        font-weight: bold;
+    }
+
+    .answer {
+        label{font-weight: bold;}
     }
 }
 

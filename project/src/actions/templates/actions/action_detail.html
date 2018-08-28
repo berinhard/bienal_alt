@@ -7,9 +7,8 @@
 
 {% block content %}
     <div class="clearfix">
-        <div class="md-col-5 sm-col-12 mx-auto text_content">
-            <h3 class="mb0 mt4">{{ action.title }}</h3>
-            <h5 class="m1 regular">{{ action.action_date|date:"F o" }}</h5>
+        <div class="mt4 md-col-5 sm-col-12 mx-auto text_content">
+            <h2>{{ action.title }}</h2>
             <hr/>
 
             <div>
@@ -33,7 +32,7 @@
               <hr/>
               <div class="years-list">
                   {% for year, edition in editions_by_year %}
-                  <p url="{% url 'action_carousel' action.slug %}?year={{ year }}" class="bienal-year refresh-carousel">{{ year }} - {{ edition}} Bienal de São Paulo</p>
+                  <p url="{% url 'action_carousel' action.slug %}?year={{ year }}" class="bienal-year refresh-carousel">{{ year }} - {{ edition}}ª Bienal de São Paulo</p>
                   {% endfor %}
               </div>
               <hr/>
@@ -43,8 +42,7 @@
 
     <div class="clearfix">
         <div class="md-col-5 sm-col-12 mx-auto text_content">
-            <h3 class="mb0 mt3">Metodologia</h3>
-            <h5 class="m1 regular">(subjetiva, como qualquer metodologia)</h5>
+            <h3 class="mb2 mt3">Metodologia</h3>
             <hr/>
 
             <div>
@@ -52,7 +50,7 @@
 
                 <p>Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, visite <a href="https://testingdataviz.github.io/BienalArtDecoder" target="_blank">Bienal Art Decoder</a>, uma plataforma interna construída exclusivamente para o projeto, reunindo todos os resultados produzidos por diferentes Inteligências Artificiais a partir das imagens da mostra.</p>
 
-                <p>Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, provocativo, falsificação e violência – que segue a seguinte ordem: very likely > likely > possible > unlikely > very unlikely. Já o termo Safe To Work é uma expressão utilizada na internet para designar conteúdos adequados para serem vistos em público ou em locais de trabalho.</p>
+                <p>Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, provocativo, falsificação e violência – que segue a seguinte ordem: provável&gt; provável&gt; possível&gt; improvável&gt; muito improvável. Já o termo Seguro para trabalhar é uma expressão utilizada na internet para designar conteúdos adequados para serem vistos em público.</p>
 
             </div>
         </div>
@@ -61,7 +59,7 @@
 
     <div class="clearfix">
         <div class="md-col-5 sm-col-12 mx-auto" id="action_nav">
-            <h3 class="mb0 mt3">Questões Relacionadas</h3>
+            <h3 class="mb0 mt2">Questões Relacionadas</h3>
             <hr/>
             {% for question in action.questions.all %}
               <p class="nav_link_container"><span>- </span><a href="{{ question.filter_url }}">{{ question.title|upper }}</a></p>

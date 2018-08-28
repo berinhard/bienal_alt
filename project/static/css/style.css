@@ -56,8 +56,8 @@ hr {
       text-decoration: underline; }
 
 .main_container {
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
@@ -86,12 +86,17 @@ hr {
   text-align: center;
   font-family: "BienalMono"; }
   #system_log_list hr {
-    width: 60%; }
+    width: 60%;
+    margin-bottom: 1.5em; }
 
-#action_nav a {
-  font-size: 0.9em; }
-#action_nav p, #action_nav span {
-  font-family: "BienalMono"; }
+#action_nav {
+  padding-top: 1.5em; }
+  #action_nav hr {
+    margin-top: 1.2em; }
+  #action_nav a {
+    font-size: 0.9em; }
+  #action_nav p, #action_nav span {
+    font-family: "BienalMono"; }
 
 .carousel_wrapper {
   text-align: center; }
@@ -128,10 +133,16 @@ hr {
     @media only screen and (max-width: 64em) {
       .carousel_element .carousel_padding {
         padding: 1em 0; } }
-  .carousel_element .carousel_img img {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.5em; }
+  .carousel_element .carousel_img {
+    text-align: center; }
+    .carousel_element .carousel_img .landscape {
+      width: 100%;
+      height: auto; }
+    .carousel_element .carousel_img .portrait {
+      height: 800px;
+      width: auto; }
+    .carousel_element .carousel_img .credits {
+      font-size: 0.8em; }
   .carousel_element .carousel_text hr {
     width: 100%; }
   .carousel_element .carousel_text p {
@@ -161,10 +172,21 @@ hr {
     #year-filter .years-list p {
       cursor: pointer; }
 
+#about_content hr {
+  margin-top: 1em;
+  margin-bottom: 1em; }
 #about_content h4 {
   margin-bottom: 0px; }
 #about_content .profile {
   margin-top: 0em; }
+#about_content .ampliado {
+  text-decoration: underline; }
+#about_content .intro {
+  font-style: italic; }
+#about_content .question {
+  font-weight: bold; }
+#about_content .answer label {
+  font-weight: bold; }
 
 #contact_session hr {
   width: 100%; }
