@@ -44,6 +44,7 @@ class AnalyzedImageAdminForm(forms.ModelForm):
             'rows': 30,
         }),
         initial=default_yaml,
+        label='Info (EN)'
     )
 
     def validate_yaml(self, field):
