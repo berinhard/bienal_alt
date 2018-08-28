@@ -17,8 +17,8 @@ a {
 
 header {
   font-weight: bold;
-  line-height: 1.5em;
-  font-size: 1.25em; }
+  line-height: 1.5rem;
+  font-size: 1.25rem; }
   header a:hover {
     padding-bottom: 0.4em;
     border-bottom: 1px solid #111; }
@@ -29,13 +29,13 @@ header {
     border-color: transparent;
     border-bottom: 1px solid #111;
     margin: 0;
-    font-size: 1em;
+    font-size: 1rem;
     width: 60%; }
   header #id_question {
     border: 1px solid #111;
     background: transparent;
     width: 70%;
-    font-size: 1em; }
+    font-size: 1rem; }
 
 hr {
   border-top: 1px solid #111; }
@@ -48,8 +48,8 @@ hr {
   .text_content hr, #action_nav hr, .carousel_element .carousel_text hr, #about_content hr, #contact_session hr {
     width: 15%; }
   .text_content p, #action_nav p, .carousel_element .carousel_text p, #about_content p, #contact_session p, .text_content span, #action_nav span, .carousel_element .carousel_text span, #about_content span, #contact_session span {
-    font-size: 1em;
-    line-height: 1.6em; }
+    font-size: 1rem;
+    line-height: 1.6rem; }
   .text_content a, #action_nav a, .carousel_element .carousel_text a, #about_content a, #contact_session a {
     text-decoration: underline; }
     .text_content a:link, #action_nav a:link, .carousel_element .carousel_text a:link, #about_content a:link, #contact_session a:link, .text_content a:visited, #action_nav a:visited, .carousel_element .carousel_text a:visited, #about_content a:visited, #contact_session a:visited {
@@ -73,14 +73,14 @@ hr {
   #actions_list hr {
     width: 40%; }
   #actions_list h2 {
-    line-height: 1em;
+    line-height: 1rem;
     font-size: 1.85rem; }
   #actions_list .actions {
     font-size: 1.25rem;
     line-height: 1.35rem;
     margin-top: 1.5em; }
     #actions_list .actions p {
-      font-size: 1.5em; }
+      font-size: 1.5rem; }
 
 #system_log_list {
   text-align: center;
@@ -94,7 +94,7 @@ hr {
   #action_nav hr {
     margin-top: 1.2em; }
   #action_nav a {
-    font-size: 0.9em; }
+    font-size: 0.9rem; }
   #action_nav p, #action_nav span {
     font-family: "BienalMono"; }
 
@@ -142,7 +142,7 @@ hr {
       height: 800px;
       width: auto; }
     .carousel_element .carousel_img .credits {
-      font-size: 0.8em; }
+      font-size: 0.8rem; }
   .carousel_element .carousel_text hr {
     width: 100%; }
   .carousel_element .carousel_text p {
@@ -210,20 +210,20 @@ hr {
   display: inline-block;
   cursor: pointer; }
 #contact_session label {
-  line-height: 1.25em;
-  font-size: 0.9em;
+  line-height: 1.25rem;
+  font-size: 0.9rem;
   font-family: "BienalMono";
   margin-bottom: 1em;
   display: block; }
 #contact_session label[for="id_upload"] {
-  line-height: 1.25em;
-  font-size: 0.9em;
+  line-height: 1.25rem;
+  font-size: 0.9rem;
   border-bottom: 1px solid #111;
   display: inline-block;
   cursor: pointer; }
 #contact_session label[id="submit_button"] {
-  line-height: 1.25em;
-  font-size: 0.9em;
+  line-height: 1.25rem;
+  font-size: 0.9rem;
   margin-top: 1em;
   border-bottom: 1px solid #111;
   display: inline-block;
