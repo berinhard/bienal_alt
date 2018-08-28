@@ -72,7 +72,7 @@ class ActionAdmin(admin.ModelAdmin):
             obj.save()
             self.message_user(
                 request,
-                'A ação "{}" foi salva e publicada com sucesso!'.format(obj.title),
+                _('A ação "{}" foi salva e publicada com sucesso!').format(obj.title),
                 messages.SUCCESS
             )
             return HttpResponseRedirect(reverse('admin:actions_action_changelist'))

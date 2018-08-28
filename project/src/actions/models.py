@@ -77,7 +77,7 @@ class AnalyzedImage(models.Model):
     title = models.CharField(max_length=100, verbose_name=_("Nome"))
     author = models.CharField(max_length=100, verbose_name=_("Autor"))
     date = models.DateField(verbose_name=_("Data"))
-    action = models.ForeignKey(Action, related_name='carousel', on_delete=models.CASCADE)
+    action = models.ForeignKey(Action, related_name='carousel', on_delete=models.CASCADE, verbose_name=_('Ação'))
     image = models.ImageField(upload_to='carousel/', null=False, blank=False, verbose_name=_('Imagem'))
     info = YAMLField(default='', verbose_name=_('Resultados da Análise'))
     order = models.PositiveIntegerField(verbose_name=_('Posição'))

@@ -52,7 +52,7 @@ class AnalyzedImageAdminForm(forms.ModelForm):
 
 
 class ContactForm(forms.ModelForm):
-    accept_file_upload = forms.BooleanField(required=False, label='Autorizo o uso do arquivo enviado para ser usado exclusivamente nas ações do Outra 33ª Bienal de São Paulo. O projeto se compromete a não utilizar os arquivos para outros fins, que não o da pesquisa artística.')
+    accept_file_upload = forms.BooleanField(required=False, label=_('Autorizo o uso do arquivo enviado para ser usado exclusivamente nas ações do Outra 33ª Bienal de São Paulo. O projeto se compromete a não utilizar os arquivos para outros fins, que não o da pesquisa artística.'))
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -67,7 +67,7 @@ class ContactForm(forms.ModelForm):
         accepted = cleaned_data.get('accept_file_upload')
 
         if upload and not accepted:
-            raise forms.ValidationError('É necessário autorização para enviar o arquivo.')
+            raise forms.ValidationError(_('É necessário autorização para enviar o arquivo.'))
         return cleaned_data
 
     class Meta:
