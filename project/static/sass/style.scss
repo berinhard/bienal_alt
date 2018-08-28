@@ -133,7 +133,10 @@ hr {
 
 #system_log_list{
     text-align: center;
-    hr { width: 60% }
+    hr {
+      width: 60%;
+      margin-bottom: 1.5em;
+    }
     font-family: "BienalMono";
 }
 
@@ -143,6 +146,11 @@ hr {
 
 #action_nav {
     @extend %centralized_content;
+    padding-top: 1.5em;
+
+    hr {
+        margin-top: 1.2em;
+    }
 
     a {
         font-size: 0.9em;

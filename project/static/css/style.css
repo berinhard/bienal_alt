@@ -86,12 +86,17 @@ hr {
   text-align: center;
   font-family: "BienalMono"; }
   #system_log_list hr {
-    width: 60%; }
+    width: 60%;
+    margin-bottom: 1.5em; }
 
-#action_nav a {
-  font-size: 0.9em; }
-#action_nav p, #action_nav span {
-  font-family: "BienalMono"; }
+#action_nav {
+  padding-top: 1.5em; }
+  #action_nav hr {
+    margin-top: 1.2em; }
+  #action_nav a {
+    font-size: 0.9em; }
+  #action_nav p, #action_nav span {
+    font-family: "BienalMono"; }
 
 .carousel_wrapper {
   text-align: center; }
