@@ -37,6 +37,9 @@ var displayCarousel = function(data){
     $(CAROUSEL_SELECTOR_ID).show()
     $(YEAR_FILTER_ID).hide()
 
+    var first = $('div[data-position="1"]');
+    hideAndDisplay(first, first)
+
     $(".carousel_text_nav .prev").click(function(){
         var current = getEnabled();
         displayToPrevious(current);
