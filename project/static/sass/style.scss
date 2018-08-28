@@ -283,12 +283,33 @@ hr {
 #about_content {
     @extend %centralized_content;
 
+    hr {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
     h4 {
         margin-bottom: 0px;
     }
 
     .profile {
         margin-top: 0em;
+    }
+
+    .ampliado {
+        text-decoration: underline;
+    }
+
+    .intro {
+        font-style: italic;
+    }
+
+    .question {
+        font-weight: bold;
+    }
+
+    .answer {
+        label{font-weight: bold;}
     }
 }
 

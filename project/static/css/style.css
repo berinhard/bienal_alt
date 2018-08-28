@@ -172,10 +172,21 @@ hr {
     #year-filter .years-list p {
       cursor: pointer; }
 
+#about_content hr {
+  margin-top: 1em;
+  margin-bottom: 1em; }
 #about_content h4 {
   margin-bottom: 0px; }
 #about_content .profile {
   margin-top: 0em; }
+#about_content .ampliado {
+  text-decoration: underline; }
+#about_content .intro {
+  font-style: italic; }
+#about_content .question {
+  font-weight: bold; }
+#about_content .answer label {
+  font-weight: bold; }
 
 #contact_session hr {
   width: 100%; }
