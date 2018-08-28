@@ -21,19 +21,25 @@ class ActionAdminForm(forms.ModelForm):
 
 class AnalyzedImageAdminForm(forms.ModelForm):
     error_messages = {
-        "info": _("Este campo precisa estar num formato YAML válido. Teste aqui http://www.yamllint.com/ para entender o erro e corrigí-lo.")
+        "info": _("Este campo precisa estar num formato YAML válido. Teste aqui http://www.yamllint.com/ para entender o erro e corrigí-lo."),
+        "info_en": _("Este campo precisa estar num formato YAML válido. Teste aqui http://www.yamllint.com/ para entender o erro e corrigí-lo."),
     }
     info = forms.CharField(
         widget=forms.Textarea(attrs={
             'rows': 30,
         })
     )
+    info = forms.CharField(
+        widget=forms.Textarea(attrs={
+            'rows': 30,
+        })
+    )
 
-    def clean_info(self):
+    def validate_yaml(self, field):
         try:
-            info = yaml.load(self.cleaned_data['info'])
+            info = yaml.load(self.cleaned_data[field])
             if not isinstance(info, dict):
-                raise forms.ValidationError(self.error_messages['info'])
+                raise forms.ValidationError(self.error_messages[field])
 
             msg = _("Está faltando o campo: {}")
             if 'analise' not in info:
@@ -43,8 +49,14 @@ class AnalyzedImageAdminForm(forms.ModelForm):
             if 'categoria' not in info:
                 raise forms.ValidationError(msg.format('categoria'))
         except (yaml.scanner.ScannerError, yaml.parser.ParserError):
-            raise forms.ValidationError(self.error_messages['info'])
+            raise forms.ValidationError(self.error_messages[field])
         return info
+
+    def clean_info(self):
+        return self.validate_yaml('info')
+
+    def clean_info_en(self):
+        return self.validate_yaml('info_en')
 
     class Meta:
         model = AnalyzedImage
