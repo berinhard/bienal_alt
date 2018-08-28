@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <div class="carousel_wrapper">
   {% for analysis in images_analyses %}
@@ -16,21 +17,21 @@
         </div>
         <hr/>
         <div class="carousel_text_content">
-            <p class="title">IMAGEM</p>
+            <p class="title">{% trans "IMAGEM" %}</p>
             <p>{{ analysis.title }}</p>
             <hr/>
-            <p class="title">ANÁLISE</p>
+            <p class="title">{% trans "ANÁLISE" %}</p>
             {% for text in analysis.analysis %}
               <p>{{ text }}</p>
             {% endfor %}
             <hr/>
-            <p class="title">PRODUTOS</p>
+            <p class="title">{% trans "PRODUTOS" %}</p>
             <p>{{ analysis.products|join:", " }}</p>
             <hr/>
-            <p class="title">CONTEÚDO</p>
+            <p class="title">{% trans "CONTEÚDO" %}</p>
             <p>{{ analysis.category }}</p>
             <hr/>
-            <p class="title">IMAGENS SEMELHANTES</p>
+            <p class="title">{% trans "IMAGENS SEMELHANTES" %}</p>
             <div class="overflow-auto">
               {% for img_url in analysis.thumbnails %}
                 <img class='thumbnail align-middle' src="{{ img_url }}"/>
@@ -41,7 +42,7 @@
   </div>
   {% endwith %}
   {% empty %}
-    <p class="no_images">Não foram encontradas imagens para a busca selecionada.</p>
+  <p class="no_images">{% trans "Não foram encontradas imagens para a busca selecionada." %}</p>
   {% endfor %}
 </div>
 

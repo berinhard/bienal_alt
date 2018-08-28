@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
 <div class="clearfix">
@@ -10,7 +11,7 @@
             <p>{{ question.description }}</p>
         </div>
         {% else %}
-        <h2>Ações</h2>
+        <h2>{% trans "Ações" %}</h2>
         {% endif %}
         <hr/>
 
@@ -23,8 +24,8 @@
 
     <div class="md-col-6 sm-col-12 mx-auto" id="system_log_list">
         <hr/>
-        <p>ESTE PROJETO ESTÁ EM CONSTANTE ATUALIZAÇÃO</p>
-        <p>ÚLTIMO UPDATE: {{ log_entry.action_time|date:"d.m.Y" }}</p>
+        <p>{% trans "ESTE PROJETO ESTÁ EM CONSTANTE ATUALIZAÇÃO" %}</p>
+        <p>{% trans "ÚLTIMO UPDATE" %}: {{ log_entry.action_time|date:"d.m.Y" }}</p>
     </div>
 </div>
 
