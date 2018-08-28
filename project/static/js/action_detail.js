@@ -53,7 +53,6 @@ var displayCarousel = function(data){
 var resizeCarouselImageDimension = function(image){
     var width = image.width;
     var height = image.height;
-    console.log(width, height);
     var is_landscape = width > height;
 
     if (is_landscape){
