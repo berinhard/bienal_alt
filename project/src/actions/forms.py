@@ -19,6 +19,15 @@ class ActionAdminForm(forms.ModelForm):
         fields = '__all__'
 
 
+default = {
+    'analise': [],
+    'produtos': [],
+    'categoria': '',
+    'thumbnails': []
+}
+default_yaml = yaml.dump(default)
+
+
 class AnalyzedImageAdminForm(forms.ModelForm):
     error_messages = {
         "info": _("Este campo precisa estar num formato YAML válido. Teste aqui http://www.yamllint.com/ para entender o erro e corrigí-lo."),
@@ -27,12 +36,14 @@ class AnalyzedImageAdminForm(forms.ModelForm):
     info = forms.CharField(
         widget=forms.Textarea(attrs={
             'rows': 30,
-        })
+        }),
+        initial=default_yaml,
     )
-    info = forms.CharField(
+    info_en = forms.CharField(
         widget=forms.Textarea(attrs={
             'rows': 30,
-        })
+        }),
+        initial=default_yaml,
     )
 
     def validate_yaml(self, field):

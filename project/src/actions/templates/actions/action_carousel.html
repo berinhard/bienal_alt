@@ -7,7 +7,11 @@
   <div class="carousel_element" data-position="{{ counter }}">
     <div class="sm-col md-col-8 sm-col-12 carousel_img carousel_padding">
         <img class="carousel_image" src="{{ analysis.image.url }}" alt="{{ analysis.title }}" title="{{ analysis.title }}"/>
+        {% if analysis.date.year == 2018 %}
         <p class='credits'>{{ analysis.author }}. {{ analysis.date|date:"d.m.Y" }}<p>
+        {% else %}
+        <p class='credits'>{{ analysis.author }}. {{ analysis.date|date:"Y" }}<p>
+        {% endif %}
     </div>
     <div class="sm-col md-col-4 sm-col-12 carousel_padding carousel_text">
         <div class="carousel_text_nav">
