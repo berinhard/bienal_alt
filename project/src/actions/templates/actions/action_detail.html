@@ -27,7 +27,9 @@
                 <span class='title'>{% trans "VISUALIZAÇÃO" %}</span>
                 <span url="{% url 'action_carousel' action.slug %}" class="nav refresh-carousel active">{% trans "Cronológica" %}</span>
                 <span url="{% url 'action_carousel' action.slug %}?order=random" class="nav refresh-carousel">{% trans "Randômica" %}</span>
-                <span id="year-filter-btn" class="nav">{% trans "Filtrar por Edição" %}</span>
+                {% if action.enable_year_filtering %}
+                  <span id="year-filter-btn" class="nav">{% trans "Filtrar por Edição" %}</span>
+                {% endif %}
             </div>
             <div id="image-carousel" url="{{action.carousel_url}}"></div>
             <div id="year-filter" style="display: none">

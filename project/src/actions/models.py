@@ -71,6 +71,11 @@ class Action(models.Model):
         return self.carousel.exists()
 
     @property
+    def enable_year_filtering(self):
+        years = set(d.year for d in self.carousel.values_list('date', flat=True))
+        return self.has_carousel and len(years) > 1
+
+    @property
     def carousel_url(self):
         if not self.has_carousel:
             return ''
