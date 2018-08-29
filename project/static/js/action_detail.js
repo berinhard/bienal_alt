@@ -11,30 +11,29 @@ var hideAndDisplay = function(to_hide, to_display) {
     to_display.addClass('active');
     var img = to_display.find('.carousel_image')[0];
     resizeCarouselImageDimension(img);
+    location.href = '#' + to_display.attr('id');
 }
 
 var displayToPrevious = function(current){
-    var prev = current.prev();
-    if (prev.length) {
-        hideAndDisplay(current, prev)
-    }
+    displayTo(current, current.prev());
 }
 
 var displayToNext = function(current){
-    var next = current.next();
+    displayTo(current, current.next());
+}
+
+var displayTo = function(current, next){
     if (next.length) {
-        hideAndDisplay(current, next)
+        hideAndDisplay(current, next);
     }
 }
 
 var previous = function(){
-    console.log('prev');
     var current = getEnabled();
     displayToPrevious(current);
 };
 
 var next = function(){
-    console.log('next');
     var current = getEnabled();
     displayToNext(current);
 };
@@ -49,8 +48,21 @@ var displayCarousel = function(data){
     $(CAROUSEL_SELECTOR_ID).show()
     $(YEAR_FILTER_ID).hide()
 
+    url = location.href
+    var hash = url.substring(url.indexOf("#") + 1);
     var first = $('div[data-position="1"]');
-    hideAndDisplay(first, first)
+
+    if (hash.length && hash != url) {
+        hash = '#' + hash
+        var current = $(hash);
+        if (current.length >= 1) {
+            hideAndDisplay(current, current)
+        } else {
+            hideAndDisplay(first, first)
+        }
+    } else {
+        hideAndDisplay(first, first)
+    }
 
     $(".carousel_text_nav .prev").click(function(){previous();});
     $(".carousel_text_nav .next").click(function(){next();});
@@ -61,7 +73,6 @@ var displayCarousel = function(data){
       if(e.keyCode == 37) {previous();}
       // right
       else if(e.keyCode == 39) {next();}
-      e.preventDefault();
     });
 }
 

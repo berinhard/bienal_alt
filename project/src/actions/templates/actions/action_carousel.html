@@ -5,7 +5,7 @@
 <div class="carousel_wrapper">
   {% for analysis in images_analyses %}
   {% with counter=forloop.counter %}
-  <div class="carousel_element" data-position="{{ counter }}">
+  <div class="carousel_element" data-position="{{ counter }}" id="img-{{ analysis.id }}">
     <div class="sm-col md-col-8 sm-col-12 carousel_img carousel_padding">
         <img class="carousel_image" src="{{ analysis.image.url }}" alt="{% trans_field analysis "title" LANGUAGE_CODE %}" title="{% trans_field analysis "title" LANGUAGE_CODE %}"/>
         {% if analysis.date.year == 2018 %}
