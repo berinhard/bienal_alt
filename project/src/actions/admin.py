@@ -19,7 +19,7 @@ class QuestionTagAdmin(admin.ModelAdmin):
 
 class AnalyzedImageInline(admin.StackedInline):
     model = AnalyzedImage
-    extra = 1
+    extra = 0
     suit_classes = 'suit-tab suit-tab-carousel'
     form = AnalyzedImageAdminForm
     exclude = ['order']
