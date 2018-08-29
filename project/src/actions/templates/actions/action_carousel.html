@@ -1,12 +1,18 @@
 {% load static %}
+{% load i18n %}
+{% load content_translation %}
 
 <div class="carousel_wrapper">
   {% for analysis in images_analyses %}
   {% with counter=forloop.counter %}
   <div class="carousel_element" data-position="{{ counter }}">
     <div class="sm-col md-col-8 sm-col-12 carousel_img carousel_padding">
-        <img class="carousel_image" src="{{ analysis.image.url }}" alt="{{ analysis.title }}" title="{{ analysis.title }}"/>
+        <img class="carousel_image" src="{{ analysis.image.url }}" alt="{% trans_field analysis "title" LANGUAGE_CODE %}" title="{% trans_field analysis "title" LANGUAGE_CODE %}"/>
+        {% if analysis.date.year == 2018 %}
         <p class='credits'>{{ analysis.author }}. {{ analysis.date|date:"d.m.Y" }}<p>
+        {% else %}
+        <p class='credits'>{{ analysis.author }}. {{ analysis.date|date:"Y" }}<p>
+        {% endif %}
     </div>
     <div class="sm-col md-col-4 sm-col-12 carousel_padding carousel_text">
         <div class="carousel_text_nav">
@@ -16,21 +22,35 @@
         </div>
         <hr/>
         <div class="carousel_text_content">
-            <p class="title">IMAGEM</p>
-            <p>{{ analysis.title }}</p>
+            <p class="title">{% trans "IMAGEM" %}</p>
+            <p>{% trans_field analysis "title" LANGUAGE_CODE %}</p>
             <hr/>
-            <p class="title">ANÁLISE</p>
-            {% for text in analysis.analysis %}
-              <p>{{ text }}</p>
-            {% endfor %}
+
+            {% if LANGUAGE_CODE == 'en' %}
+              <p class="title">{% trans "ANÁLISE" %}</p>
+              {% for text in analysis.analysis_en %}
+                <p>{{ text }}</p>
+              {% endfor %}
+              <hr/>
+              <p class="title">{% trans "PRODUTOS" %}</p>
+              <p>{{ analysis.products_en|join:", " }}</p>
+              <hr/>
+              <p class="title">{% trans "CONTEÚDO" %}</p>
+              <p>{{ analysis.category_en }}</p>
+            {% else %}
+              <p class="title">{% trans "ANÁLISE" %}</p>
+              {% for text in analysis.analysis %}
+                <p>{{ text }}</p>
+              {% endfor %}
+              <hr/>
+              <p class="title">{% trans "PRODUTOS" %}</p>
+              <p>{{ analysis.products|join:", " }}</p>
+              <hr/>
+              <p class="title">{% trans "CONTEÚDO" %}</p>
+              <p>{{ analysis.category }}</p>
+            {% endif %}
             <hr/>
-            <p class="title">PRODUTOS</p>
-            <p>{{ analysis.products|join:", " }}</p>
-            <hr/>
-            <p class="title">CONTEÚDO</p>
-            <p>{{ analysis.category }}</p>
-            <hr/>
-            <p class="title">IMAGENS SEMELHANTES</p>
+            <p class="title">{% trans "IMAGENS SEMELHANTES" %}</p>
             <div class="overflow-auto">
               {% for img_url in analysis.thumbnails %}
                 <img class='thumbnail align-middle' src="{{ img_url }}"/>
@@ -41,7 +61,7 @@
   </div>
   {% endwith %}
   {% empty %}
-    <p class="no_images">Não foram encontradas imagens para a busca selecionada.</p>
+  <p class="no_images">{% trans "Não foram encontradas imagens para a busca selecionada." %}</p>
   {% endfor %}
 </div>
 

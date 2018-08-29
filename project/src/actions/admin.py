@@ -4,8 +4,6 @@ from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import gettext as _
 
-from suit.admin import SortableTabularInline
-
 from src.actions.forms import ActionAdminForm, AnalyzedImageAdminForm
 from src.actions.models import QuestionTag, Action, Contact, AnalyzedImage
 
@@ -19,12 +17,12 @@ class QuestionTagAdmin(admin.ModelAdmin):
         return False
 
 
-class AnalyzedImageInline(SortableTabularInline):
+class AnalyzedImageInline(admin.StackedInline):
     model = AnalyzedImage
-    sortable = 'order'
-    extra = 1
+    extra = 0
     suit_classes = 'suit-tab suit-tab-carousel'
     form = AnalyzedImageAdminForm
+    exclude = ['order']
 
 
 class ActionAdmin(admin.ModelAdmin):
@@ -39,7 +37,7 @@ class ActionAdmin(admin.ModelAdmin):
     change_form_template = 'admin/actions_action_change_form.html'
     fieldsets = (
         (None, {
-            'fields': ('title', 'body', 'questions', 'slug', 'published'),
+            'fields': ('title', 'title_en', 'body', 'body_en', 'questions', 'slug', 'published'),
             'classes': ('suit-tab', 'suit-tab-acao',),
         }),
         (_('Avançados'), {
@@ -47,7 +45,7 @@ class ActionAdmin(admin.ModelAdmin):
             'fields': ('custom_css', 'js_code', 'extra_head'),
         }),
         (_('Carrossel de Imagens'), {
-            'classes': ('suit-tab', 'suit-tab-carousel',),
+            'classes': ('suit-tab', 'suit-tab-carousel', 'collapse',),
             'fields': []
         })
     )
@@ -72,7 +70,7 @@ class ActionAdmin(admin.ModelAdmin):
             obj.save()
             self.message_user(
                 request,
-                'A ação "{}" foi salva e publicada com sucesso!'.format(obj.title),
+                _('A ação "{}" foi salva e publicada com sucesso!').format(obj.title),
                 messages.SUCCESS
             )
             return HttpResponseRedirect(reverse('admin:actions_action_changelist'))

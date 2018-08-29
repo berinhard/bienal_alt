@@ -7,8 +7,10 @@ from yamlfield.fields import YAMLField
 
 
 class QuestionTag(models.Model):
-    title = models.CharField(max_length=50, verbose_name=_("Texto da pergunta"))
+    title = models.CharField(max_length=100, verbose_name=_("Pergunta"))
     description = models.TextField(default='', verbose_name=_("Descrição"))
+    title_en = models.CharField(max_length=100, verbose_name=_("Pergunta (EN)"), default='', blank=True)
+    description_en = models.TextField(default='', verbose_name=_("Descrição (EN)"), blank=True)
 
     class Meta:
         verbose_name = _('Pergunta')
@@ -39,7 +41,9 @@ class Action(models.Model):
 
     slug = models.SlugField(max_length=100, unique=True, verbose_name=_('Slug'))
     title = models.CharField(max_length=100, verbose_name=_("Título"))
-    body = HTMLField()
+    title_en = models.CharField(max_length=100, verbose_name=_("Título (EN)"), blank=True)
+    body = HTMLField(verbose_name=(_("Conteúdo")))
+    body_en = HTMLField(verbose_name=(_("Conteúdo (EN)")), default='', blank=True)
     js_code = models.TextField(blank=True, default='', verbose_name=_('Código Javascript'))
     custom_css = models.TextField(blank=True, default='', verbose_name=_('CSS Customizado'))
     extra_head = models.TextField(blank=True, default='', verbose_name=_('Extra head'))
@@ -75,12 +79,14 @@ class Action(models.Model):
 
 class AnalyzedImage(models.Model):
     title = models.CharField(max_length=100, verbose_name=_("Nome"))
+    title_en = models.CharField(max_length=100, verbose_name=_("Nome (EN)"), default='', blank=True)
     author = models.CharField(max_length=100, verbose_name=_("Autor"))
     date = models.DateField(verbose_name=_("Data"))
-    action = models.ForeignKey(Action, related_name='carousel', on_delete=models.CASCADE)
+    action = models.ForeignKey(Action, related_name='carousel', on_delete=models.CASCADE, verbose_name=_('Ação'))
     image = models.ImageField(upload_to='carousel/', null=False, blank=False, verbose_name=_('Imagem'))
     info = YAMLField(default='', verbose_name=_('Resultados da Análise'))
-    order = models.PositiveIntegerField(verbose_name=_('Posição'))
+    info_en = YAMLField(default='', verbose_name=_('Resultados da Análise (EN)'), blank=True)
+    order = models.PositiveIntegerField(verbose_name=_('Posição'), default=1)
 
     class Meta:
         verbose_name = _('Imagem Analisada')
@@ -101,7 +107,19 @@ class AnalyzedImage(models.Model):
 
     @property
     def thumbnails(self):
-        return self.info.get('thumbnails') or []
+        return self.info.get('thumbnails') or self.info_en.get('thumbnails') or []
+
+    @property
+    def analysis_en(self):
+        return self.info_en.get('analise') or []
+
+    @property
+    def products_en(self):
+        return self.info_en.get('produtos') or []
+
+    @property
+    def category_en(self):
+        return self.info_en.get('categoria') or ''
 
 
 class Contact(models.Model):

@@ -31,7 +31,11 @@ a {
 }
 
 header {
-    a {
+    font-weight: bold;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+
+    .header_link {
         &:hover {
             padding-bottom: 0.4em;
             border-bottom: $border_size solid $black;
@@ -41,9 +45,6 @@ header {
             border-bottom: $border_size solid $black;
         }
     }
-    font-weight: bold;
-    line-height: 1.5rem;
-    font-size: 1.25rem;
 
     #id_search {
         border-color: transparent;
@@ -58,6 +59,10 @@ header {
         background: transparent;
         width: 70%;
         font-size: 1rem;
+    }
+
+    .language_picker {
+        font-size: 0.85rem;
     }
 }
 

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
+{% load content_translation %}
 
 {% block custom_css %}
   {{ action.custom_css }}
@@ -8,11 +10,11 @@
 {% block content %}
     <div class="clearfix">
         <div class="mt4 md-col-6 sm-col-12 mx-auto text_content">
-            <h2>{{ action.title }}</h2>
+            <h2>{% trans_field action "title" LANGUAGE_CODE %}</h2>
             <hr/>
 
             <div>
-                {{ action.body|safe }}
+                {% trans_safe_field action "body" LANGUAGE_CODE %}
             </div>
         </div>
     </div>
@@ -22,17 +24,17 @@
         <div class="sm-col-12 md-col-11 mx-auto">
             <hr/>
             <div id="carousel_nav">
-                <span class='title'>VISUALIZAÇÃO</span>
-                <span url="{% url 'action_carousel' action.slug %}" class="nav refresh-carousel active">Cronológica</span>
-                <span url="{% url 'action_carousel' action.slug %}?order=random" class="nav refresh-carousel">Randômica</span>
-                <span id="year-filter-btn" class="nav">Filtrar por Edição</span>
+                <span class='title'>{% trans "VISUALIZAÇÃO" %}</span>
+                <span url="{% url 'action_carousel' action.slug %}" class="nav refresh-carousel active">{% trans "Cronológica" %}</span>
+                <span url="{% url 'action_carousel' action.slug %}?order=random" class="nav refresh-carousel">{% trans "Randômica" %}</span>
+                <span id="year-filter-btn" class="nav">{% trans "Filtrar por Edição" %}</span>
             </div>
             <div id="image-carousel" url="{{action.carousel_url}}"></div>
             <div id="year-filter" style="display: none">
               <hr/>
               <div class="years-list">
                   {% for year, edition in editions_by_year %}
-                  <p url="{% url 'action_carousel' action.slug %}?year={{ year }}" class="bienal-year refresh-carousel">{{ year }} - {{ edition}}ª Bienal de São Paulo</p>
+                  <p url="{% url 'action_carousel' action.slug %}?year={{ year }}" class="bienal-year refresh-carousel">{{ year }} - {{ edition}}ª {% trans "Bienal de São Paulo" %}</p>
                   {% endfor %}
               </div>
               <hr/>
@@ -42,15 +44,15 @@
 
     <div class="clearfix">
         <div class="md-col-6 sm-col-12 mx-auto text_content">
-            <h3 class="mb2 mt3">Metodologia</h3>
+            <h3 class="mb2 mt3">{% trans "Metodologia" %}</h3>
             <hr/>
 
             <div>
-                <p>Os resultados das imagens da Bienal apresentados aqui seguiram um modo metodológico, que se utiliza de bases pretensamente tecnólogico-científicas, sempre na intenção de destacar os resultados mais inesperados. Estamos interessados nas respostas das Inteligências Artificiais que ampliam os significados das imagens e/ou revelam as categorias das estruturas dessas plataformas.</p>
+                <p>{% trans "Os resultados das imagens da Bienal apresentados aqui seguiram um modo metodológico, que se utiliza de bases pretensamente tecnólogico-científicas, sempre na intenção de destacar os resultados mais inesperados. Estamos interessados nas respostas das Inteligências Artificiais que ampliam os significados das imagens e/ou revelam as categorias das estruturas dessas plataformas." %}</p>
 
-                <p>Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, visite <a href="https://testingdataviz.github.io/BienalArtDecoder" target="_blank">Bienal Art Decoder</a>, uma plataforma interna construída exclusivamente para o projeto, reunindo todos os resultados produzidos por diferentes Inteligências Artificiais a partir das imagens da mostra.</p>
+                <p>{% trans "Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, visite <a href='https://testingdataviz.github.io/BienalArtDecoder' target='_blank'>Bienal Art Decoder</a>, uma plataforma interna construída exclusivamente para o projeto, reunindo todos os resultados produzidos por diferentes Inteligências Artificiais a partir das imagens da mostra." %}</p>
 
-                <p>Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, provocativo, falsificação e violência – que segue a seguinte ordem: provável&gt; provável&gt; possível&gt; improvável&gt; muito improvável. Já o termo Seguro para trabalhar é uma expressão utilizada na internet para designar conteúdos adequados para serem vistos em público.</p>
+                <p>{% trans "Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, provocativo, falsificação e violência – que segue a seguinte ordem: provável&gt; provável&gt; possível&gt; improvável&gt; muito improvável. Já o termo Seguro para trabalhar é uma expressão utilizada na internet para designar conteúdos adequados para serem vistos em público." %}</p>
 
             </div>
         </div>
@@ -59,20 +61,20 @@
 
     <div class="clearfix">
         <div class="md-col-6 sm-col-12 mx-auto" id="action_nav">
-            <h3 class="mb0 mt2">Questões Relacionadas</h3>
+            <h3 class="mb0 mt2">{% trans "Questões Relacionadas" %}</h3>
             <hr/>
             {% for question in action.questions.all %}
-              <p class="nav_link_container"><span>- </span><a href="{{ question.filter_url }}">{{ question.title|upper }}</a></p>
+              <p class="nav_link_container"><span>- </span><a href="{{ question.filter_url }}">{% trans_upper_field question "title" LANGUAGE_CODE %}</a></p>
             {% endfor %}
             <div class="mt4">
                 <hr/>
                 <span class="nav_link_container">
                     {% if prev %}
-                    <span>&lt; <a href="{{ prev.detail_url }}">AÇÃO ANTERIOR</a></span>
+                    <span>&lt; <a href="{{ prev.detail_url }}">{% trans "AÇÃO ANTERIOR" %}</a></span>
                     {% endif %}
                      |
                     {% if next %}
-                    <span><a href="{{ next.detail_url }}">PRÓXIMA AÇÃO</a> &gt;</span>
+                    <span><a href="{{ next.detail_url }}">{% trans "PRÓXIMA AÇÃO" %}</a> &gt;</span>
                     {% endif %}
                 </span>
             </div>

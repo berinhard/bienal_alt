@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block extra_head %}
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -15,11 +16,11 @@
   <div class="md-col-6 sm-col-12 mx-auto" id="contact_session">
 
     <div class="mb4">
-        <p>Sugestões sobre o nosso projeto e histórias sobre a 33ª Bienal de São Paulo são muito importantes para nós.</p>
+        <p>{% trans "Sugestões sobre o nosso projeto e histórias sobre a 33ª Bienal de São Paulo são muito importantes para nós." %}</p>
 
-        <p>Fotografias, vídeos curtos, desenhos e outros arquivos relacionados à 33ª Bienal de São Paulo podem ser enviados para contribuir na construção deste arquivo alternativo e não tradicional da exposição. Ao enviar o material, é preciso selecionar a opção que declara que poderemos utilizá-lo sempre dentro do contexto do projeto. O arquivo irá nos ajudar, por exemplo, nas ações que buscam entender como as Inteligências Artificiais lêem as imagens e vídeos produzidos em contextos artísticos. </p>
+        <p>{% trans "Fotografias, vídeos curtos, desenhos e outros arquivos relacionados à 33ª Bienal de São Paulo podem ser enviados para contribuir na construção deste arquivo alternativo e não tradicional da exposição. Ao enviar o material, é preciso selecionar a opção que declara que poderemos utilizá-lo sempre dentro do contexto do projeto. O arquivo irá nos ajudar, por exemplo, nas ações que buscam entender como as Inteligências Artificiais lêem as imagens e vídeos produzidos em contextos artísticos." %}</p>
 
-        <p><b>Muito obrigado!</b></p>
+        <p><b>{% trans "Muito obrigado!" %}</b></p>
     </div>
 
     <form id="contact_form" action="." method="POST" enctype="multipart/form-data">
@@ -31,7 +32,7 @@
           {% endif %}
           <p>
               {% if field.id_for_label == "id_upload" %}
-                <label>ENVIO DE ARQUIVO</label>
+                <label>{% trans "ENVIO DE ARQUIVO" %}</label>
                 <label for="{{ field.id_for_label }}">selecionar...</label>
                 {{ field }}
 
@@ -63,7 +64,7 @@
         <div class="g-recaptcha" data-sitekey="6LceCWkUAAAAAJbYyCluVNj5y_L-CSQwBgVQR_fa" data-callback="enableBtn"></div>
       </div>
       <input type="submit" style="display: none" value="ENVIAR"/>
-      <p><label id="submit_button">ENVIAR</label></p>
+      <p><label id="submit_button">{% trans "ENVIAR" %}</label></p>
     </form>
 
     <hr>
