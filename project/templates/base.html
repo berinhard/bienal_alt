@@ -58,8 +58,12 @@
               <div class="sm-col sm-col-12 md-col-12 lg-col-3 header_item">
                 <select name="question" id="id_question">
                     <option value="0">{% trans "Questões" %}</option>
-                    {% for iter_question in all_questions %}
-                    <option {% if question.id == iter_question.id %}selected{% endif %} value="{{ question.id }}">{% trans_field iter_question "title" LANGUAGE_CODE %}</option>
+                    {% for iter_question in all_questions %}A
+                      {% if question %}
+                        <option {% if question.id == iter_question.id %}selected{% endif %} value="{{ iter_question.id }}">{% trans_field iter_question "title" LANGUAGE_CODE %}</option>
+                      {% else %}
+                        <option value="{{ iter_question.id }}">{% trans_field iter_question "title" LANGUAGE_CODE %}</option>
+                      {% endif %}
                     {% endfor %}
                 </select>
                 {% if LANGUAGE_CODE == 'en' %}
