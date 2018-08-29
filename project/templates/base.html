@@ -9,8 +9,9 @@
     <title>OUTRA 33ª Bienal de São Paulo</title>
     <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{% static "js/base.js" %}"></script>
     <link rel="stylesheet" href="https://fonts.typotheque.com/WF-031670-010387.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
 
     {% block extra_head %}
     {% endblock %}
@@ -22,12 +23,6 @@
   </head>
 
   <script type="text/javascript">
-    $(document).ready(function(){
-        $("#id_question").change(function(){
-            $("#action_filter_form").submit();
-        });
-    });
-
     {% block custom_js %}
     {% endblock %}
   </script>
