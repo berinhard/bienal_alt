@@ -8,6 +8,5 @@
 *.swn
 *.sqlite3
 *.map
-*.mo
 .sass-cache/
 project/media/*
