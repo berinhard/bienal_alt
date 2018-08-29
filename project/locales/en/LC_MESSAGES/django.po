@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-29 12:19-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: actions/admin.py:29 actions/models.py:54 actions/models.py:85
+msgid "Ação"
+msgstr ""
+
+#: actions/admin.py:29 actions/admin.py:47
+msgid "Carrossel de Imagens"
+msgstr ""
+
+#: actions/admin.py:43
+msgid "Avançados"
+msgstr ""
+
+#: actions/admin.py:58
+msgid "Preview"
+msgstr ""
+
+#: actions/admin.py:62
+msgid "Publica as ações"
+msgstr ""
+
+#: actions/admin.py:73
+msgid "A ação \"{}\" foi salva e publicada com sucesso!"
+msgstr ""
+
+#: actions/admin.py:90 actions/models.py:116
+msgid "Mensagem"
+msgstr ""
+
+#: actions/forms.py:33 actions/forms.py:34
+msgid ""
+"Este campo precisa estar num formato YAML válido. Teste aqui http://www."
+"yamllint.com/ para entender o erro e corrigí-lo."
+msgstr ""
+
+#: actions/forms.py:56
+msgid "Está faltando o campo: {}"
+msgstr ""
+
+#: actions/forms.py:79
+msgid ""
+"Autorizo o uso do arquivo enviado para ser usado exclusivamente nas ações do "
+"Outra 33ª Bienal de São Paulo. O projeto se compromete a não utilizar os "
+"arquivos para outros fins, que não o da pesquisa artística."
+msgstr ""
+
+#: actions/forms.py:94
+msgid "É necessário autorização para enviar o arquivo."
+msgstr ""
+
+#: actions/models.py:10 actions/models.py:16
+msgid "Pergunta"
+msgstr ""
+
+#: actions/models.py:11
+msgid "Descrição"
+msgstr ""
+
+#: actions/models.py:12
+msgid "Pergunta (EN)"
+msgstr ""
+
+#: actions/models.py:13
+msgid "Descrição (EN)"
+msgstr ""
+
+#: actions/models.py:17 actions/models.py:50
+msgid "Perguntas"
+msgstr ""
+
+#: actions/models.py:42
+msgid "Slug"
+msgstr ""
+
+#: actions/models.py:43
+msgid "Título"
+msgstr ""
+
+#: actions/models.py:44
+msgid "Título (EN)"
+msgstr ""
+
+#: actions/models.py:45
+msgid "Conteúdo"
+msgstr ""
+
+#: actions/models.py:46
+msgid "Conteúdo (EN)"
+msgstr ""
+
+#: actions/models.py:47
+msgid "Código Javascript"
+msgstr ""
+
+#: actions/models.py:48
+msgid "CSS Customizado"
+msgstr ""
+
+#: actions/models.py:49
+msgid "Extra head"
+msgstr ""
+
+#: actions/models.py:51
+msgid "Publicada"
+msgstr ""
+
+#: actions/models.py:55 actions/templates/actions/list_actions.html:14
+msgid "Ações"
+msgstr ""
+
+#: actions/models.py:81 actions/models.py:114
+msgid "Nome"
+msgstr ""
+
+#: actions/models.py:82
+msgid "Nome (EN)"
+msgstr ""
+
+#: actions/models.py:83
+msgid "Autor"
+msgstr ""
+
+#: actions/models.py:84 actions/models.py:118
+msgid "Data"
+msgstr ""
+
+#: actions/models.py:86
+msgid "Imagem"
+msgstr ""
+
+#: actions/models.py:87
+msgid "Resultados da Análise"
+msgstr ""
+
+#: actions/models.py:88
+msgid "Resultados da Análise (EN)"
+msgstr ""
+
+#: actions/models.py:89
+msgid "Posição"
+msgstr ""
+
+#: actions/models.py:92
+msgid "Imagem Analisada"
+msgstr ""
+
+#: actions/models.py:93
+msgid "Imagens Analisadas"
+msgstr ""
+
+#: actions/models.py:115
+msgid "E-mail"
+msgstr ""
+
+#: actions/models.py:117
+msgid "Envio de Arquivo"
+msgstr ""
+
+#: actions/models.py:121
+msgid "Contato"
+msgstr ""
+
+#: actions/models.py:122
+msgid "Contatos"
+msgstr ""
+
+#: actions/templates/actions/action_carousel.html:24
+msgid "IMAGEM"
+msgstr ""
+
+#: actions/templates/actions/action_carousel.html:27
+msgid "ANÁLISE"
+msgstr ""
+
+#: actions/templates/actions/action_carousel.html:32
+msgid "PRODUTOS"
+msgstr ""
+
+#: actions/templates/actions/action_carousel.html:35
+msgid "CONTEÚDO"
+msgstr ""
+
+#: actions/templates/actions/action_carousel.html:38
+msgid "IMAGENS SEMELHANTES"
+msgstr ""
+
+#: actions/templates/actions/action_carousel.html:49
+msgid "Não foram encontradas imagens para a busca selecionada."
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:26
+msgid "VISUALIZAÇÃO"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:27
+msgid "Cronológica"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:28
+msgid "Randômica"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:29
+msgid "Filtrar por Edição"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:36
+msgid "Bienal de São Paulo"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:46
+msgid "Metodologia"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:50
+msgid ""
+"Os resultados das imagens da Bienal apresentados aqui seguiram um modo "
+"metodológico, que se utiliza de bases pretensamente tecnólogico-científicas, "
+"sempre na intenção de destacar os resultados mais inesperados. Estamos "
+"interessados nas respostas das Inteligências Artificiais que ampliam os "
+"significados das imagens e/ou revelam as categorias das estruturas dessas "
+"plataformas."
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:52
+msgid ""
+"Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, "
+"visite <a href='https://testingdataviz.github.io/BienalArtDecoder' "
+"target='_blank'>Bienal Art Decoder</a>, uma plataforma interna construída "
+"exclusivamente para o projeto, reunindo todos os resultados produzidos por "
+"diferentes Inteligências Artificiais a partir das imagens da mostra."
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:54
+msgid ""
+"Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, "
+"provocativo, falsificação e violência – que segue a seguinte ordem: "
+"provável&gt; provável&gt; possível&gt; improvável&gt; muito improvável. Já o "
+"termo Seguro para trabalhar é uma expressão utilizada na internet para "
+"designar conteúdos adequados para serem vistos em público."
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:63
+msgid "Questões Relacionadas"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:72
+msgid "AÇÃO ANTERIOR"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:76
+msgid "PRÓXIMA AÇÃO"
+msgstr ""
+
+#: actions/templates/actions/contact.html:19
+msgid ""
+"Sugestões sobre o nosso projeto e histórias sobre a 33ª Bienal de São Paulo "
+"são muito importantes para nós."
+msgstr ""
+
+#: actions/templates/actions/contact.html:21
+msgid ""
+"Fotografias, vídeos curtos, desenhos e outros arquivos relacionados à 33ª "
+"Bienal de São Paulo podem ser enviados para contribuir na construção deste "
+"arquivo alternativo e não tradicional da exposição. Ao enviar o material, é "
+"preciso selecionar a opção que declara que poderemos utilizá-lo sempre "
+"dentro do contexto do projeto. O arquivo irá nos ajudar, por exemplo, nas "
+"ações que buscam entender como as Inteligências Artificiais lêem as imagens "
+"e vídeos produzidos em contextos artísticos."
+msgstr ""
+
+#: actions/templates/actions/contact.html:23
+msgid "Muito obrigado!"
+msgstr ""
+
+#: actions/templates/actions/contact.html:35
+msgid "ENVIO DE ARQUIVO"
+msgstr ""
+
+#: actions/templates/actions/contact.html:67
+msgid "ENVIAR"
+msgstr ""
+
+#: actions/templates/actions/list_actions.html:27
+msgid "ESTE PROJETO ESTÁ EM CONSTANTE ATUALIZAÇÃO"
+msgstr ""
+
+#: actions/templates/actions/list_actions.html:28
+msgid "ÚLTIMO UPDATE"
+msgstr ""
+
+#: actions/views.py:95
+msgid "Erro na validação do Captcha"
+msgstr ""
+
+#: mce_filebrowser/models.py:9
+msgid "Image"
+msgstr ""
+
+#: mce_filebrowser/models.py:10
+msgid "Document"
+msgstr ""
+
+#: mce_filebrowser/models.py:15
+msgid "File / Image"
+msgstr ""
+
+#: mce_filebrowser/models.py:17
+msgid "Create date"
+msgstr ""
+
+#: mce_filebrowser/templates/_paginator.html:7
+msgid "Previous"
+msgstr ""
+
+#: mce_filebrowser/templates/_paginator.html:11
+msgid "Next"
+msgstr ""
+
+#: mce_filebrowser/templates/filebrowser.html:5
+msgid "File browser"
+msgstr ""
+
+#: mce_filebrowser/templates/filebrowser.html:17
+msgid "Previosly uploaded images"
+msgstr ""
+
+#: mce_filebrowser/templates/filebrowser.html:27
+#: mce_filebrowser/templates/filebrowser.html:49
+msgid "Remove"
+msgstr ""
+
+#: mce_filebrowser/templates/filebrowser.html:32
+msgid "No images uploaded"
+msgstr ""
+
+#: mce_filebrowser/templates/filebrowser.html:41
+msgid "Previosly uploaded documents"
+msgstr ""
+
+#: mce_filebrowser/templates/filebrowser.html:54
+msgid "No documents uploaded"
+msgstr ""
+
+#: mce_filebrowser/templates/filebrowser.html:63
+msgid "Upload file"
+msgstr ""
+
+#: mce_filebrowser/templates/filebrowser.html:70
+msgid "Insert"
+msgstr ""
