@@ -27,6 +27,18 @@ var displayToNext = function(current){
     }
 }
 
+var previous = function(){
+    console.log('prev');
+    var current = getEnabled();
+    displayToPrevious(current);
+};
+
+var next = function(){
+    console.log('next');
+    var current = getEnabled();
+    displayToNext(current);
+};
+
 var refreshCarousel = function(url){
     $.get(url, displayCarousel);
 }
@@ -40,13 +52,16 @@ var displayCarousel = function(data){
     var first = $('div[data-position="1"]');
     hideAndDisplay(first, first)
 
-    $(".carousel_text_nav .prev").click(function(){
-        var current = getEnabled();
-        displayToPrevious(current);
-    });
-    $(".carousel_text_nav .next").click(function(){
-        var current = getEnabled();
-        displayToNext(current);
+    $(".carousel_text_nav .prev").click(function(){previous();});
+    $(".carousel_text_nav .next").click(function(){next();});
+
+    $("body").keydown(function(e) {
+      console.log('key');
+      // left
+      if(e.keyCode == 37) {previous();}
+      // right
+      else if(e.keyCode == 39) {next();}
+      e.preventDefault();
     });
 }
 
@@ -65,6 +80,7 @@ var resizeCarouselImageDimension = function(image){
 }
 
 $(document).ready(function(){
+
     $('.text_content a').click(function() {
         window.open($(this).attr('href'));
         return false;
