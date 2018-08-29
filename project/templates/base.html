@@ -1,5 +1,7 @@
 {% load staticfiles %}
 {% load i18n %}
+{% load content_translation %}
+
 <html>
   <head>
     <base href="">
@@ -56,8 +58,8 @@
               <div class="sm-col sm-col-12 md-col-12 lg-col-3 header_item">
                 <select name="question" id="id_question">
                     <option value="0">{% trans "Questões" %}</option>
-                    {% for question in questions %}
-                    <option {% if question.id == question_id %}selected{% endif %} value="{{ question.id }}">{{ question.title }}</option>
+                    {% for question in all_questions %}
+                    <option {% if question.id == question.id %}selected{% endif %} value="{{ question.id }}">{% trans_field question "title" LANGUAGE_CODE %}</option>
                     {% endfor %}
                 </select>
               </div>

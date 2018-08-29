@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load content_translation %}
 
 {% block content %}
 <div class="clearfix">
     <div class="md-col-6 sm-col-12 mx-auto" id="actions_list">
         {% if question %}
-        <h2>{{ question.title }}</h2>
+        <h2>{% trans_field question "title" LANGUAGE_CODE %}</h2>
         <hr/>
         <div class="text_content">
-            <p>{{ question.description }}</p>
+            <p>{% trans_field question "description" LANGUAGE_CODE %}</p>
         </div>
         {% else %}
         <h2>{% trans "Ações" %}</h2>
@@ -17,7 +18,7 @@
 
         <div class="actions">
             {% for action in actions %}
-                <p><a class="action_link" href="{{ action.detail_url }}">{{ action.title }}</a></p>
+                <p><a class="action_link" href="{{ action.detail_url }}">{% trans_field action "title" LANGUAGE_CODE %}</a></p>
             {% endfor %}
         </div>
     </div>

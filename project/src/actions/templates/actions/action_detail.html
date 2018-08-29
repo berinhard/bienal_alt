@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% load content_translation %}
 
 {% block custom_css %}
   {{ action.custom_css }}
@@ -9,11 +10,11 @@
 {% block content %}
     <div class="clearfix">
         <div class="mt4 md-col-6 sm-col-12 mx-auto text_content">
-            <h2>{{ action.title }}</h2>
+            <h2>{% trans_field action "title" LANGUAGE_CODE %}</h2>
             <hr/>
 
             <div>
-                {{ action.body|safe }}
+                {% trans_safe_field action "body" LANGUAGE_CODE %}
             </div>
         </div>
     </div>
@@ -63,7 +64,7 @@
             <h3 class="mb0 mt2">{% trans "Questões Relacionadas" %}</h3>
             <hr/>
             {% for question in action.questions.all %}
-              <p class="nav_link_container"><span>- </span><a href="{{ question.filter_url }}">{{ question.title|upper }}</a></p>
+              <p class="nav_link_container"><span>- </span><a href="{{ question.filter_url }}">{% trans_upper_field question "title" LANGUAGE_CODE %}</a></p>
             {% endfor %}
             <div class="mt4">
                 <hr/>
