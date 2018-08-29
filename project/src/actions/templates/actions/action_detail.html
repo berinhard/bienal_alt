@@ -3,6 +3,10 @@
 {% load i18n %}
 {% load content_translation %}
 
+{% block head_title %}
+    <title>{% trans "OUTRA 33ª Bienal de São Paulo" %} - {% trans_field action "title" LANGUAGE_CODE %}</title>
+{% endblock %}
+
 {% block custom_css %}
   {{ action.custom_css }}
 {% endblock %}
