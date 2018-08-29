@@ -56,6 +56,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'src.actions.context_processors.list_questions',
+                'src.actions.context_processors.request_language',
             ],
         },
     },
