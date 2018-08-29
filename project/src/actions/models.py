@@ -107,7 +107,19 @@ class AnalyzedImage(models.Model):
 
     @property
     def thumbnails(self):
-        return self.info.get('thumbnails') or []
+        return self.info.get('thumbnails') or self.info_en.get('thumbnails') or []
+
+    @property
+    def analysis_en(self):
+        return self.info_en.get('analise') or []
+
+    @property
+    def products_en(self):
+        return self.info_en.get('produtos') or []
+
+    @property
+    def category_en(self):
+        return self.info_en.get('categoria') or ''
 
 
 class Contact(models.Model):
