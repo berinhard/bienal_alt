@@ -138,6 +138,9 @@ hr {
       .carousel_element .carousel_padding {
         padding: 1em 0; } }
   .carousel_element .carousel_img {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
     text-align: center; }
     .carousel_element .carousel_img .landscape {
       width: 100%;

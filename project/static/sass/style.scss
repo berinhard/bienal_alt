@@ -222,6 +222,9 @@ hr {
     }
 
     .carousel_img {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
         text-align: center;
 
         .landscape {
