@@ -10,7 +10,10 @@ DEBUG = config('DEBUG', cast=bool)
 SECRET_KEY = config('SECRET_KEY')
 PRODUCTION = config('PRODUCTION', default=False)
 
+
 ALLOWED_HOSTS = ['bienal-alt.herokuapp.com']
+if PRODUCTION and not DEBUG:
+    SECURE_SSL_REDIRECT = True
 
 
 INSTALLED_APPS = [
