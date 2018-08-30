@@ -6,25 +6,27 @@ var getEnabled = function(){
     return $(".carousel_element.active")
 }
 
-var hideAndDisplay = function(to_hide, to_display) {
+var hideAndDisplay = function(to_hide, to_display, add_hash=true) {
     to_hide.removeClass('active');
     to_display.addClass('active');
     var img = to_display.find('.carousel_image')[0];
     resizeCarouselImageDimension(img);
-    location.href = '#' + to_display.attr('id');
+    if (add_hash){
+        location.href = '#' + to_display.attr('id');
+    }
 }
 
-var displayToPrevious = function(current){
+var displayToPrevious = function(current, add_hash=true){
     displayTo(current, current.prev());
 }
 
-var displayToNext = function(current){
+var displayToNext = function(current, add_hash=true){
     displayTo(current, current.next());
 }
 
-var displayTo = function(current, next){
+var displayTo = function(current, next, add_hash=true){
     if (next.length) {
-        hideAndDisplay(current, next);
+        hideAndDisplay(current, next, add_hash=add_hash);
     }
 }
 
@@ -53,15 +55,15 @@ var displayCarousel = function(data){
     var first = $('div[data-position="1"]');
 
     if (hash.length && hash != url) {
-        hash = '#' + hash
+        hash = '#' + hash;
         var current = $(hash);
         if (current.length >= 1) {
-            hideAndDisplay(current, current)
+            hideAndDisplay(current, current, add_hash=false);
         } else {
-            hideAndDisplay(first, first)
+            hideAndDisplay(first, first, add_hash=false);
         }
     } else {
-        hideAndDisplay(first, first)
+        hideAndDisplay(first, first, add_hash=false);
     }
 
     $(".carousel_text_nav .prev").click(function(){previous();});
