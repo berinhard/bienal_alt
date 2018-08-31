@@ -58,6 +58,10 @@ hr {
     .text_content a:link, #action_nav a:link, .carousel_element .carousel_text a:link, #about_content a:link, #contact_session a:link, .text_content a:visited, #action_nav a:visited, .carousel_element .carousel_text a:visited, #about_content a:visited, #contact_session a:visited {
       text-decoration: underline; }
 
+.text_content img {
+  width: 90%;
+  height: auto; }
+
 .main_container {
   padding-left: 2rem;
   padding-right: 2rem;
