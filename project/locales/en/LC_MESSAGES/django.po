@@ -7,235 +7,239 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-29 13:34-0300\n"
+"POT-Creation-Date: 2018-08-31 17:50-0300\n"
 "PO-Revision-Date: 2018-08-29 13:59-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: src/actions/admin.py:29 src/actions/models.py:54 src/actions/models.py:85
+#: actions/admin.py:29 actions/models.py:54 actions/models.py:90
 msgid "Ação"
 msgstr ""
 
-#: src/actions/admin.py:29 src/actions/admin.py:47
+#: actions/admin.py:29 actions/admin.py:47
 msgid "Carrossel de Imagens"
 msgstr ""
 
-#: src/actions/admin.py:43
+#: actions/admin.py:43
 msgid "Avançados"
 msgstr ""
 
-#: src/actions/admin.py:58
+#: actions/admin.py:58
 msgid "Preview"
 msgstr ""
 
-#: src/actions/admin.py:62
+#: actions/admin.py:62
 msgid "Publica as ações"
 msgstr ""
 
-#: src/actions/admin.py:73
+#: actions/admin.py:73
 msgid "A ação \"{}\" foi salva e publicada com sucesso!"
 msgstr ""
 
-#: src/actions/admin.py:90 src/actions/models.py:128
+#: actions/admin.py:90 actions/models.py:133
 msgid "Mensagem"
 msgstr ""
 
-#: src/actions/forms.py:33 src/actions/forms.py:34
+#: actions/forms.py:33 actions/forms.py:34
 msgid ""
 "Este campo precisa estar num formato YAML válido. Teste aqui http://www."
 "yamllint.com/ para entender o erro e corrigí-lo."
 msgstr ""
 
-#: src/actions/forms.py:56
+#: actions/forms.py:56
 msgid "Está faltando o campo: {}"
 msgstr ""
 
-#: src/actions/forms.py:79
+#: actions/forms.py:79
 msgid ""
 "Autorizo o uso do arquivo enviado para ser usado exclusivamente nas ações do "
 "Outra 33ª Bienal de São Paulo. O projeto se compromete a não utilizar os "
 "arquivos para outros fins, que não o da pesquisa artística."
 msgstr ""
 
-#: src/actions/forms.py:94
+#: actions/forms.py:94
 msgid "É necessário autorização para enviar o arquivo."
 msgstr ""
 
-#: src/actions/models.py:10 src/actions/models.py:16
+#: actions/models.py:10 actions/models.py:16
 msgid "Pergunta"
 msgstr ""
 
-#: src/actions/models.py:11
+#: actions/models.py:11
 msgid "Descrição"
 msgstr ""
 
-#: src/actions/models.py:12
+#: actions/models.py:12
 msgid "Pergunta (EN)"
 msgstr ""
 
-#: src/actions/models.py:13
+#: actions/models.py:13
 msgid "Descrição (EN)"
 msgstr ""
 
-#: src/actions/models.py:17 src/actions/models.py:50
+#: actions/models.py:17 actions/models.py:50
 msgid "Perguntas"
 msgstr ""
 
-#: src/actions/models.py:42
+#: actions/models.py:42
 msgid "Slug"
 msgstr ""
 
-#: src/actions/models.py:43
+#: actions/models.py:43
 msgid "Título"
 msgstr ""
 
-#: src/actions/models.py:44
+#: actions/models.py:44
 msgid "Título (EN)"
 msgstr ""
 
-#: src/actions/models.py:45
+#: actions/models.py:45
 msgid "Conteúdo"
 msgstr ""
 
-#: src/actions/models.py:46
+#: actions/models.py:46
 msgid "Conteúdo (EN)"
 msgstr ""
 
-#: src/actions/models.py:47
+#: actions/models.py:47
 msgid "Código Javascript"
 msgstr ""
 
-#: src/actions/models.py:48
+#: actions/models.py:48
 msgid "CSS Customizado"
 msgstr ""
 
-#: src/actions/models.py:49
+#: actions/models.py:49
 msgid "Extra head"
 msgstr ""
 
-#: src/actions/models.py:51
+#: actions/models.py:51
 msgid "Publicada"
 msgstr ""
 
-#: src/actions/models.py:55 src/actions/templates/actions/list_actions.html:15
-#: templates/base.html:43
+#: actions/models.py:55 actions/templates/actions/list_actions.html:15
 msgid "Ações"
 msgstr "Actions"
 
-#: src/actions/models.py:81 src/actions/models.py:126
+#: actions/models.py:86 actions/models.py:131
 msgid "Nome"
 msgstr ""
 
-#: src/actions/models.py:82
+#: actions/models.py:87
 msgid "Nome (EN)"
 msgstr ""
 
-#: src/actions/models.py:83
+#: actions/models.py:88
 msgid "Autor"
 msgstr ""
 
-#: src/actions/models.py:84 src/actions/models.py:130
+#: actions/models.py:89 actions/models.py:135
 msgid "Data"
 msgstr ""
 
-#: src/actions/models.py:86
+#: actions/models.py:91
 msgid "Imagem"
 msgstr ""
 
-#: src/actions/models.py:87
+#: actions/models.py:92
 msgid "Resultados da Análise"
 msgstr ""
 
-#: src/actions/models.py:88
+#: actions/models.py:93
 msgid "Resultados da Análise (EN)"
 msgstr ""
 
-#: src/actions/models.py:89
+#: actions/models.py:94
 msgid "Posição"
 msgstr ""
 
-#: src/actions/models.py:92
+#: actions/models.py:97
 msgid "Imagem Analisada"
 msgstr ""
 
-#: src/actions/models.py:93
+#: actions/models.py:98
 msgid "Imagens Analisadas"
 msgstr ""
 
-#: src/actions/models.py:127
+#: actions/models.py:132
 msgid "E-mail"
 msgstr ""
 
-#: src/actions/models.py:129
+#: actions/models.py:134
 msgid "Envio de Arquivo"
 msgstr ""
 
-#: src/actions/models.py:133 templates/base.html:49
+#: actions/models.py:138 actions/templates/actions/contact.html:5
 msgid "Contato"
 msgstr "Contact"
 
-#: src/actions/models.py:134
+#: actions/models.py:139
 msgid "Contatos"
 msgstr ""
 
-#: src/actions/templates/actions/action_carousel.html:25
+#: actions/templates/actions/action_carousel.html:25
 msgid "IMAGEM"
 msgstr ""
 
-#: src/actions/templates/actions/action_carousel.html:30
-#: src/actions/templates/actions/action_carousel.html:41
+#: actions/templates/actions/action_carousel.html:30
+#: actions/templates/actions/action_carousel.html:41
 msgid "ANÁLISE"
 msgstr ""
 
-#: src/actions/templates/actions/action_carousel.html:35
-#: src/actions/templates/actions/action_carousel.html:46
+#: actions/templates/actions/action_carousel.html:35
+#: actions/templates/actions/action_carousel.html:46
 msgid "PRODUTOS"
 msgstr ""
 
-#: src/actions/templates/actions/action_carousel.html:38
-#: src/actions/templates/actions/action_carousel.html:49
+#: actions/templates/actions/action_carousel.html:38
+#: actions/templates/actions/action_carousel.html:49
 msgid "CONTEÚDO"
 msgstr ""
 
-#: src/actions/templates/actions/action_carousel.html:53
+#: actions/templates/actions/action_carousel.html:53
 msgid "IMAGENS SEMELHANTES"
 msgstr ""
 
-#: src/actions/templates/actions/action_carousel.html:64
+#: actions/templates/actions/action_carousel.html:64
 msgid "Não foram encontradas imagens para a busca selecionada."
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:27
+#: actions/templates/actions/action_detail.html:7
+#: actions/templates/actions/contact.html:5
+msgid "OUTRA 33 Bienal de São Paulo"
+msgstr ""
+
+#: actions/templates/actions/action_detail.html:31
 msgid "VISUALIZAÇÃO"
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:28
+#: actions/templates/actions/action_detail.html:32
 msgid "Cronológica"
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:29
+#: actions/templates/actions/action_detail.html:33
 msgid "Randômica"
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:30
+#: actions/templates/actions/action_detail.html:35
 msgid "Filtrar por Edição"
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:37
+#: actions/templates/actions/action_detail.html:43
 msgid "Bienal de São Paulo"
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:47
+#: actions/templates/actions/action_detail.html:53
 msgid "Metodologia"
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:51
+#: actions/templates/actions/action_detail.html:57
 msgid ""
 "Os resultados das imagens da Bienal apresentados aqui seguiram um modo "
 "metodológico, que se utiliza de bases pretensamente tecnólogico-científicas, "
@@ -245,7 +249,7 @@ msgid ""
 "plataformas."
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:53
+#: actions/templates/actions/action_detail.html:59
 msgid ""
 "Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, "
 "visite <a href='https://testingdataviz.github.io/BienalArtDecoder' "
@@ -254,7 +258,7 @@ msgid ""
 "diferentes Inteligências Artificiais a partir das imagens da mostra."
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:55
+#: actions/templates/actions/action_detail.html:61
 msgid ""
 "Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, "
 "provocativo, falsificação e violência – que segue a seguinte ordem: "
@@ -263,25 +267,25 @@ msgid ""
 "designar conteúdos adequados para serem vistos em público."
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:64
+#: actions/templates/actions/action_detail.html:70
 msgid "Questões Relacionadas"
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:73
+#: actions/templates/actions/action_detail.html:79
 msgid "AÇÃO ANTERIOR"
 msgstr ""
 
-#: src/actions/templates/actions/action_detail.html:77
+#: actions/templates/actions/action_detail.html:83
 msgid "PRÓXIMA AÇÃO"
 msgstr ""
 
-#: src/actions/templates/actions/contact.html:19
+#: actions/templates/actions/contact.html:23
 msgid ""
 "Sugestões sobre o nosso projeto e histórias sobre a 33ª Bienal de São Paulo "
 "são muito importantes para nós."
 msgstr ""
 
-#: src/actions/templates/actions/contact.html:21
+#: actions/templates/actions/contact.html:25
 msgid ""
 "Fotografias, vídeos curtos, desenhos e outros arquivos relacionados à 33ª "
 "Bienal de São Paulo podem ser enviados para contribuir na construção deste "
@@ -292,351 +296,86 @@ msgid ""
 "e vídeos produzidos em contextos artísticos."
 msgstr ""
 
-#: src/actions/templates/actions/contact.html:23
+#: actions/templates/actions/contact.html:27
 msgid "Muito obrigado!"
 msgstr ""
 
-#: src/actions/templates/actions/contact.html:35
+#: actions/templates/actions/contact.html:39
 msgid "ENVIO DE ARQUIVO"
 msgstr ""
 
-#: src/actions/templates/actions/contact.html:67
+#: actions/templates/actions/contact.html:71
 msgid "ENVIAR"
 msgstr ""
 
-#: src/actions/templates/actions/list_actions.html:28
+#: actions/templates/actions/list_actions.html:28
 msgid "ESTE PROJETO ESTÁ EM CONSTANTE ATUALIZAÇÃO"
 msgstr ""
 
-#: src/actions/templates/actions/list_actions.html:29
+#: actions/templates/actions/list_actions.html:29
 msgid "ÚLTIMO UPDATE"
 msgstr ""
 
-#: src/actions/views.py:95
+#: actions/views.py:95
 msgid "Erro na validação do Captcha"
 msgstr ""
 
-#: src/mce_filebrowser/models.py:9
+#: mce_filebrowser/models.py:9
 msgid "Image"
 msgstr ""
 
-#: src/mce_filebrowser/models.py:10
+#: mce_filebrowser/models.py:10
 msgid "Document"
 msgstr ""
 
-#: src/mce_filebrowser/models.py:15
+#: mce_filebrowser/models.py:15
 msgid "File / Image"
 msgstr ""
 
-#: src/mce_filebrowser/models.py:17
+#: mce_filebrowser/models.py:17
 msgid "Create date"
 msgstr ""
 
-#: src/mce_filebrowser/templates/_paginator.html:7
+#: mce_filebrowser/templates/_paginator.html:7
 msgid "Previous"
 msgstr ""
 
-#: src/mce_filebrowser/templates/_paginator.html:11
+#: mce_filebrowser/templates/_paginator.html:11
 msgid "Next"
 msgstr ""
 
-#: src/mce_filebrowser/templates/filebrowser.html:5
+#: mce_filebrowser/templates/filebrowser.html:5
 msgid "File browser"
 msgstr ""
 
-#: src/mce_filebrowser/templates/filebrowser.html:17
+#: mce_filebrowser/templates/filebrowser.html:17
 msgid "Previosly uploaded images"
 msgstr ""
 
-#: src/mce_filebrowser/templates/filebrowser.html:27
-#: src/mce_filebrowser/templates/filebrowser.html:49
+#: mce_filebrowser/templates/filebrowser.html:27
+#: mce_filebrowser/templates/filebrowser.html:49
 msgid "Remove"
 msgstr ""
 
-#: src/mce_filebrowser/templates/filebrowser.html:32
+#: mce_filebrowser/templates/filebrowser.html:32
 msgid "No images uploaded"
 msgstr ""
 
-#: src/mce_filebrowser/templates/filebrowser.html:41
+#: mce_filebrowser/templates/filebrowser.html:41
 msgid "Previosly uploaded documents"
 msgstr ""
 
-#: src/mce_filebrowser/templates/filebrowser.html:54
+#: mce_filebrowser/templates/filebrowser.html:54
 msgid "No documents uploaded"
 msgstr ""
 
-#: src/mce_filebrowser/templates/filebrowser.html:63
+#: mce_filebrowser/templates/filebrowser.html:63
 msgid "Upload file"
 msgstr ""
 
-#: src/mce_filebrowser/templates/filebrowser.html:70
+#: mce_filebrowser/templates/filebrowser.html:70
 msgid "Insert"
 msgstr ""
 
-#: templates/about.html:10
-msgid ""
-"Sobre / <span class='ampliado'>Outra</span> / <span class='ampliado'>mais "
-"uma</span> / <span class='ampliado'>segunda</span> / <span "
-"class='ampliado'>seguinte</span> / <span class='ampliado'>restante</span> / "
-"<span class='ampliado'>díspar</span> / <span class='ampliado'>irregular</"
-"span> / <span class='ampliado'>discordante</span> / <span "
-"class='ampliado'>adicional</span> / <span class='ampliado'>modificada</"
-"span> / <span class='ampliado'>vulgar</span> / <span class='ampliado'>não "
-"profissional</span> / <span class='ampliado'>desconhecida</span> / <span "
-"class='ampliado'>sui generis</span> / <span class='ampliado'>numerosa</span> "
-"33ª Bienal"
-msgstr ""
-
-#: templates/about.html:12
-msgid ""
-"Versão ampliada com <span class='ampliado'>intervenções</span> de uma rede "
-"de Inteligências Artificiais que sugere modificações do texto/entrevista de "
-"Bruno Moreschi com a assistente de curadoria Laura Consendey para o livro de "
-"registro da 33ª Bienal de São Paulo."
-msgstr ""
-
-#: templates/about.html:15
-msgid ""
-"Laura Cosendey: Seu trabalho tem a particularidade de se desenvolver ao "
-"longo da Bienal / <span class='ampliado'>a disposição de criar tudo através "
-"da Bienal</span>, de se alimentar justamente / <span class='ampliado'>de "
-"comer exatamente</span> do que ainda vai acontecer, e contaminar o arquivo "
-"oficial / <span class='ampliado'>autêntico</span> da instituição. Como você "
-"encara / <span class='ampliado'>transcende</span> essa forma de trabalhar?"
-msgstr ""
-
-#: templates/about.html:19
-msgid ""
-"Encaro como um convite para pensar a Bienal de uma maneira não tradicional / "
-"<span class='ampliado'>Considero encorajador pensar na Bienal de maneira não "
-"convencional</span>. Quatro perguntas nos interessam / inquéritos nos "
-"intrigam: o que é presença / <span class='ampliado'>proximidade</span> hoje? "
-"O que as pessoas não especializadas / <span class='ampliado'>indivíduos não-"
-"particulares</span> têm a dizer? O que reverbera (do prédio para o resto do "
-"mundo / <span class='ampliado'>para o que resta do mundo</span>)? O que "
-"fica / <span class='ampliado'>o que é limpo</span>?"
-msgstr ""
-
-#: templates/about.html:23
-msgid ""
-"São perguntas propositadamente amplas. Gosto de lembrar à equipe que "
-"trabalha comigo (o pesquisador parceiro / <span class='ampliado'>cientista "
-"cúmplice</span> Gabriel Pereira, a produtora Nina Bamberg, o programador "
-"Bernardo Fontes e o designer Guilherme Falcão) que não precisamos provar "
-"nada / <span class='ampliado'>convencer defensores</span>. Queremos reunir o "
-"resultado de experiências / <span class='ampliado'>encontros</span> que não "
-"são aquelas que costumam constituir um arquivo oficial. Uma imagem me "
-"orienta desde o início: no futuro, alguém chega à Bienal para estudar a 33ª "
-"edição e se depara com o arquivo oficial esperado, mas também com outro "
-"conjunto de documentos, que são fruto de nossas ações / <span "
-"class='ampliado'>alguém toca a base na Bienal para pensar na versão 33 e "
-"aparece na aparência normal da autoridade, mas também com outro arranjo de "
-"registros, que são o efeito posterior de nossas atividades</span>. Gosto de "
-"imaginar / <span class='ampliado'>tenho um pontapé na chance de imaginar</"
-"span> que isso pode ser um convite para esse pesquisador. “Olha, você também "
-"pode incluir em sua pesquisa / <span class='ampliado'>exploração</span> esse "
-"modo experimental de construir / <span class='ampliado'>desenvolver</span> o "
-"passado, ressignificá-lo ainda mais, não se contentar apenas com o ontem "
-"formalizado da maneira esperada."
-msgstr ""
-
-#: templates/about.html:27
-msgid ""
-"L.C.: Como essas ações se afastam do convencional / <span "
-"class='ampliado'>costumeiro</span>?"
-msgstr ""
-
-#: templates/about.html:31
-msgid ""
-"Elas têm em comum a característica de ampliar os discursos oficiais "
-"construídos e propagados pela curadoria e a instituição / <span "
-"class='ampliado'>a empresa de grande porte</span> durante a 33ª Bienal. Para "
-"além dessa oficialidade, há uma série de outras compreensões possíveis. Para "
-"ficar só em alguns exemplos: o que os guardas e o pessoal de limpeza, que "
-"convivem diariamente com a arte exposta ali, têm a dizer sobre a mostra / "
-"<span class='ampliado'>que vivem todos os dias com a obra descoberta lá, "
-"comentam em relação ao show</span>? Leituras alternativas / <span "
-"class='ampliado'>eletivas</span> também são produzidas quando as imagens e "
-"os textos da 33ª Bienal (e de outras edições) são interpretados por "
-"Inteligências Artificiais (IA) não totalmente treinadas para entender o "
-"sistema da arte / <span class='ampliado'>para compreender a estrutura da "
-"grande obra</span>."
-msgstr ""
-
-#: templates/about.html:35
-msgid ""
-"L.C.: É como se a programação, as IAs, fossem encaradas como uma voz, não? "
-"Uma voz que diz coisas diferentes da instituição e do público "
-"especializado / <span class='ampliado'>eleito</span>. Seu projeto tem um "
-"olhar sobre esse conteúdo / <span class='ampliado'>Sua tarefa examina essa "
-"substância</span>, destacando o lado humano da sistematização de dados."
-msgstr ""
-
-#: templates/about.html:39
-msgid ""
-"Essa é uma preocupação que Gabriel Pereira e eu já tínhamos em projetos / "
-"<span class='ampliado'>empreendimentos</span> anteriores. Temos um grande "
-"interesse / <span class='ampliado'>incrível entusiasmo</span> em entender "
-"como as IAs se comportam diante de materiais relacionados ao sistema da "
-"arte / <span class='ampliado'>a rede de reação ao artesanto</span>."
-msgstr ""
-
-#: templates/about.html:43
-msgid ""
-"Quando elas interpretam imagens complexas / <span class='ampliado'>quadros "
-"cheios de detalhes</span>, como as do campo artístico / <span "
-"class='ampliado'>inventivo</span>, é comum não conseguirem dar conta da "
-"subjetividade humana desses conteúdos / <span class='ampliado'>é fundamental "
-"não ter a capacidade de representar a subjetividade humana dessas "
-"substâncias</span>. Por um lado / <span class='ampliado'>De um ponto de "
-"vista</span>, seus resultados nivelam a arte / <span class='ampliado'>a mão "
-"de obra especializada de</span> uma maneira bastante desconcertante / <span "
-"class='ampliado'>perturbadora</span>; mas também oferecem interpretações "
-"alternativas / <span class='ampliado'>traduções eletivas</span> que, a meu "
-"ver, não devem ser descartadas. Uma escultura / <span "
-"class='ampliado'>projeto</span> de Max Bill é lida como um refrigerador "
-"(ressaltando o fato de que o objeto de arte é, também, produto / <span "
-"class='ampliado'>essência do capitalismo</span>); um visitante da Bienal "
-"parado na frente de um quadro é descrito como um consumidor parado / <span "
-"class='ampliado'>comprador apaixonado</span> na frente da vitrine de uma "
-"loja; o prédio da Bienal é definido como um condomínio de luxo (relacionando "
-"arte contemporânea / <span class='ampliado'>artesanato não tradicional</"
-"span> e elitismo); e uma parede expositiva / <span class='ampliado'>divisor "
-"explicativo</span> é encarada, poeticamente, como um vasto horizonte / <span "
-"class='ampliado'>uma rede de possibilidades</span>. Não ignorar esses "
-"resultados inesperados, não tratá-los como simples erros nos ajuda / <span "
-"class='ampliado'>nos encoraja</span> a entender que essas IAs foram "
-"programadas a partir de certos valores / <span "
-"class='ampliado'>personalizadas de qualidades específicas</span>, e que não "
-"estão em um campo distinto do humano; também carregam as ideologias / "
-"transmitem um sistema de crença, muitas delas problemáticas, de nossa "
-"sociedade / <span class='ampliado'>público em geral</span>."
-msgstr ""
-
-#: templates/about.html:47
-msgid ""
-"L.C.: Muitas ações de seu projeto / <span class='ampliado'>sua empresa</"
-"span> envolvem a participação do público / <span class='ampliado'>incluem um "
-"suporte aberto</span>. Como se dá essa ativação / <span "
-"class='ampliado'>Como esta promulgação acontece</span>?"
-msgstr ""
-
-#: templates/about.html:51
-msgid ""
-"Estamos interessados / <span class='ampliado'>empenhados</span> em registrar "
-"as reações do público no espaço expositivo / <span class='ampliado'>as "
-"respostas abertas no espaço de apresentação e representação</span>, criar um "
-"canal de diálogo com os mediadores / <span class='ampliado'>com duração</"
-"span> e oferecer a possibilidade de as pessoas enviarem materiais / <span "
-"class='ampliado'>respingos</span> sobre a 33ª Bienal para serem "
-"decodificados no website do projeto (outra33.bienal.org.br). Desse modo, a "
-"lógica se inverte / <span class='ampliado'>um problema acontece</span>: a "
-"passividade / <span class='ampliado'>falta de envolvimento</span> do “não "
-"entendo de / <span class='ampliado'>não aceito</span> a arte contemporânea” "
-"dá lugar à ideia de participação. E, participando, esse visitante passa a "
-"ser corresponsável pela construção do discurso / <span class='ampliado'>este "
-"convidado acaba encarregado do desenvolvimento da palestra</span>; é "
-"estimulado a ir além das posturas comuns / <span class='ampliado'>recomenda-"
-"se ir além dos lugares normais de recusa</span>, da crítica fácil ao "
-"artista / <span class='ampliado'>sócio</span> / <span "
-"class='ampliado'>especialista</span> e ao curador / <span "
-"class='ampliado'>cuidador</span> / <span class='ampliado'>controlador</"
-"span> / <span class='ampliado'>custodiante</span> / <span "
-"class='ampliado'>guardião</span> / <span class='ampliado'>selecionador de "
-"pontos de vista</span>, e a encarar os compromissos de uma emancipação que "
-"ele reclamava que não lhe era oferecida antes."
-msgstr ""
-
-#: templates/about.html:58
-msgid ""
-"Pesquisador e artista visual com projetos relacionados ao sistema das artes "
-"visuais, em especial a seus espaços de legitimação, interessa-se pela "
-"decodificação desse campo, que revela seus procedimentos e seus jogos de "
-"poder. É pesquisador-sênior do Center for Arts, Design and Social Research "
-"(CAD+SR), em Boston (EUA), e doutorando pela Capes em artes visuais na "
-"Unicamp (Campinas), com passagem pela University of Arts of Helsinki "
-"(Finlândia). É coordenador de experiências no campo da história da arte, com "
-"aulas e projetos financiados e reconhecidos por prêmios e bolsas como Rumos "
-"Itaú Cultural, Fapesp, CNPq e Deviant Practice 2018-2019 Van Abbemuseum. "
-"Suas obras estão em instituições como MAC-USP, Museu Nacional da Colômbia, "
-"CCSP e CA2M, na maioria das vezes de formas que problematizam suas coleções "
-"e estruturas internas de funcionamento. É artista convidado da 33ª Bienal de "
-"São Paulo e coordenador geral do projeto Outra 33ª Bienal de São Paulo."
-msgstr ""
-
-#: templates/about.html:65
-msgid ""
-"Pesquisador e doutorando na Universidade de Aarhus, Dinamarca, é doutorando-"
-"visitante no Massachusetts Institute of Technology (MIT), em Cambridge "
-"(EUA), e pesquisador afiliado do Center for Arts, Design and Social Research "
-"(CAD+SR), em Boston (EUA). Em suas pesquisas, busca misturar, de forma "
-"criativa, teorias da ciência e da tecnologia e práticas e métodos "
-"artísticos. Seu principal foco está no estudo de infraestruturas de dados e "
-"algoritmos. Pesquisador do Future Making Consortium, desenvolve o <a "
-"target='_blank' href='http://futuremaking.space/morm/'>Museum of Random "
-"Memory</a>, experimentos que buscam identificar e fomentar métodos criativos "
-"para recuperar o controle dos Big Data que produzimos no cotidiano. Sua "
-"colaboração com Bruno Moreschi iniciou-se com o projeto A história da _rte e "
-"segue com pesquisa para o Van Abbemuseum (Holanda), em andamento. "
-"Pesquisador parceiro do projeto Outra 33ª Bienal de São Paulo, coordena a "
-"conceituação e a implementação de suas ações digitais e tecnológicas."
-msgstr ""
-
-#: templates/about.html:72
-msgid ""
-"Cientista da computação formado pela Universidade Federal Fluminense (UFF), "
-"no Rio de Janeiro. No universo computacional, é desenvolvedor conjunto do "
-"projeto de libertação de dados público <a href='https://brasil.io/' "
-"target='_blank'>brasil.io</a>, mantenedor de projetos de software livre e "
-"palestrante com passagens por eventos como FISL e PythonBrasil. Também "
-"desenvolve uma exploração sobre o fazer minimalista e processual em algumas "
-"frentes. No campo da escrita, é um dos criadores e colaboradores do coletivo "
-"<a href='https://pessoas.cc/' target='_blank'>pessoas.cc</a>. Na música, "
-"assina como <a href='https://berin.bandcamp.com/' target='_blank'>berin</a> "
-"e <a href='https://2bonsai.bandcamp.com/' target='_blank'>2bonsai</a> "
-"registros fotográficos em formas de faixas musicais. No campo das imagens, "
-"publica rascunhos de arte computacional criados em <a href='http://berinhard."
-"github.io/sketches/' target='_blank'>berinhard.github.io/sketches</a>. É "
-"responsável pela programação do site e outras experiências do projeto Outra "
-"33ª Bienal de São Paulo."
-msgstr ""
-
-#: templates/about.html:79
-msgid ""
-"Designer e editor, bacharel em design gráfico pelo Senac São Paulo e pós-"
-"graduado em Arte: Crítica e Curadoria pela PUC (São Paulo). Sua prática em "
-"design abrange edição e jornalismo, educação, a relação entre design e "
-"música, além da pesquisa e produção de autopublicações: fanzines, panfletos, "
-"livros e boletins. É criador do Zine Parasita (2006-) e editor responsável "
-"desde 2012, além de fundador da editora CONTRA (2013-16) e co-fundador d’A "
-"Escola Livre. Seus trabalhos apareceram em exposições e publicações e foram "
-"premiados no Brasil e no exterior. Desde 2016, é editor de arte do <a "
-"href='https://www.nexojornal.com.br/' target='_blank'>Nexo Jornal</a>. Em "
-"2018, integra a equipe de professores da ebac na disciplina Design "
-"Editorial. É responsável pelo design do projeto Outra 33ª Bienal de São "
-"Paulo."
-msgstr ""
-
-#: templates/about.html:86
-msgid ""
-"É produtora cultural, focada em projetos de linguagens diversas. Formada em "
-"artes cênicas pela Universidade do Estado de Santa Catarina (UDESC), iniciou "
-"seu trabalho em 2008 em festivais independentes. Em 2013, mudou-se para São "
-"Paulo e, desde então, desenvolve projetos em diversas áreas culturais, como "
-"Fórum Mundial de Bienais 2, Cultura Inglesa Festival, Semana Internacional "
-"de Música de São Paulo e Parque Gráfico – Feira de Arte Impressa. É "
-"responsável pelo gerenciamento de ações do projeto Outra 33ª Bienal de São "
-"Paulo."
-msgstr ""
-
-#: templates/base.html:12 templates/base.html:41
-msgid "OUTRA 33ª Bienal de São Paulo"
-msgstr ""
-
-#: templates/base.html:46
-msgid "Sobre"
-msgstr "About"
-
-#: templates/base.html:60
-msgid "Questões"
-msgstr ""
+#~ msgid "Sobre"
+#~ msgstr "About"

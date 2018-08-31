@@ -188,12 +188,15 @@ hr {
   margin-bottom: 1em; }
 #about_content h4 {
   margin-bottom: 0px; }
+#about_content #interview {
+  margin-top: 4em; }
+  #about_content #interview a {
+    font-weight: bold; }
 #about_content .profile {
-  margin-top: 0em; }
+  margin-top: 0em;
+  font-size: 0.9rem; }
 #about_content .ampliado {
   text-decoration: underline; }
-#about_content .intro {
-  font-style: italic; }
 #about_content .question {
   font-weight: bold; }
 #about_content .answer label {

@@ -307,16 +307,18 @@ hr {
         margin-bottom: 0px;
     }
 
+    #interview {
+        a {font-weight: bold;};
+        margin-top: 4em;
+    }
+
     .profile {
         margin-top: 0em;
+        font-size: 0.9rem;
     }
 
     .ampliado {
         text-decoration: underline;
-    }
-
-    .intro {
-        font-style: italic;
     }
 
     .question {
