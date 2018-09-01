@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-01 13:48-0300\n"
-"PO-Revision-Date: 2018-09-01 13:54-0300\n"
+"PO-Revision-Date: 2018-09-01 15:34-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -293,11 +293,11 @@ msgstr "Related Questions"
 
 #: src/actions/templates/actions/action_detail.html:79
 msgid "AÇÃO ANTERIOR"
-msgstr "NEXT ACTION"
+msgstr "PREVIOUS ACTION"
 
 #: src/actions/templates/actions/action_detail.html:83
 msgid "PRÓXIMA AÇÃO"
-msgstr "PREVIOUS ACTION"
+msgstr "NEXT ACTION"
 
 #: src/actions/templates/actions/contact.html:23
 msgid ""
