@@ -106,6 +106,12 @@ hr {
     }
 }
 
+.metodologia_content {
+    @extend %centralized_content;
+
+    p {font-size: 0.8em;}
+}
+
 .main_container{
     padding-left: 2rem;
     padding-right: 2rem;
