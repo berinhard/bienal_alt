@@ -125,7 +125,7 @@ LANGUAGES = [
 
 # Admin config
 SUIT_CONFIG = {
-    'ADMIN_NAME': '(OUTRA) 33ª Bienal de São Paulo',
+    'ADMIN_NAME': 'Outra 33ª Bienal de São Paulo',
 }
 
 # TinyMCE
