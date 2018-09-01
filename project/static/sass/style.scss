@@ -152,7 +152,7 @@ hr {
 
     .actions {
         font-size:1.25rem;
-        line-height:1.35rem;
+        line-height:1.5rem;
         margin-top: 1.5em;
         p { font-size: 1.5rem; }
     }
@@ -433,6 +433,17 @@ hr {
     #actions_list {
         .text_content {
             max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 32em) {
+    header {
+        .header_link {
+            &.active {
+                padding-bottom: 0.1em;
+                border-bottom: $border_size solid $black;
+            }
         }
     }
 }
