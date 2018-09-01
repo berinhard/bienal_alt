@@ -58,7 +58,7 @@ class AnalyzedImageAdminForm(forms.ModelForm):
                 raise forms.ValidationError(msg.format('analise'))
             if 'produtos' not in info:
                 raise forms.ValidationError(msg.format('produtos'))
-            if 'categoria' not in info:
+            if 'categoria' not in info and 'conteúdo' not in info:
                 raise forms.ValidationError(msg.format('categoria'))
         except (yaml.scanner.ScannerError, yaml.parser.ParserError):
             raise forms.ValidationError(self.error_messages[field])

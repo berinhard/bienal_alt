@@ -168,7 +168,7 @@ class AnalyzedImage(models.Model):
 
     @property
     def category(self):
-        return self.info.get('categoria') or ''
+        return self.info.get('categoria') or self.info.get('conteúdo') or ''
 
     @property
     def thumbnails(self):
@@ -184,7 +184,7 @@ class AnalyzedImage(models.Model):
 
     @property
     def category_en(self):
-        return self.info_en.get('categoria') or ''
+        return self.info_en.get('categoria') or self.info_en.get('conteúdo') or ''
 
 
 class Contact(models.Model):
