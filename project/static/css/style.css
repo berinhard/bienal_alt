@@ -10,6 +10,13 @@ body {
   background-color: #fff;
   text-rendering: geometricPrecision; }
 
+h1, h2, h3, h4, h5, h6, b, strong, b, .bold {
+  font-family: "Neutral Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  font-variant: normal; }
+
 a {
   color: #111;
   text-decoration: none; }
@@ -17,7 +24,6 @@ a {
     text-decoration: none; }
 
 header {
-  font-weight: bold;
   line-height: 1.5rem;
   font-size: 1.25rem; }
   header .header_link:hover {
@@ -194,8 +200,6 @@ hr {
   margin-bottom: 0px; }
 #about_content #interview {
   margin-top: 2em; }
-  #about_content #interview a {
-    font-weight: bold; }
 #about_content .profile {
   margin-top: 0em;
   font-size: 0.8rem; }
