@@ -19,7 +19,14 @@
         <div class="actions">
             {% for action in actions %}
                 <p><a class="action_link" href="{{ action.detail_url }}">{% trans_field action "title" LANGUAGE_CODE %}</a></p>
+            {% empty %}
+                {% if q %}
+                <p>{% trans "Nenhum resultado encontrado para a busca "%} "{{ q }}".</p>
+                {% else %}
+                <p>{% trans "Nenhum resultado encontrado."%}</p>
+                {% endif %}
             {% endfor %}
+
         </div>
     </div>
 

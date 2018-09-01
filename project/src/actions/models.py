@@ -1,9 +1,62 @@
 from django.db import models
 from django.utils.translation import gettext as _
 from django.urls import reverse
+from django.conf import settings
 
 from tinymce.models import HTMLField
 from yamlfield.fields import YAMLField
+
+def html_encode(s):
+    """
+    Returns the ASCII decoded version of the given HTML string. This does
+    NOT remove normal HTML tags like <p>.
+    """
+    htmlCodes = (
+        ("'", '&#39;'),
+        ('"', '&quot;'),
+        ('>', '&gt;'),
+        ('<', '&lt;'),
+        ('&', '&amp;'),
+        ('À', '&Agrave;'),
+        ('à', '&agrave;'),
+        ('Á', '&Aacute;'),
+        ('á', '&aacute;'),
+        ('Â', '&Acirc;'),
+        ('â', '&acirc;'),
+        ('Ã', '&Atilde;'),
+        ('ã', '&atilde;'),
+        ('Ç', '&Ccedil;'),
+        ('ç', '&ccedil;'),
+        ('È', '&Egrave;'),
+        ('è', '&egrave;'),
+        ('É', '&Eacute;'),
+        ('é', '&eacute;'),
+        ('Ê', '&Ecirc;'),
+        ('ê', '&ecirc;'),
+        ('Ì', '&Igrave;'),
+        ('ì', '&igrave;'),
+        ('Í', '&Iacute;'),
+        ('í', '&iacute;'),
+        ('Ï', '&Iuml;'),
+        ('ï', '&iuml;'),
+        ('Ò', '&Ograve;'),
+        ('ò', '&ograve;'),
+        ('Ó', '&Oacute;'),
+        ('ó', '&oacute;'),
+        ('Õ', '&Otilde;'),
+        ('õ', '&otilde;'),
+        ('Ù', '&Ugrave;'),
+        ('ù', '&ugrave;'),
+        ('Ú', '&Uacute;'),
+        ('ú', '&uacute;'),
+        ('Ü', '&Uuml;'),
+        ('ü', '&uuml;'),
+        ('ª', '&ordf;'),
+        ('º', '&ordm;'),
+    )
+    for code in htmlCodes:
+        s = s.replace(code[0], code[1])
+    return s
 
 
 class QuestionTag(models.Model):
@@ -26,11 +79,18 @@ class QuestionTag(models.Model):
 
 class ActionQuerySet(models.QuerySet):
 
-    def search(self, search_query):
-        return self.filter(
-            models.Q(title__icontains=search_query) |
-            models.Q(body__icontains=search_query)
-        )
+    def search(self, search_query, language=settings.LANGUAGE_CODE):
+        html_search_query = html_encode(search_query)
+        if language == 'en':
+            return self.filter(
+                models.Q(title_en__icontains=search_query) |
+                models.Q(body_en__icontains=html_search_query)
+            )
+        else:
+            return self.filter(
+                models.Q(title__icontains=search_query) |
+                models.Q(body__icontains=html_search_query)
+            )
 
     def published(self):
         return self.filter(published=True)
