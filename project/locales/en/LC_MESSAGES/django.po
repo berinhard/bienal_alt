@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-01 12:02-0300\n"
-"PO-Revision-Date: 2018-09-01 12:04-0300\n"
+"PO-Revision-Date: 2018-09-01 13:33-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -216,7 +216,7 @@ msgstr "No images were found for the selected search."
 #: src/actions/templates/actions/contact.html:5 templates/404.html:5
 #: templates/about.html:6 templates/base.html:24 templates/base.html:56
 msgid "Outra 33 Bienal de São Paulo"
-msgstr "Other 33 Bienal de São Paulo"
+msgstr "Another 33 Bienal de São Paulo"
 
 #: src/actions/templates/actions/action_detail.html:31
 msgid "VISUALIZAÇÃO"
