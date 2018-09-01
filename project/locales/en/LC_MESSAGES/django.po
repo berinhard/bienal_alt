@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-31 17:50-0300\n"
-"PO-Revision-Date: 2018-08-29 13:59-0300\n"
+"POT-Creation-Date: 2018-09-01 12:02-0300\n"
+"PO-Revision-Date: 2018-09-01 12:04-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -18,228 +18,231 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: actions/admin.py:29 actions/models.py:54 actions/models.py:90
+#: src/actions/admin.py:29 src/actions/models.py:114 src/actions/models.py:150
 msgid "Ação"
-msgstr ""
+msgstr "Action"
 
-#: actions/admin.py:29 actions/admin.py:47
+#: src/actions/admin.py:29 src/actions/admin.py:47
 msgid "Carrossel de Imagens"
 msgstr ""
 
-#: actions/admin.py:43
+#: src/actions/admin.py:43
 msgid "Avançados"
 msgstr ""
 
-#: actions/admin.py:58
+#: src/actions/admin.py:58
 msgid "Preview"
 msgstr ""
 
-#: actions/admin.py:62
+#: src/actions/admin.py:62
 msgid "Publica as ações"
 msgstr ""
 
-#: actions/admin.py:73
+#: src/actions/admin.py:73
 msgid "A ação \"{}\" foi salva e publicada com sucesso!"
 msgstr ""
 
-#: actions/admin.py:90 actions/models.py:133
+#: src/actions/admin.py:90 src/actions/models.py:193
 msgid "Mensagem"
 msgstr ""
 
-#: actions/forms.py:33 actions/forms.py:34
+#: src/actions/forms.py:33 src/actions/forms.py:34
 msgid ""
 "Este campo precisa estar num formato YAML válido. Teste aqui http://www."
 "yamllint.com/ para entender o erro e corrigí-lo."
 msgstr ""
 
-#: actions/forms.py:56
+#: src/actions/forms.py:56
 msgid "Está faltando o campo: {}"
 msgstr ""
 
-#: actions/forms.py:79
+#: src/actions/forms.py:79
 msgid ""
 "Autorizo o uso do arquivo enviado para ser usado exclusivamente nas ações do "
 "Outra 33ª Bienal de São Paulo. O projeto se compromete a não utilizar os "
 "arquivos para outros fins, que não o da pesquisa artística."
 msgstr ""
 
-#: actions/forms.py:94
+#: src/actions/forms.py:94
 msgid "É necessário autorização para enviar o arquivo."
-msgstr ""
+msgstr "You must agree with the file usage authorization to upload it."
 
-#: actions/models.py:10 actions/models.py:16
+#: src/actions/models.py:63 src/actions/models.py:69
 msgid "Pergunta"
 msgstr ""
 
-#: actions/models.py:11
+#: src/actions/models.py:64
 msgid "Descrição"
 msgstr ""
 
-#: actions/models.py:12
+#: src/actions/models.py:65
 msgid "Pergunta (EN)"
 msgstr ""
 
-#: actions/models.py:13
+#: src/actions/models.py:66
 msgid "Descrição (EN)"
 msgstr ""
 
-#: actions/models.py:17 actions/models.py:50
+#: src/actions/models.py:70 src/actions/models.py:110
 msgid "Perguntas"
 msgstr ""
 
-#: actions/models.py:42
+#: src/actions/models.py:102
 msgid "Slug"
 msgstr ""
 
-#: actions/models.py:43
+#: src/actions/models.py:103
 msgid "Título"
 msgstr ""
 
-#: actions/models.py:44
+#: src/actions/models.py:104
 msgid "Título (EN)"
 msgstr ""
 
-#: actions/models.py:45
+#: src/actions/models.py:105
 msgid "Conteúdo"
 msgstr ""
 
-#: actions/models.py:46
+#: src/actions/models.py:106
 msgid "Conteúdo (EN)"
 msgstr ""
 
-#: actions/models.py:47
+#: src/actions/models.py:107
 msgid "Código Javascript"
 msgstr ""
 
-#: actions/models.py:48
+#: src/actions/models.py:108
 msgid "CSS Customizado"
 msgstr ""
 
-#: actions/models.py:49
+#: src/actions/models.py:109
 msgid "Extra head"
 msgstr ""
 
-#: actions/models.py:51
+#: src/actions/models.py:111
 msgid "Publicada"
 msgstr ""
 
-#: actions/models.py:55 actions/templates/actions/list_actions.html:15
+#: src/actions/models.py:115 src/actions/templates/actions/list_actions.html:15
+#: templates/base.html:58
 msgid "Ações"
 msgstr "Actions"
 
-#: actions/models.py:86 actions/models.py:131
+#: src/actions/models.py:146 src/actions/models.py:191
 msgid "Nome"
 msgstr ""
 
-#: actions/models.py:87
+#: src/actions/models.py:147
 msgid "Nome (EN)"
 msgstr ""
 
-#: actions/models.py:88
+#: src/actions/models.py:148
 msgid "Autor"
-msgstr ""
+msgstr "Author"
 
-#: actions/models.py:89 actions/models.py:135
+#: src/actions/models.py:149 src/actions/models.py:195
 msgid "Data"
-msgstr ""
+msgstr "Date"
 
-#: actions/models.py:91
+#: src/actions/models.py:151
 msgid "Imagem"
-msgstr ""
+msgstr "Image"
 
-#: actions/models.py:92
+#: src/actions/models.py:152
 msgid "Resultados da Análise"
 msgstr ""
 
-#: actions/models.py:93
+#: src/actions/models.py:153
 msgid "Resultados da Análise (EN)"
 msgstr ""
 
-#: actions/models.py:94
+#: src/actions/models.py:154
 msgid "Posição"
 msgstr ""
 
-#: actions/models.py:97
+#: src/actions/models.py:157
 msgid "Imagem Analisada"
 msgstr ""
 
-#: actions/models.py:98
+#: src/actions/models.py:158
 msgid "Imagens Analisadas"
 msgstr ""
 
-#: actions/models.py:132
+#: src/actions/models.py:192
 msgid "E-mail"
 msgstr ""
 
-#: actions/models.py:134
+#: src/actions/models.py:194
 msgid "Envio de Arquivo"
 msgstr ""
 
-#: actions/models.py:138 actions/templates/actions/contact.html:5
+#: src/actions/models.py:198 src/actions/templates/actions/contact.html:5
+#: templates/base.html:64
 msgid "Contato"
 msgstr "Contact"
 
-#: actions/models.py:139
+#: src/actions/models.py:199
 msgid "Contatos"
-msgstr ""
+msgstr "Contacts"
 
-#: actions/templates/actions/action_carousel.html:25
+#: src/actions/templates/actions/action_carousel.html:25
 msgid "IMAGEM"
-msgstr ""
+msgstr "IMAGE"
 
-#: actions/templates/actions/action_carousel.html:30
-#: actions/templates/actions/action_carousel.html:41
+#: src/actions/templates/actions/action_carousel.html:30
+#: src/actions/templates/actions/action_carousel.html:41
 msgid "ANÁLISE"
-msgstr ""
+msgstr "ANALYSIS"
 
-#: actions/templates/actions/action_carousel.html:35
-#: actions/templates/actions/action_carousel.html:46
+#: src/actions/templates/actions/action_carousel.html:35
+#: src/actions/templates/actions/action_carousel.html:46
 msgid "PRODUTOS"
-msgstr ""
+msgstr "PRODUCTS"
 
-#: actions/templates/actions/action_carousel.html:38
-#: actions/templates/actions/action_carousel.html:49
+#: src/actions/templates/actions/action_carousel.html:38
+#: src/actions/templates/actions/action_carousel.html:49
 msgid "CONTEÚDO"
-msgstr ""
+msgstr "CONTENT"
 
-#: actions/templates/actions/action_carousel.html:53
+#: src/actions/templates/actions/action_carousel.html:53
 msgid "IMAGENS SEMELHANTES"
-msgstr ""
+msgstr "SIMILAR IMAGES"
 
-#: actions/templates/actions/action_carousel.html:64
+#: src/actions/templates/actions/action_carousel.html:64
 msgid "Não foram encontradas imagens para a busca selecionada."
-msgstr ""
+msgstr "No images were found for the selected search."
 
-#: actions/templates/actions/action_detail.html:7
-#: actions/templates/actions/contact.html:5
-msgid "OUTRA 33 Bienal de São Paulo"
-msgstr ""
+#: src/actions/templates/actions/action_detail.html:7
+#: src/actions/templates/actions/contact.html:5 templates/404.html:5
+#: templates/about.html:6 templates/base.html:24 templates/base.html:56
+msgid "Outra 33 Bienal de São Paulo"
+msgstr "Other 33 Bienal de São Paulo"
 
-#: actions/templates/actions/action_detail.html:31
+#: src/actions/templates/actions/action_detail.html:31
 msgid "VISUALIZAÇÃO"
-msgstr ""
+msgstr "VISUALIZATION"
 
-#: actions/templates/actions/action_detail.html:32
+#: src/actions/templates/actions/action_detail.html:32
 msgid "Cronológica"
-msgstr ""
+msgstr "Chronological"
 
-#: actions/templates/actions/action_detail.html:33
+#: src/actions/templates/actions/action_detail.html:33
 msgid "Randômica"
-msgstr ""
+msgstr "Random"
 
-#: actions/templates/actions/action_detail.html:35
+#: src/actions/templates/actions/action_detail.html:35
 msgid "Filtrar por Edição"
-msgstr ""
+msgstr "By Edition"
 
-#: actions/templates/actions/action_detail.html:43
+#: src/actions/templates/actions/action_detail.html:43
 msgid "Bienal de São Paulo"
-msgstr ""
+msgstr "Bienal de São Paulo"
 
-#: actions/templates/actions/action_detail.html:53
+#: src/actions/templates/actions/action_detail.html:53
 msgid "Metodologia"
-msgstr ""
+msgstr "Records Methodology"
 
-#: actions/templates/actions/action_detail.html:57
+#: src/actions/templates/actions/action_detail.html:57
 msgid ""
 "Os resultados das imagens da Bienal apresentados aqui seguiram um modo "
 "metodológico, que se utiliza de bases pretensamente tecnólogico-científicas, "
@@ -248,8 +251,14 @@ msgid ""
 "significados das imagens e/ou revelam as categorias das estruturas dessas "
 "plataformas."
 msgstr ""
+"The results of the images of the Bienal (of this one and of the past "
+"editions) presented here were arrived at by a “methodological” mode with "
+"ostensibly technological/scientific bases, always with the aim of "
+"highlighting the unexpected results. We are interested in the responses of "
+"the artificial intelligences that expand the meanings of the images and/or "
+"reveal the categories of the structures of these platforms."
 
-#: actions/templates/actions/action_detail.html:59
+#: src/actions/templates/actions/action_detail.html:59
 msgid ""
 "Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, "
 "visite <a href='https://testingdataviz.github.io/BienalArtDecoder' "
@@ -257,8 +266,13 @@ msgid ""
 "exclusivamente para o projeto, reunindo todos os resultados produzidos por "
 "diferentes Inteligências Artificiais a partir das imagens da mostra."
 msgstr ""
+"If you are interested in consulting the complete results, without our "
+"filter, visit the <a href='https://testingdataviz.github.io/"
+"BienalArtDecoder' target='_blank'>Bienal Art Decoder</a>, an internal "
+"platform constructed exclusively for the project and which presents all the "
+"results of the images produced by the different artificial intelligences."
 
-#: actions/templates/actions/action_detail.html:61
+#: src/actions/templates/actions/action_detail.html:61
 msgid ""
 "Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, "
 "provocativo, falsificação e violência – que segue a seguinte ordem: "
@@ -266,26 +280,32 @@ msgid ""
 "termo Seguro para trabalhar é uma expressão utilizada na internet para "
 "designar conteúdos adequados para serem vistos em público."
 msgstr ""
+"In the Content/Control category there is a grading of the results in the "
+"descriptors “adult,” “physician,” “racy,” “falsification” and “violence” in "
+"the following order: very likely&gt; likely&gt; possible&gt; unlikely&gt; "
+"very unlikely. For its part, the term “Safe for Work” is an Internet "
+"expression used for contents appropriate for viewing in public places or at "
+"work."
 
-#: actions/templates/actions/action_detail.html:70
+#: src/actions/templates/actions/action_detail.html:70
 msgid "Questões Relacionadas"
-msgstr ""
+msgstr "Related Questions"
 
-#: actions/templates/actions/action_detail.html:79
+#: src/actions/templates/actions/action_detail.html:79
 msgid "AÇÃO ANTERIOR"
-msgstr ""
+msgstr "NEXT ACTION"
 
-#: actions/templates/actions/action_detail.html:83
+#: src/actions/templates/actions/action_detail.html:83
 msgid "PRÓXIMA AÇÃO"
-msgstr ""
+msgstr "PREVIOUS ACTION"
 
-#: actions/templates/actions/contact.html:23
+#: src/actions/templates/actions/contact.html:23
 msgid ""
 "Sugestões sobre o nosso projeto e histórias sobre a 33ª Bienal de São Paulo "
 "são muito importantes para nós."
 msgstr ""
 
-#: actions/templates/actions/contact.html:25
+#: src/actions/templates/actions/contact.html:25
 msgid ""
 "Fotografias, vídeos curtos, desenhos e outros arquivos relacionados à 33ª "
 "Bienal de São Paulo podem ser enviados para contribuir na construção deste "
@@ -296,86 +316,218 @@ msgid ""
 "e vídeos produzidos em contextos artísticos."
 msgstr ""
 
-#: actions/templates/actions/contact.html:27
+#: src/actions/templates/actions/contact.html:27
 msgid "Muito obrigado!"
-msgstr ""
+msgstr "Thank you!"
 
-#: actions/templates/actions/contact.html:39
+#: src/actions/templates/actions/contact.html:39
 msgid "ENVIO DE ARQUIVO"
-msgstr ""
+msgstr "FILE UPLOAD"
 
-#: actions/templates/actions/contact.html:71
+#: src/actions/templates/actions/contact.html:71
 msgid "ENVIAR"
-msgstr ""
+msgstr "SUBMIT"
 
-#: actions/templates/actions/list_actions.html:28
+#: src/actions/templates/actions/list_actions.html:24
+msgid "Nenhum resultado encontrado para a busca "
+msgstr "No results were found for search"
+
+#: src/actions/templates/actions/list_actions.html:26
+msgid "Nenhum resultado encontrado."
+msgstr "No results were found."
+
+#: src/actions/templates/actions/list_actions.html:35
 msgid "ESTE PROJETO ESTÁ EM CONSTANTE ATUALIZAÇÃO"
-msgstr ""
+msgstr "THIS PROJECT IS IN CONSTANT UPDATE"
 
-#: actions/templates/actions/list_actions.html:29
+#: src/actions/templates/actions/list_actions.html:36
 msgid "ÚLTIMO UPDATE"
-msgstr ""
+msgstr "LAST UPDATE"
 
-#: actions/views.py:95
+#: src/actions/views.py:95
 msgid "Erro na validação do Captcha"
-msgstr ""
+msgstr "Error with Captcha validation"
 
-#: mce_filebrowser/models.py:9
+#: src/mce_filebrowser/models.py:9
 msgid "Image"
 msgstr ""
 
-#: mce_filebrowser/models.py:10
+#: src/mce_filebrowser/models.py:10
 msgid "Document"
 msgstr ""
 
-#: mce_filebrowser/models.py:15
+#: src/mce_filebrowser/models.py:15
 msgid "File / Image"
 msgstr ""
 
-#: mce_filebrowser/models.py:17
+#: src/mce_filebrowser/models.py:17
 msgid "Create date"
 msgstr ""
 
-#: mce_filebrowser/templates/_paginator.html:7
+#: src/mce_filebrowser/templates/_paginator.html:7
 msgid "Previous"
 msgstr ""
 
-#: mce_filebrowser/templates/_paginator.html:11
+#: src/mce_filebrowser/templates/_paginator.html:11
 msgid "Next"
 msgstr ""
 
-#: mce_filebrowser/templates/filebrowser.html:5
+#: src/mce_filebrowser/templates/filebrowser.html:5
 msgid "File browser"
 msgstr ""
 
-#: mce_filebrowser/templates/filebrowser.html:17
+#: src/mce_filebrowser/templates/filebrowser.html:17
 msgid "Previosly uploaded images"
 msgstr ""
 
-#: mce_filebrowser/templates/filebrowser.html:27
-#: mce_filebrowser/templates/filebrowser.html:49
+#: src/mce_filebrowser/templates/filebrowser.html:27
+#: src/mce_filebrowser/templates/filebrowser.html:49
 msgid "Remove"
 msgstr ""
 
-#: mce_filebrowser/templates/filebrowser.html:32
+#: src/mce_filebrowser/templates/filebrowser.html:32
 msgid "No images uploaded"
 msgstr ""
 
-#: mce_filebrowser/templates/filebrowser.html:41
+#: src/mce_filebrowser/templates/filebrowser.html:41
 msgid "Previosly uploaded documents"
 msgstr ""
 
-#: mce_filebrowser/templates/filebrowser.html:54
+#: src/mce_filebrowser/templates/filebrowser.html:54
 msgid "No documents uploaded"
 msgstr ""
 
-#: mce_filebrowser/templates/filebrowser.html:63
+#: src/mce_filebrowser/templates/filebrowser.html:63
 msgid "Upload file"
 msgstr ""
 
-#: mce_filebrowser/templates/filebrowser.html:70
+#: src/mce_filebrowser/templates/filebrowser.html:70
 msgid "Insert"
 msgstr ""
 
-#~ msgid "Sobre"
-#~ msgstr "About"
+#: templates/404.html:5 templates/404.html:9
+msgid "Página não encontrada"
+msgstr "Page not found"
+
+#: templates/about.html:6 templates/base.html:61
+msgid "Sobre"
+msgstr "About"
+
+#: templates/about.html:13
+msgid "Sobre o projeto"
+msgstr "About the project"
+
+#: templates/about.html:17
+msgid ""
+"Para além do discurso oficial, há outras compreensões possíveis da 33ª "
+"Bienal. O artista Bruno Moreschi, com colaboração do pesquisador Gabriel "
+"Pereira, do programador Bernardo Fontes, da produtora Nina Bamberg e do "
+"designer Guilherme Falcão, criou modos alternativos de compreensão da "
+"exposição: análises de imagens da Bienal por Inteligências Artificiais; "
+"faixas do audioguia com comentários de guardas, montadores e funcionários da "
+"limpeza; ampliações dos textos da Bienal; filmagens não convencionais da "
+"montagem; registros das reações do público etc. A partir de quatro perguntas "
+"propositadamente amplas – o que é presença, hoje? O que os não "
+"especializados têm a dizer? O que reverbera? E o que fica? – esse projeto "
+"constituirá um arquivo alternativo ao da instituição e investigará as etapas "
+"de registro dos discursos oficiais. Assim, pesquisadores terão aceso a um "
+"material que revele parte do funcionamento do sistema da arte e que estimule "
+"pesquisas experimentais sobre a 33ª Bienal."
+msgstr ""
+
+#: templates/about.html:21 templates/about.html:23
+msgid "Conversa entre Bruno Moreschi e Laura Consendy"
+msgstr "Conversation between Bruno Moreschi and Laura Consendy"
+
+#: templates/about.html:27
+msgid "Participantes"
+msgstr "Participants"
+
+#: templates/about.html:31
+msgid ""
+"Pesquisador e artista visual com projetos relacionados ao sistema das artes "
+"visuais, em especial a seus espaços de legitimação, interessa-se pela "
+"decodificação desse campo, que revela seus procedimentos e seus jogos de "
+"poder. É pesquisador-sênior do Center for Arts, Design and Social Research "
+"(CAD+SR), em Boston (EUA), e doutorando pela Capes em artes visuais na "
+"Unicamp (Campinas), com passagem pela University of Arts of Helsinki "
+"(Finlândia). É coordenador de experiências no campo da história da arte, com "
+"aulas e projetos financiados e reconhecidos por prêmios e bolsas como Rumos "
+"Itaú Cultural, Fapesp, CNPq e Deviant Practice 2018-2019 Van Abbemuseum. "
+"Suas obras estão em instituições como MAC-USP, Museu Nacional da Colômbia, "
+"CCSP e CA2M, na maioria das vezes de formas que problematizam suas coleções "
+"e estruturas internas de funcionamento. É artista convidado da 33ª Bienal de "
+"São Paulo e coordenador geral do projeto Outra 33 Bienal de São Paulo."
+msgstr ""
+
+#: templates/about.html:38
+msgid ""
+"Pesquisador e doutorando na Universidade de Aarhus, Dinamarca, é doutorando-"
+"visitante no Massachusetts Institute of Technology (MIT), em Cambridge "
+"(EUA), e pesquisador afiliado do Center for Arts, Design and Social Research "
+"(CAD+SR), em Boston (EUA). Em suas pesquisas, busca misturar, de forma "
+"criativa, teorias da ciência e da tecnologia e práticas e métodos "
+"artísticos. Seu principal foco está no estudo de infraestruturas de dados e "
+"algoritmos. Pesquisador do Future Making Consortium, desenvolve o <a "
+"target='_blank' href='http://futuremaking.space/morm/'>Museum of Random "
+"Memory</a>, experimentos que buscam identificar e fomentar métodos criativos "
+"para recuperar o controle dos Big Data que produzimos no cotidiano. Sua "
+"colaboração com Bruno Moreschi iniciou-se com o projeto A história da _rte e "
+"segue com pesquisa para o Van Abbemuseum (Holanda), em andamento. "
+"Pesquisador parceiro do projeto Outra 33 Bienal de São Paulo, coordena a "
+"conceituação e a implementação de suas ações digitais e tecnológicas."
+msgstr ""
+
+#: templates/about.html:45
+msgid ""
+"Cientista da computação formado pela Universidade Federal Fluminense (UFF), "
+"no Rio de Janeiro. No universo computacional, é desenvolvedor conjunto do "
+"projeto de libertação de dados público <a href='https://brasil.io/' "
+"target='_blank'>brasil.io</a>, mantenedor de projetos de software livre e "
+"palestrante com passagens por eventos como FISL e PythonBrasil. Também "
+"desenvolve uma exploração sobre o fazer minimalista e processual em algumas "
+"frentes. No campo da escrita, é um dos criadores e colaboradores do coletivo "
+"<a href='https://pessoas.cc/' target='_blank'>pessoas.cc</a>. Na música, "
+"assina como <a href='https://berin.bandcamp.com/' target='_blank'>berin</a> "
+"e <a href='https://2bonsai.bandcamp.com/' target='_blank'>2bonsai</a> "
+"registros fotográficos em formas de faixas musicais. No campo das imagens, "
+"publica rascunhos de arte computacional criados em <a href='http://berinhard."
+"github.io/sketches/' target='_blank'>berinhard.github.io/sketches</a>. É "
+"responsável pela programação do site e outras experiências do projeto Outra "
+"33 Bienal de São Paulo."
+msgstr ""
+
+#: templates/about.html:52
+msgid ""
+"Designer e editor, bacharel em design gráfico pelo Senac São Paulo e pós-"
+"graduado em Arte: Crítica e Curadoria pela PUC (São Paulo). Sua prática em "
+"design abrange edição e jornalismo, educação, a relação entre design e "
+"música, além da pesquisa e produção de autopublicações: fanzines, panfletos, "
+"livros e boletins. É criador do Zine Parasita (2006-) e editor responsável "
+"desde 2012, além de fundador da editora CONTRA (2013-16) e co-fundador d’A "
+"Escola Livre. Seus trabalhos apareceram em exposições e publicações e foram "
+"premiados no Brasil e no exterior. Desde 2016, é editor de arte do <a "
+"href='https://www.nexojornal.com.br/' target='_blank'>Nexo Jornal</a>. Em "
+"2018, integra a equipe de professores da ebac na disciplina Design "
+"Editorial. É responsável pelo design do projeto Outra 33 Bienal de São Paulo."
+msgstr ""
+
+#: templates/about.html:59
+msgid ""
+"É produtora cultural, focada em projetos de linguagens diversas. Formada em "
+"artes cênicas pela Universidade do Estado de Santa Catarina (UDESC), iniciou "
+"seu trabalho em 2008 em festivais independentes. Em 2013, mudou-se para São "
+"Paulo e, desde então, desenvolve projetos em diversas áreas culturais, como "
+"Fórum Mundial de Bienais 2, Cultura Inglesa Festival, Semana Internacional "
+"de Música de São Paulo e Parque Gráfico – Feira de Arte Impressa. É "
+"responsável pelo gerenciamento de ações do projeto Outra 33 Bienal de São "
+"Paulo."
+msgstr ""
+
+#: templates/base.html:71
+msgid "Busca"
+msgstr "Search"
+
+#: templates/base.html:75
+msgid "Questões"
+msgstr "Questions"

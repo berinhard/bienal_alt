@@ -68,7 +68,7 @@
             </div>
             <form id="action_filter_form" method="GET" action='{% url "index" %}'>
               <div class="sm-col sm-col-12 md-col-12 lg-col-1 header_item">
-                <input id="id_search" type="text" name="q" placeholder="Busca" {% if q %}value="{{ q }}"{% endif %}/>
+                  <input id="id_search" type="text" name="q" placeholder='{% trans "Busca" %}' {% if q %}value="{{ q }}"{% endif %}/>
               </div>
               <div class="sm-col sm-col-12 md-col-12 lg-col-3 header_item">
                 <select name="question" id="id_question">

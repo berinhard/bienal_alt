@@ -17,10 +17,14 @@
       <p>{% trans "Para além do discurso oficial, há outras compreensões possíveis da 33ª Bienal. O artista Bruno Moreschi, com colaboração do pesquisador Gabriel Pereira, do programador Bernardo Fontes, da produtora Nina Bamberg e do designer Guilherme Falcão, criou modos alternativos de compreensão da exposição: análises de imagens da Bienal por Inteligências Artificiais; faixas do audioguia com comentários de guardas, montadores e funcionários da limpeza; ampliações dos textos da Bienal; filmagens não convencionais da montagem; registros das reações do público etc. A partir de quatro perguntas propositadamente amplas – o que é presença, hoje? O que os não especializados têm a dizer? O que reverbera? E o que fica? – esse projeto constituirá um arquivo alternativo ao da instituição e investigará as etapas de registro dos discursos oficiais. Assim, pesquisadores terão aceso a um material que revele parte do funcionamento do sistema da arte e que estimule pesquisas experimentais sobre a 33ª Bienal." %}</p>
 
       <div id="interview">
-        <a href="https://estaticos-outra-bienal.s3.amazonaws.com/mce_filebrowser/2018/08/31/Outra33Bienal_Sobre.pdf" target="_blank">Conversa entre Bruno Moreschi e Laura Consendy.</a>
+        {% if LANGUAGE_CODE == 'en' %}
+          <a href="#" target="_blank">{% trans "Conversa entre Bruno Moreschi e Laura Consendy" %}.</a>
+        {% else %}
+          <a href="https://estaticos-outra-bienal.s3.amazonaws.com/mce_filebrowser/2018/08/31/Outra33Bienal_Sobre.pdf" target="_blank">{% trans "Conversa entre Bruno Moreschi e Laura Consendy" %}.</a>
+        {% endif %}
       </div>
 
-      <h3 class="mt4">Participantes</h3>
+      <h3 class="mt4">{% trans "Participantes" %}</h3>
       <hr/>
       <h4>Bruno Moreschi</h4>
       <p class="profile">
