@@ -2,7 +2,7 @@ import yaml
 from tinymce.widgets import TinyMCE
 
 from django import forms
-from django.utils.translation import gettext as _
+from django.utils.translation import ugettext_lazy as _
 
 from src.actions.models import Action, Contact, AnalyzedImage
 

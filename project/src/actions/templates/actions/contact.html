@@ -35,7 +35,7 @@
           <p>
               {% if field.id_for_label == "id_upload" %}
                 <label>{% trans "ENVIO DE ARQUIVO" %}</label>
-                <label for="{{ field.id_for_label }}">selecionar...</label>
+                <label for="{{ field.id_for_label }}">{% trans "selecionar..." %}</label>
                 {{ field }}
 
               {% elif field.id_for_label == "id_accept_file_upload" %}
