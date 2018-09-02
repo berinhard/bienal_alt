@@ -1,4 +1,4 @@
-Projeto para o site da (OUTRA) 33ª Bienal de São Paulo
+Projeto para o site da Outra 33 Bienal de São Paulo
 
 ## Setup da aplicação
 

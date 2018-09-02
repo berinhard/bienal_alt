@@ -219,7 +219,7 @@ msgstr "No images were found for the selected search."
 #: src/actions/templates/actions/contact.html:5 templates/404.html:5
 #: templates/about.html:6 templates/base.html:24 templates/base.html:56
 msgid "Outra 33 Bienal de São Paulo"
-msgstr "Another 33 Bienal de São Paulo"
+msgstr "Another 33rd São Paulo Biennial"
 
 #: src/actions/templates/actions/action_detail.html:31
 msgid "VISUALIZAÇÃO"
@@ -487,7 +487,7 @@ msgstr ""
 "Helsinki. He is a coordinator of projects that have been recognized by "
 "awards and grants such as Rumos Itaú Cultural and Deviant Practice 2018–2019 "
 "Van Abbemuseum. He is an invited artist of the 33rd Bienal de São Paulo and "
-"general coordinator of the project Another 33rd Bienal de São Paulo."
+"general coordinator of the project Another 33rd São Paulo Biennial."
 
 #: templates/about.html:37
 msgid ""
@@ -573,8 +573,8 @@ msgid ""
 "Diretório de Ações realizadas pelo projeto Outra 33 Bienal de Artes de São "
 "Paulo"
 msgstr ""
-"Directory for the actions created by the project Outra 33 Bienal de Artes de "
-"São Paulo"
+"Directory for the actions created by the project Another 33rd São Paulo "
+"Biennial"
 
 #: templates/base.html:71
 msgid "Busca"
