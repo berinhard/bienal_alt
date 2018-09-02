@@ -68,6 +68,7 @@ class QuestionTag(models.Model):
     class Meta:
         verbose_name = _('Pergunta')
         verbose_name_plural = _('Perguntas')
+        ordering = ['id']
 
     def __str__(self):
         return self.title
