@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-02 09:45-0300\n"
-"PO-Revision-Date: 2018-09-02 09:39-0300\n"
+"POT-Creation-Date: 2018-09-02 18:42-0300\n"
+"PO-Revision-Date: 2018-09-02 18:42-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: src/actions/admin.py:29 src/actions/models.py:114 src/actions/models.py:150
+#: src/actions/admin.py:29 src/actions/models.py:115 src/actions/models.py:151
 msgid "Ação"
 msgstr "Action"
 
@@ -42,7 +42,7 @@ msgstr ""
 msgid "A ação \"{}\" foi salva e publicada com sucesso!"
 msgstr ""
 
-#: src/actions/admin.py:90 src/actions/models.py:193
+#: src/actions/admin.py:90 src/actions/models.py:194
 msgid "Mensagem"
 msgstr "Message"
 
@@ -86,105 +86,105 @@ msgstr ""
 msgid "Descrição (EN)"
 msgstr ""
 
-#: src/actions/models.py:70 src/actions/models.py:110
+#: src/actions/models.py:70 src/actions/models.py:111
 msgid "Perguntas"
 msgstr ""
 
-#: src/actions/models.py:102
+#: src/actions/models.py:103
 msgid "Slug"
 msgstr ""
 
-#: src/actions/models.py:103
+#: src/actions/models.py:104
 msgid "Título"
 msgstr ""
 
-#: src/actions/models.py:104
+#: src/actions/models.py:105
 msgid "Título (EN)"
 msgstr ""
 
-#: src/actions/models.py:105
+#: src/actions/models.py:106
 msgid "Conteúdo"
 msgstr ""
 
-#: src/actions/models.py:106
+#: src/actions/models.py:107
 msgid "Conteúdo (EN)"
 msgstr ""
 
-#: src/actions/models.py:107
+#: src/actions/models.py:108
 msgid "Código Javascript"
 msgstr ""
 
-#: src/actions/models.py:108
+#: src/actions/models.py:109
 msgid "CSS Customizado"
 msgstr ""
 
-#: src/actions/models.py:109
+#: src/actions/models.py:110
 msgid "Extra head"
 msgstr ""
 
-#: src/actions/models.py:111
+#: src/actions/models.py:112
 msgid "Publicada"
 msgstr ""
 
-#: src/actions/models.py:115 src/actions/templates/actions/list_actions.html:15
+#: src/actions/models.py:116 src/actions/templates/actions/list_actions.html:15
 #: templates/base.html:58
 msgid "Ações"
 msgstr "Actions"
 
-#: src/actions/models.py:146 src/actions/models.py:191
+#: src/actions/models.py:147 src/actions/models.py:192
 msgid "Nome"
 msgstr "Name"
 
-#: src/actions/models.py:147
+#: src/actions/models.py:148
 msgid "Nome (EN)"
 msgstr ""
 
-#: src/actions/models.py:148
+#: src/actions/models.py:149
 msgid "Autor"
 msgstr "Author"
 
-#: src/actions/models.py:149 src/actions/models.py:195
+#: src/actions/models.py:150 src/actions/models.py:196
 msgid "Data"
 msgstr "Date"
 
-#: src/actions/models.py:151
+#: src/actions/models.py:152
 msgid "Imagem"
 msgstr "Image"
 
-#: src/actions/models.py:152
+#: src/actions/models.py:153
 msgid "Resultados da Análise"
 msgstr ""
 
-#: src/actions/models.py:153
+#: src/actions/models.py:154
 msgid "Resultados da Análise (EN)"
 msgstr ""
 
-#: src/actions/models.py:154
+#: src/actions/models.py:155
 msgid "Posição"
 msgstr ""
 
-#: src/actions/models.py:157
+#: src/actions/models.py:158
 msgid "Imagem Analisada"
 msgstr ""
 
-#: src/actions/models.py:158
+#: src/actions/models.py:159
 msgid "Imagens Analisadas"
 msgstr ""
 
-#: src/actions/models.py:192
+#: src/actions/models.py:193
 msgid "E-mail"
 msgstr ""
 
-#: src/actions/models.py:194
+#: src/actions/models.py:195
 msgid "Envio de Arquivo"
 msgstr ""
 
-#: src/actions/models.py:198 src/actions/templates/actions/contact.html:5
+#: src/actions/models.py:199 src/actions/templates/actions/contact.html:5
 #: templates/base.html:64
 msgid "Contato"
 msgstr "Contact"
 
-#: src/actions/models.py:199
+#: src/actions/models.py:200
 msgid "Contatos"
 msgstr "Contacts"
 
@@ -219,7 +219,7 @@ msgstr "No images were found for the selected search."
 #: src/actions/templates/actions/contact.html:5 templates/404.html:5
 #: templates/about.html:6 templates/base.html:24 templates/base.html:56
 msgid "Outra 33 Bienal de São Paulo"
-msgstr "Another 33 Bienal de São Paulo"
+msgstr "Another 33rd São Paulo Biennial"
 
 #: src/actions/templates/actions/action_detail.html:31
 msgid "VISUALIZAÇÃO"
@@ -248,47 +248,45 @@ msgstr "Records Methodology"
 #: src/actions/templates/actions/action_detail.html:57
 msgid ""
 "Os resultados das imagens da Bienal apresentados aqui seguiram um modo "
-"metodológico, que se utiliza de bases pretensamente tecnólogico-científicas, "
-"sempre na intenção de destacar os resultados mais inesperados. Estamos "
-"interessados nas respostas das Inteligências Artificiais que ampliam os "
-"significados das imagens e/ou revelam as categorias das estruturas dessas "
-"plataformas."
+"metodológico com na intenção de destacar os resultados mais inesperados. "
+"Estamos interessados nas respostas das AIs que ampliam os significados das "
+"imagens e/ou revelam as categorias das estruturas dessas plataformas."
 msgstr ""
 "The results of the images of the Bienal (of this one and of the past "
 "editions) presented here were arrived at by a “methodological” mode with "
-"ostensibly technological/scientific bases, always with the aim of "
-"highlighting the unexpected results. We are interested in the responses of "
-"the artificial intelligences that expand the meanings of the images and/or "
-"reveal the categories of the structures of these platforms."
+"technological/scientific bases, always with the aim of highlighting the "
+"unexpected results. We are interested in the responses of the artificial "
+"intelligences that expand the meanings of the images and/or reveal the "
+"categories of the structures of these platforms."
 
 #: src/actions/templates/actions/action_detail.html:59
 msgid ""
 "Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, "
-"visite <a href='https://testingdataviz.github.io/BienalArtDecoder' "
+"visite <a href='https://outra-bienal.github.io/biennal-art-decoder/' "
 "target='_blank'>Bienal Art Decoder</a>, uma plataforma interna construída "
 "exclusivamente para o projeto, reunindo todos os resultados produzidos por "
-"diferentes Inteligências Artificiais a partir das imagens da mostra."
+"diferentes Inteligências Artificiais a partir das imagens oficiais da "
+"instituição Bienal."
 msgstr ""
 "If you are interested in consulting the complete results, without our "
-"filter, visit the <a href='https://testingdataviz.github.io/"
-"BienalArtDecoder' target='_blank'>Bienal Art Decoder</a>, an internal "
-"platform constructed exclusively for the project and which presents all the "
-"results of the images produced by the different artificial intelligences."
+"filter, visit the  <a href='https://outra-bienal.github.io/biennal-art-"
+"decoder/' target='_blank'>Bienal Art Decoder</a>, an internal platform "
+"constructed exclusively for the project and which presents all the results "
+"of the images produced by the different artificial intelligences."
 
 #: src/actions/templates/actions/action_detail.html:61
 msgid ""
-"Na categoria Conteúdo há uma gradação dos resultados – adulto, médico, "
-"provocativo, falsificação e violência – que segue a seguinte ordem: "
-"provável&gt; provável&gt; possível&gt; improvável&gt; muito improvável. Já o "
-"termo Seguro para trabalhar é uma expressão utilizada na internet para "
+"Na categoria \"Conteúdo\" há uma gradação dos resultados – adulto, médico, "
+"provocativo, falsificação e violência – que segue a seguinte ordem: provável "
+"&gt; provável &gt; possível &gt; improvável &gt; muito improvável. Já o "
+"termo \"Seguro para trabalhar\" é uma expressão utilizada na internet para "
 "designar conteúdos adequados para serem vistos em público."
 msgstr ""
-"In the Content/Control category there is a grading of the results in the "
+"In the \"Content\" category there is a grading of the results in the "
 "descriptors “adult,” “physician,” “racy,” “falsification” and “violence” in "
-"the following order: very likely&gt; likely&gt; possible&gt; unlikely&gt; "
-"very unlikely. For its part, the term “Safe for Work” is an Internet "
-"expression used for contents appropriate for viewing in public places or at "
-"work."
+"the following order: very likely > likely > possible > unlikely > very "
+"unlikely. For its part, the term “Safe for Work” is an Internet expression "
+"used for contents appropriate for viewing in public places or at work."
 
 #: src/actions/templates/actions/action_detail.html:70
 msgid "Questões Relacionadas"
@@ -478,6 +476,16 @@ msgid ""
 "artista convidado da 33ª Bienal de São Paulo e coordenador geral do projeto "
 "Outra 33 Bienal de São Paulo."
 msgstr ""
+"Visual artist who works with projects related to the visual art system, "
+"especially to the spaces for the legitimization of art – with an interest in "
+"the decoding of the field in question, revealing its procedures and its "
+"power games. Moreschi is a senior researcher at the Center for Arts, Design "
+"and Social Research (CAD+SR, Boston, USA), and a Capes PhD candidate in "
+"visual arts at Unicamp (Campinas), having attended the University of Arts of "
+"Helsinki. He is a coordinator of projects that have been recognized by "
+"awards and grants such as Rumos Itaú Cultural and Deviant Practice 2018–2019 "
+"Van Abbemuseum. He is an invited artist of the 33rd Bienal de São Paulo and "
+"general coordinator of the project Another 33rd São Paulo Biennial."
 
 #: templates/about.html:37
 msgid ""
@@ -491,6 +499,16 @@ msgid ""
 "cotidiano. Pesquisador parceiro do projeto, coordena a conceituação e a "
 "implementação das ações digitais. "
 msgstr ""
+"PhD researcher at Aarhus University (Denmark), visiting PhD researcher at "
+"MIT (USA) and a researcher affiliated with the Center for Arts, Design and "
+"Social Research (CAD+SR). He seeks to creatively blend theories of science "
+"and technology with artistic practices and methods - with focus is in "
+"infrastructures of data and algorithms. He is a researcher with the Future "
+"Making Consortium, developing the <a href='http://futuremaking.space/morm/' "
+"target='_blank'>Museum of Random Memory</a>: experiments that seek to "
+"undestand the control of the Big Data that we produce in our daily lives. He "
+"is a partner researcher with the project Another 33rd Bienal, coordinating "
+"the conceptualization and implementation of the project’s digital actions."
 
 #: templates/about.html:44
 msgid ""
@@ -504,6 +522,16 @@ msgid ""
 "sketches/' target='_blank'>berinhard.github.io/sketches</a>. É responsável "
 "pela programação do site e outras experiências do projeto."
 msgstr ""
+"A computer scientist with a degree from UFF (Rio de Janeiro). He is "
+"developing an exploration into minimalistic and procedural practice on "
+"several fronts; one of the creators of the collective <a href='http://"
+"pessoas.cc/' target='blank'>pessoas.cc</a>; he signs as <a href='http://"
+"berin.bandcamp.com/' target='_blank'>berin</a> e  <a href='http://2bonsai."
+"bandcamp.com/' target='_blank'>2bonsai</a> in his works with music tracks;  "
+"and publishes sketches of computational art created at <a href='http://"
+"berinhard.github.io/sketches/' target='_blank'>berinhard.github.io/sketches</"
+"a>. He is responsible for the programming work for the site and experiments "
+"of the project."
 
 #: templates/about.html:51
 msgid ""
@@ -514,6 +542,13 @@ msgid ""
 "editor de arte do <a href='https://www.nexojornal.com.br/' "
 "target='_blank'>Nexo Jornal</a>. É responsável pelo design do projeto."
 msgstr ""
+"A designer and editor. His practice in design includes publishing and "
+"journalism, education, the relationship between design and music, as well as "
+"research and production of self-publications. He is a creator (2006-) of "
+"Zine Parasita, founder of the publisher CONTRA (2013–16) and co-founder of "
+"d’A Escola Livre. Since 2016 he is the art editor for <a href='https://www."
+"nexojornal.com.br/' target='_blank'>Nexo Jornal</a>. He is responsible for "
+"the design of the project."
 
 #: templates/about.html:58
 msgid ""
@@ -524,14 +559,20 @@ msgid ""
 "Impressa. É responsável pelo gerenciamento de ações do projeto. Sabe que foi "
 "golpe."
 msgstr ""
+"A cultural producer with a degree in performing arts from UDESC (Santa "
+"Catarina). She has developed projects in various cultural areas such as the "
+"Fórum Mundial de Bienais nº 2, the Cultura Inglesa Festival, the Semana "
+"Internacional de Música de São Paulo and the Parque Gráfico – Feira de Arte "
+"Impressa. Nina is responsible for the management of actions of the project "
+"and she knows that Brazil is going through a coup d’état."
 
 #: templates/base.html:20
 msgid ""
 "Diretório de Ações realizadas pelo projeto Outra 33 Bienal de Artes de São "
 "Paulo"
 msgstr ""
-"Directory for the actions created by the project Outra 33 Bienal de Artes de "
-"São Paulo"
+"Directory for the actions created by the project Another 33rd São Paulo "
+"Biennial"
 
 #: templates/base.html:71
 msgid "Busca"
