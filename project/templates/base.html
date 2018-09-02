@@ -83,11 +83,11 @@
                 </select>
                 {% if LANGUAGE_CODE == 'en' %}
                   {% language 'pt-br' %}
-                    <a class="language_picker bold" href="{% url "index" %}">PT</a>
+                    <a class="language_picker bold" href="{% translate_url pt-br %}">PT</a>
                   {% endlanguage %}
                 {% else %}
                   {% language 'en' %}
-                    <a class="language_picker bold" href="{% url "index" %}">EN</a>
+                    <a class="language_picker bold" href="{% translate_url en %}">EN</a>
                   {% endlanguage %}
                 {% endif %}
               </div>
