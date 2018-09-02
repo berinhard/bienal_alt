@@ -12,8 +12,8 @@ PRODUCTION = config('PRODUCTION', default=False)
 
 
 ALLOWED_HOSTS = ['bienal-alt.herokuapp.com']
-#if PRODUCTION and not DEBUG:
-#    SECURE_SSL_REDIRECT = True
+if PRODUCTION and not DEBUG:
+    SECURE_SSL_REDIRECT = True
 
 
 INSTALLED_APPS = [

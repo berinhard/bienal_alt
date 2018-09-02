@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-02 09:45-0300\n"
-"PO-Revision-Date: 2018-09-02 13:10-0300\n"
+"POT-Creation-Date: 2018-09-02 13:51-0300\n"
+"PO-Revision-Date: 2018-09-02 13:51-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: src/actions/admin.py:29 src/actions/models.py:114 src/actions/models.py:150
+#: src/actions/admin.py:29 src/actions/models.py:115 src/actions/models.py:151
 msgid "Ação"
 msgstr "Action"
 
@@ -42,7 +42,7 @@ msgstr ""
 msgid "A ação \"{}\" foi salva e publicada com sucesso!"
 msgstr ""
 
-#: src/actions/admin.py:90 src/actions/models.py:193
+#: src/actions/admin.py:90 src/actions/models.py:194
 msgid "Mensagem"
 msgstr "Message"
 
@@ -86,105 +86,105 @@ msgstr ""
 msgid "Descrição (EN)"
 msgstr ""
 
-#: src/actions/models.py:70 src/actions/models.py:110
+#: src/actions/models.py:70 src/actions/models.py:111
 msgid "Perguntas"
 msgstr ""
 
-#: src/actions/models.py:102
+#: src/actions/models.py:103
 msgid "Slug"
 msgstr ""
 
-#: src/actions/models.py:103
+#: src/actions/models.py:104
 msgid "Título"
 msgstr ""
 
-#: src/actions/models.py:104
+#: src/actions/models.py:105
 msgid "Título (EN)"
 msgstr ""
 
-#: src/actions/models.py:105
+#: src/actions/models.py:106
 msgid "Conteúdo"
 msgstr ""
 
-#: src/actions/models.py:106
+#: src/actions/models.py:107
 msgid "Conteúdo (EN)"
 msgstr ""
 
-#: src/actions/models.py:107
+#: src/actions/models.py:108
 msgid "Código Javascript"
 msgstr ""
 
-#: src/actions/models.py:108
+#: src/actions/models.py:109
 msgid "CSS Customizado"
 msgstr ""
 
-#: src/actions/models.py:109
+#: src/actions/models.py:110
 msgid "Extra head"
 msgstr ""
 
-#: src/actions/models.py:111
+#: src/actions/models.py:112
 msgid "Publicada"
 msgstr ""
 
-#: src/actions/models.py:115 src/actions/templates/actions/list_actions.html:15
+#: src/actions/models.py:116 src/actions/templates/actions/list_actions.html:15
 #: templates/base.html:58
 msgid "Ações"
 msgstr "Actions"
 
-#: src/actions/models.py:146 src/actions/models.py:191
+#: src/actions/models.py:147 src/actions/models.py:192
 msgid "Nome"
 msgstr "Name"
 
-#: src/actions/models.py:147
+#: src/actions/models.py:148
 msgid "Nome (EN)"
 msgstr ""
 
-#: src/actions/models.py:148
+#: src/actions/models.py:149
 msgid "Autor"
 msgstr "Author"
 
-#: src/actions/models.py:149 src/actions/models.py:195
+#: src/actions/models.py:150 src/actions/models.py:196
 msgid "Data"
 msgstr "Date"
 
-#: src/actions/models.py:151
+#: src/actions/models.py:152
 msgid "Imagem"
 msgstr "Image"
 
-#: src/actions/models.py:152
+#: src/actions/models.py:153
 msgid "Resultados da Análise"
 msgstr ""
 
-#: src/actions/models.py:153
+#: src/actions/models.py:154
 msgid "Resultados da Análise (EN)"
 msgstr ""
 
-#: src/actions/models.py:154
+#: src/actions/models.py:155
 msgid "Posição"
 msgstr ""
 
-#: src/actions/models.py:157
+#: src/actions/models.py:158
 msgid "Imagem Analisada"
 msgstr ""
 
-#: src/actions/models.py:158
+#: src/actions/models.py:159
 msgid "Imagens Analisadas"
 msgstr ""
 
-#: src/actions/models.py:192
+#: src/actions/models.py:193
 msgid "E-mail"
 msgstr ""
 
-#: src/actions/models.py:194
+#: src/actions/models.py:195
 msgid "Envio de Arquivo"
 msgstr ""
 
-#: src/actions/models.py:198 src/actions/templates/actions/contact.html:5
+#: src/actions/models.py:199 src/actions/templates/actions/contact.html:5
 #: templates/base.html:64
 msgid "Contato"
 msgstr "Contact"
 
-#: src/actions/models.py:199
+#: src/actions/models.py:200
 msgid "Contatos"
 msgstr "Contacts"
 
@@ -264,16 +264,16 @@ msgstr ""
 #: src/actions/templates/actions/action_detail.html:59
 msgid ""
 "Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, "
-"visite <a href='https://testingdataviz.github.io/BienalArtDecoder' "
+"visite <a href='https://outra-bienal.github.io/biennal-art-decoder/' "
 "target='_blank'>Bienal Art Decoder</a>, uma plataforma interna construída "
 "exclusivamente para o projeto, reunindo todos os resultados produzidos por "
 "diferentes Inteligências Artificiais a partir das imagens da mostra."
 msgstr ""
 "If you are interested in consulting the complete results, without our "
-"filter, visit the <a href='https://testingdataviz.github.io/"
-"BienalArtDecoder' target='_blank'>Bienal Art Decoder</a>, an internal "
-"platform constructed exclusively for the project and which presents all the "
-"results of the images produced by the different artificial intelligences."
+"filter, visit the <a href='https://outra-bienal.github.io/biennal-art-"
+"decoder/' target='_blank'>Bienal Art Decoder</a>, an internal platform "
+"constructed exclusively for the project and which presents all the results "
+"of the images produced by the different artificial intelligences."
 
 #: src/actions/templates/actions/action_detail.html:61
 msgid ""
