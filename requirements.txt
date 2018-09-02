@@ -16,3 +16,4 @@ django-yamlfield==1.0.3
 Pillow==5.2.0
 sorl-thumbnail==12.4.1
 requests==2.19.1
+raven==6.9.0

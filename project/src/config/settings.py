@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'src.actions',
     'src.mce_filebrowser',
+    'raven.contrib.django.raven_compat',
 ]
 
 MIDDLEWARE = [
