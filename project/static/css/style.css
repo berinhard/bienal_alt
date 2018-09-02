@@ -157,7 +157,7 @@ hr {
     display: inline-block;
     text-align: center; }
     .carousel_element .carousel_img .landscape {
-      width: 100%;
+      width: 95%;
       height: auto; }
     .carousel_element .carousel_img .portrait {
       height: 800px;
