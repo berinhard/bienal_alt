@@ -148,9 +148,10 @@ TINYMCE_COMPRESSOR = True
 GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
 
 REDIS_URL = config('REDISCLOUD_URL', 'redis://localhost:6379')
+CACHE_DEFAULT_TIMEOUT = 60 * 60 * 24 * 90  # 3 months caching
 CACHES = {
     "default": {
-        "TIMEOUT": 60 * 60 * 24 * 90, # 3 months caching
+        "TIMEOUT": CACHE_DEFAULT_TIMEOUT,
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": REDIS_URL,
         "OPTIONS": {

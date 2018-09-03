@@ -5,6 +5,9 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
+from django.views.decorators.cache import cache_page
+
+timeout = settings.CACHE_DEFAULT_TIMEOUT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,7 +16,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^sobre/$', TemplateView.as_view(template_name='about.html'), name='about'),
+    url(r'^sobre/$', cache_page(timeout)(TemplateView.as_view(template_name='about.html')), name='about'),
     path('', include('src.actions.urls')),
     prefix_default_language=True,
 )
