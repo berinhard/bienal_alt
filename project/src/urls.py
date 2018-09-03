@@ -16,7 +16,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^sobre/$', cache_page(timeout)(TemplateView.as_view(template_name='about.html')), name='about'),
+    url(r'^sobre/$', cache_page(timeout, key_prefix="about")(TemplateView.as_view(template_name='about.html')), name='about'),
     path('', include('src.actions.urls')),
     prefix_default_language=True,
 )

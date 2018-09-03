@@ -6,6 +6,8 @@ from django.conf import settings
 from tinymce.models import HTMLField
 from yamlfield.fields import YAMLField
 
+from src.actions.cache import ActionCache
+
 
 def html_encode(s):
     """
@@ -143,6 +145,20 @@ class Action(models.Model):
             return ''
         return reverse('action_carousel', args=[self.slug])
 
+    @property
+    def caches(self):
+        if not self.id:
+            return []
+        return [
+            ActionCache(self.id, settings.LANGUAGE_CODE),
+            ActionCache(self.id, 'en')
+        ]
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        for cache in self.caches:
+            cache.clear()
+
 
 class AnalyzedImage(models.Model):
     title = models.CharField(max_length=100, verbose_name=_("Nome"))
@@ -187,6 +203,11 @@ class AnalyzedImage(models.Model):
     @property
     def category_en(self):
         return self.info_en.get('categoria') or self.info_en.get('conteúdo') or ''
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        for cache in self.action.caches:
+            cache.clear()
 
 
 class Contact(models.Model):

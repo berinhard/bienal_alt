@@ -20,7 +20,6 @@ class ActionCache():
         value = cache.get(key)
         if value is None:
             return default
-        print('############CACHE HIT!')
         return value
 
     def set(self, cache_key, value, *args, **kwargs):
@@ -34,4 +33,7 @@ class ActionCache():
     def clear(self):
         search = self.key_prefix + '*'
         for key in cache.iter_keys(search):
+            cache.delete(key)
+
+        for key in cache.keys('*.home.*'):
             cache.delete(key)
