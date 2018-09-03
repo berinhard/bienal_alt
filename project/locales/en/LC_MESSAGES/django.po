@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-02 18:42-0300\n"
+"POT-Creation-Date: 2018-09-03 15:19-0300\n"
 "PO-Revision-Date: 2018-09-02 18:42-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: src/actions/admin.py:29 src/actions/models.py:115 src/actions/models.py:151
+#: src/actions/admin.py:29 src/actions/models.py:118 src/actions/models.py:168
 msgid "Ação"
 msgstr "Action"
 
@@ -42,7 +42,7 @@ msgstr ""
 msgid "A ação \"{}\" foi salva e publicada com sucesso!"
 msgstr ""
 
-#: src/actions/admin.py:90 src/actions/models.py:194
+#: src/actions/admin.py:90 src/actions/models.py:220
 msgid "Mensagem"
 msgstr "Message"
 
@@ -70,121 +70,121 @@ msgstr ""
 msgid "É necessário autorização para enviar o arquivo."
 msgstr "You must agree with the file usage authorization to upload it."
 
-#: src/actions/models.py:63 src/actions/models.py:69
+#: src/actions/models.py:66 src/actions/models.py:72
 msgid "Pergunta"
 msgstr ""
 
-#: src/actions/models.py:64
+#: src/actions/models.py:67
 msgid "Descrição"
 msgstr ""
 
-#: src/actions/models.py:65
+#: src/actions/models.py:68
 msgid "Pergunta (EN)"
 msgstr ""
 
-#: src/actions/models.py:66
+#: src/actions/models.py:69
 msgid "Descrição (EN)"
 msgstr ""
 
-#: src/actions/models.py:70 src/actions/models.py:111
+#: src/actions/models.py:73 src/actions/models.py:114
 msgid "Perguntas"
 msgstr ""
 
-#: src/actions/models.py:103
+#: src/actions/models.py:106
 msgid "Slug"
 msgstr ""
 
-#: src/actions/models.py:104
+#: src/actions/models.py:107
 msgid "Título"
 msgstr ""
 
-#: src/actions/models.py:105
+#: src/actions/models.py:108
 msgid "Título (EN)"
 msgstr ""
 
-#: src/actions/models.py:106
+#: src/actions/models.py:109
 msgid "Conteúdo"
 msgstr ""
 
-#: src/actions/models.py:107
+#: src/actions/models.py:110
 msgid "Conteúdo (EN)"
 msgstr ""
 
-#: src/actions/models.py:108
+#: src/actions/models.py:111
 msgid "Código Javascript"
 msgstr ""
 
-#: src/actions/models.py:109
+#: src/actions/models.py:112
 msgid "CSS Customizado"
 msgstr ""
 
-#: src/actions/models.py:110
+#: src/actions/models.py:113
 msgid "Extra head"
 msgstr ""
 
-#: src/actions/models.py:112
+#: src/actions/models.py:115
 msgid "Publicada"
 msgstr ""
 
-#: src/actions/models.py:116 src/actions/templates/actions/list_actions.html:15
+#: src/actions/models.py:119 src/actions/templates/actions/list_actions.html:15
 #: templates/base.html:58
 msgid "Ações"
 msgstr "Actions"
 
-#: src/actions/models.py:147 src/actions/models.py:192
+#: src/actions/models.py:164 src/actions/models.py:218
 msgid "Nome"
 msgstr "Name"
 
-#: src/actions/models.py:148
+#: src/actions/models.py:165
 msgid "Nome (EN)"
 msgstr ""
 
-#: src/actions/models.py:149
+#: src/actions/models.py:166
 msgid "Autor"
 msgstr "Author"
 
-#: src/actions/models.py:150 src/actions/models.py:196
+#: src/actions/models.py:167 src/actions/models.py:222
 msgid "Data"
 msgstr "Date"
 
-#: src/actions/models.py:152
+#: src/actions/models.py:169
 msgid "Imagem"
 msgstr "Image"
 
-#: src/actions/models.py:153
+#: src/actions/models.py:170
 msgid "Resultados da Análise"
 msgstr ""
 
-#: src/actions/models.py:154
+#: src/actions/models.py:171
 msgid "Resultados da Análise (EN)"
 msgstr ""
 
-#: src/actions/models.py:155
+#: src/actions/models.py:172
 msgid "Posição"
 msgstr ""
 
-#: src/actions/models.py:158
+#: src/actions/models.py:175
 msgid "Imagem Analisada"
 msgstr ""
 
-#: src/actions/models.py:159
+#: src/actions/models.py:176
 msgid "Imagens Analisadas"
 msgstr ""
 
-#: src/actions/models.py:193
+#: src/actions/models.py:219
 msgid "E-mail"
 msgstr ""
 
-#: src/actions/models.py:195
+#: src/actions/models.py:221
 msgid "Envio de Arquivo"
 msgstr ""
 
-#: src/actions/models.py:199 src/actions/templates/actions/contact.html:5
+#: src/actions/models.py:225 src/actions/templates/actions/contact.html:5
 #: templates/base.html:64
 msgid "Contato"
 msgstr "Contact"
 
-#: src/actions/models.py:200
+#: src/actions/models.py:226
 msgid "Contatos"
 msgstr "Contacts"
 
@@ -239,7 +239,7 @@ msgstr "By Edition"
 
 #: src/actions/templates/actions/action_detail.html:43
 msgid "Bienal de São Paulo"
-msgstr "Bienal de São Paulo"
+msgstr "São Paulo Biennial"
 
 #: src/actions/templates/actions/action_detail.html:53
 msgid "Metodologia"
@@ -252,7 +252,7 @@ msgid ""
 "Estamos interessados nas respostas das AIs que ampliam os significados das "
 "imagens e/ou revelam as categorias das estruturas dessas plataformas."
 msgstr ""
-"The results of the images of the Bienal (of this one and of the past "
+"The results of the images of the Biennial (of this one and of the past "
 "editions) presented here were arrived at by a “methodological” mode with "
 "technological/scientific bases, always with the aim of highlighting the "
 "unexpected results. We are interested in the responses of the artificial "
@@ -270,7 +270,7 @@ msgid ""
 msgstr ""
 "If you are interested in consulting the complete results, without our "
 "filter, visit the  <a href='https://outra-bienal.github.io/biennal-art-"
-"decoder/' target='_blank'>Bienal Art Decoder</a>, an internal platform "
+"decoder/' target='_blank'>Biennial Art Decoder</a>, an internal platform "
 "constructed exclusively for the project and which presents all the results "
 "of the images produced by the different artificial intelligences."
 
@@ -350,7 +350,7 @@ msgstr "THIS PROJECT IS IN CONSTANT UPDATE"
 msgid "ÚLTIMO UPDATE"
 msgstr "LAST UPDATE"
 
-#: src/actions/views.py:95
+#: src/actions/views.py:102
 msgid "Erro na validação do Captcha"
 msgstr "Error with Captcha validation"
 
@@ -484,8 +484,8 @@ msgstr ""
 "visual arts at Unicamp (Campinas), having attended the University of Arts of "
 "Helsinki. He is a coordinator of projects that have been recognized by "
 "awards and grants such as Rumos Itaú Cultural and Deviant Practice 2018–2019 "
-"Van Abbemuseum. He is an invited artist of the 33rd Bienal de São Paulo and "
-"general coordinator of the project Another 33rd São Paulo Biennial."
+"Van Abbemuseum. He is an invited artist of the 33rd Biennial de São Paulo "
+"and general coordinator of the project Another 33rd São Paulo Biennial."
 
 #: templates/about.html:37
 msgid ""
@@ -507,7 +507,7 @@ msgstr ""
 "Making Consortium, developing the <a href='http://futuremaking.space/morm/' "
 "target='_blank'>Museum of Random Memory</a>: experiments that seek to "
 "undestand the control of the Big Data that we produce in our daily lives. He "
-"is a partner researcher with the project Another 33rd Bienal, coordinating "
+"is a partner researcher with the project Another 33rd Biennial, coordinating "
 "the conceptualization and implementation of the project’s digital actions."
 
 #: templates/about.html:44
@@ -535,6 +535,22 @@ msgstr ""
 
 #: templates/about.html:51
 msgid ""
+"Produtora cultural formada em artes cênicas pela Universidade do Estado de "
+"Santa Catarina (UDESC). Desenvolve projetos em diversas áreas culturais, "
+"como Fórum Mundial de Bienais 2, Cultura Inglesa Festival, Semana "
+"Internacional de Música de São Paulo e Parque Gráfico – Feira de Arte "
+"Impressa. É responsável pelo gerenciamento de ações do projeto. Sabe que foi "
+"golpe."
+msgstr ""
+"A cultural producer with a degree in performing arts from UDESC (Santa "
+"Catarina). She has developed projects in various cultural areas such as the "
+"Fórum Mundial de Bienais nº 2, the Cultura Inglesa Festival, the Semana "
+"Internacional de Música de São Paulo and the Parque Gráfico – Feira de Arte "
+"Impressa. Nina is responsible for the management of actions of the project "
+"and she knows that Brazil is going through a coup d’état."
+
+#: templates/about.html:56
+msgid ""
 "Designer e editor, sua prática em design abrange edição e jornalismo, "
 "educação, a relação entre design e música, além da pesquisa e produção de "
 "autopublicações. É criador do Zine Parasita (2006-), além de fundador da "
@@ -550,22 +566,6 @@ msgstr ""
 "nexojornal.com.br/' target='_blank'>Nexo Jornal</a>. He is responsible for "
 "the design of the project."
 
-#: templates/about.html:58
-msgid ""
-"Produtora cultural formada em artes cênicas pela Universidade do Estado de "
-"Santa Catarina (UDESC). Desenvolve projetos em diversas áreas culturais, "
-"como Fórum Mundial de Bienais 2, Cultura Inglesa Festival, Semana "
-"Internacional de Música de São Paulo e Parque Gráfico – Feira de Arte "
-"Impressa. É responsável pelo gerenciamento de ações do projeto. Sabe que foi "
-"golpe."
-msgstr ""
-"A cultural producer with a degree in performing arts from UDESC (Santa "
-"Catarina). She has developed projects in various cultural areas such as the "
-"Fórum Mundial de Bienais nº 2, the Cultura Inglesa Festival, the Semana "
-"Internacional de Música de São Paulo and the Parque Gráfico – Feira de Arte "
-"Impressa. Nina is responsible for the management of actions of the project "
-"and she knows that Brazil is going through a coup d’état."
-
 #: templates/base.html:20
 msgid ""
 "Diretório de Ações realizadas pelo projeto Outra 33 Bienal de Artes de São "
@@ -573,6 +573,10 @@ msgid ""
 msgstr ""
 "Directory for the actions created by the project Another 33rd São Paulo "
 "Biennial"
+
+#: templates/base.html:67
+msgid "Bienal"
+msgstr "Biennial"
 
 #: templates/base.html:71
 msgid "Busca"
