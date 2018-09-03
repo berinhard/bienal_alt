@@ -254,6 +254,12 @@ hr {
             height: 700px;
             width: auto;
         }
+        @media only screen and (max-width: 64em) {
+            .portrait {
+                width: 95%;
+                height: auto;
+            }
+        }
 
         .credits {
             font-size: 0.8rem;
