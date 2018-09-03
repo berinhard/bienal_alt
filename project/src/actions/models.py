@@ -6,6 +6,7 @@ from django.conf import settings
 from tinymce.models import HTMLField
 from yamlfield.fields import YAMLField
 
+
 def html_encode(s):
     """
     Returns the ASCII decoded version of the given HTML string. This does
