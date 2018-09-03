@@ -147,5 +147,18 @@ TINYMCE_COMPRESSOR = True
 
 GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
 
+REDIS_URL = config('REDISCLOUD_URL', 'redis://localhost:6379')
+CACHES = {
+    "default": {
+        "TIMEOUT": 60 * 60 * 24 * 90, # 3 months caching
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": REDIS_URL,
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "django-"
+    }
+}
+
 import django_heroku
 django_heroku.settings(locals())
