@@ -17,3 +17,5 @@ Pillow==5.2.0
 sorl-thumbnail==12.4.1
 requests==2.19.1
 raven==6.9.0
+django-redis==4.9.0
+redis==2.10.6
