@@ -150,8 +150,8 @@ class Action(models.Model):
         if not self.id:
             return []
         return [
-            ActionCache(self.id, settings.LANGUAGE_CODE),
-            ActionCache(self.id, 'en')
+            ActionCache(self.slug, settings.LANGUAGE_CODE.lower()),
+            ActionCache(self.slug, 'en'.lower())
         ]
 
     def save(self, *args, **kwargs):
