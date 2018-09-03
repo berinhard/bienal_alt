@@ -204,6 +204,10 @@ class AnalyzedImage(models.Model):
     def category_en(self):
         return self.info_en.get('categoria') or self.info_en.get('conteúdo') or ''
 
+    @property
+    def clean_url(self):
+        return self.image.url.split('?')[0]
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         for cache in self.action.caches:

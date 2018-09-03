@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-02 18:42-0300\n"
-"PO-Revision-Date: 2018-09-02 18:42-0300\n"
+"POT-Creation-Date: 2018-09-03 15:19-0300\n"
+"PO-Revision-Date: 2018-09-03 15:29-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: src/actions/admin.py:29 src/actions/models.py:115 src/actions/models.py:151
+#: src/actions/admin.py:29 src/actions/models.py:118 src/actions/models.py:168
 msgid "Ação"
 msgstr "Action"
 
@@ -42,7 +42,7 @@ msgstr ""
 msgid "A ação \"{}\" foi salva e publicada com sucesso!"
 msgstr ""
 
-#: src/actions/admin.py:90 src/actions/models.py:194
+#: src/actions/admin.py:90 src/actions/models.py:220
 msgid "Mensagem"
 msgstr "Message"
 
@@ -70,121 +70,121 @@ msgstr ""
 msgid "É necessário autorização para enviar o arquivo."
 msgstr "You must agree with the file usage authorization to upload it."
 
-#: src/actions/models.py:63 src/actions/models.py:69
+#: src/actions/models.py:66 src/actions/models.py:72
 msgid "Pergunta"
 msgstr ""
 
-#: src/actions/models.py:64
+#: src/actions/models.py:67
 msgid "Descrição"
 msgstr ""
 
-#: src/actions/models.py:65
+#: src/actions/models.py:68
 msgid "Pergunta (EN)"
 msgstr ""
 
-#: src/actions/models.py:66
+#: src/actions/models.py:69
 msgid "Descrição (EN)"
 msgstr ""
 
-#: src/actions/models.py:70 src/actions/models.py:111
+#: src/actions/models.py:73 src/actions/models.py:114
 msgid "Perguntas"
 msgstr ""
 
-#: src/actions/models.py:103
+#: src/actions/models.py:106
 msgid "Slug"
 msgstr ""
 
-#: src/actions/models.py:104
+#: src/actions/models.py:107
 msgid "Título"
 msgstr ""
 
-#: src/actions/models.py:105
+#: src/actions/models.py:108
 msgid "Título (EN)"
 msgstr ""
 
-#: src/actions/models.py:106
+#: src/actions/models.py:109
 msgid "Conteúdo"
 msgstr ""
 
-#: src/actions/models.py:107
+#: src/actions/models.py:110
 msgid "Conteúdo (EN)"
 msgstr ""
 
-#: src/actions/models.py:108
+#: src/actions/models.py:111
 msgid "Código Javascript"
 msgstr ""
 
-#: src/actions/models.py:109
+#: src/actions/models.py:112
 msgid "CSS Customizado"
 msgstr ""
 
-#: src/actions/models.py:110
+#: src/actions/models.py:113
 msgid "Extra head"
 msgstr ""
 
-#: src/actions/models.py:112
+#: src/actions/models.py:115
 msgid "Publicada"
 msgstr ""
 
-#: src/actions/models.py:116 src/actions/templates/actions/list_actions.html:15
+#: src/actions/models.py:119 src/actions/templates/actions/list_actions.html:15
 #: templates/base.html:58
 msgid "Ações"
 msgstr "Actions"
 
-#: src/actions/models.py:147 src/actions/models.py:192
+#: src/actions/models.py:164 src/actions/models.py:218
 msgid "Nome"
 msgstr "Name"
 
-#: src/actions/models.py:148
+#: src/actions/models.py:165
 msgid "Nome (EN)"
 msgstr ""
 
-#: src/actions/models.py:149
+#: src/actions/models.py:166
 msgid "Autor"
 msgstr "Author"
 
-#: src/actions/models.py:150 src/actions/models.py:196
+#: src/actions/models.py:167 src/actions/models.py:222
 msgid "Data"
 msgstr "Date"
 
-#: src/actions/models.py:152
+#: src/actions/models.py:169
 msgid "Imagem"
 msgstr "Image"
 
-#: src/actions/models.py:153
+#: src/actions/models.py:170
 msgid "Resultados da Análise"
 msgstr ""
 
-#: src/actions/models.py:154
+#: src/actions/models.py:171
 msgid "Resultados da Análise (EN)"
 msgstr ""
 
-#: src/actions/models.py:155
+#: src/actions/models.py:172
 msgid "Posição"
 msgstr ""
 
-#: src/actions/models.py:158
+#: src/actions/models.py:175
 msgid "Imagem Analisada"
 msgstr ""
 
-#: src/actions/models.py:159
+#: src/actions/models.py:176
 msgid "Imagens Analisadas"
 msgstr ""
 
-#: src/actions/models.py:193
+#: src/actions/models.py:219
 msgid "E-mail"
 msgstr ""
 
-#: src/actions/models.py:195
+#: src/actions/models.py:221
 msgid "Envio de Arquivo"
 msgstr ""
 
-#: src/actions/models.py:199 src/actions/templates/actions/contact.html:5
+#: src/actions/models.py:225 src/actions/templates/actions/contact.html:5
 #: templates/base.html:64
 msgid "Contato"
 msgstr "Contact"
 
-#: src/actions/models.py:200
+#: src/actions/models.py:226
 msgid "Contatos"
 msgstr "Contacts"
 
@@ -239,7 +239,7 @@ msgstr "By Edition"
 
 #: src/actions/templates/actions/action_detail.html:43
 msgid "Bienal de São Paulo"
-msgstr "Bienal de São Paulo"
+msgstr "São Paulo Biennial"
 
 #: src/actions/templates/actions/action_detail.html:53
 msgid "Metodologia"
@@ -252,7 +252,7 @@ msgid ""
 "Estamos interessados nas respostas das AIs que ampliam os significados das "
 "imagens e/ou revelam as categorias das estruturas dessas plataformas."
 msgstr ""
-"The results of the images of the Bienal (of this one and of the past "
+"The results of the images of the Biennial (of this one and of the past "
 "editions) presented here were arrived at by a “methodological” mode with "
 "technological/scientific bases, always with the aim of highlighting the "
 "unexpected results. We are interested in the responses of the artificial "
@@ -270,7 +270,7 @@ msgid ""
 msgstr ""
 "If you are interested in consulting the complete results, without our "
 "filter, visit the  <a href='https://outra-bienal.github.io/biennal-art-"
-"decoder/' target='_blank'>Bienal Art Decoder</a>, an internal platform "
+"decoder/' target='_blank'>Biennial Art Decoder</a>, an internal platform "
 "constructed exclusively for the project and which presents all the results "
 "of the images produced by the different artificial intelligences."
 
@@ -314,9 +314,9 @@ msgstr ""
 "Paulo Biennial can be sent to contribute to this alternative and non-"
 "traditional archive of the exhibit. To send material, it is necessary to "
 "select the option that declares that we can utilize it in the context of "
-"this project. The archive you sent is helpful, for example, in the actions "
-"that seek to understand how Artificial Intelligences read images and videos "
-"produced in an artistic context."
+"this project. The archives sent by the public are helpful, for example, in "
+"the actions and experiments that seek to understand how Artificial "
+"Intelligences reads images and videos produced in an artistic context."
 
 #: src/actions/templates/actions/contact.html:25
 msgid "Muito obrigado!"
@@ -350,7 +350,7 @@ msgstr "THIS PROJECT IS IN CONSTANT UPDATE"
 msgid "ÚLTIMO UPDATE"
 msgstr "LAST UPDATE"
 
-#: src/actions/views.py:95
+#: src/actions/views.py:102
 msgid "Erro na validação do Captcha"
 msgstr "Error with Captcha validation"
 
@@ -476,8 +476,8 @@ msgid ""
 "artista convidado da 33ª Bienal de São Paulo e coordenador geral do projeto "
 "Outra 33 Bienal de São Paulo."
 msgstr ""
-"Visual artist who works with projects related to the visual art system, "
-"especially to the spaces for the legitimization of art – with an interest in "
+"Visual artist who works with projects related to the visual arts system, "
+"especially to the spaces for the legitimation of art – with an interest in "
 "the decoding of the field in question, revealing its procedures and its "
 "power games. Moreschi is a senior researcher at the Center for Arts, Design "
 "and Social Research (CAD+SR, Boston, USA), and a Capes PhD candidate in "
@@ -500,15 +500,15 @@ msgid ""
 "implementação das ações digitais. "
 msgstr ""
 "PhD researcher at Aarhus University (Denmark), visiting PhD researcher at "
-"MIT (USA) and a researcher affiliated with the Center for Arts, Design and "
-"Social Research (CAD+SR). He seeks to creatively blend theories of science "
-"and technology with artistic practices and methods - with focus is in "
-"infrastructures of data and algorithms. He is a researcher with the Future "
-"Making Consortium, developing the <a href='http://futuremaking.space/morm/' "
-"target='_blank'>Museum of Random Memory</a>: experiments that seek to "
-"undestand the control of the Big Data that we produce in our daily lives. He "
-"is a partner researcher with the project Another 33rd Bienal, coordinating "
-"the conceptualization and implementation of the project’s digital actions."
+"MIT (USA) and a research fellow at the Center for Arts, Design and Social "
+"Research (CAD+SR, Boston, USA). He seeks to creatively blend theories of "
+"science and technology with artistic practices and methods - with a focus on "
+"the infrastructures of data and algorithms. Researcher at the Future ;Making "
+"Consortium, he collaboratively develops the <a href='http://futuremaking."
+"space/morm/' target='_blank'>Museum of Random Memory</a> experiments that "
+"reflect on the Big Data we produce in our everyday lives. He is a partner "
+"researcher with the project Another 33rd Bienal, coordinating the "
+"conceptualization and implementation of the project’s digital actions. "
 
 #: templates/about.html:44
 msgid ""
@@ -522,35 +522,18 @@ msgid ""
 "sketches/' target='_blank'>berinhard.github.io/sketches</a>. É responsável "
 "pela programação do site e outras experiências do projeto."
 msgstr ""
-"A computer scientist with a degree from UFF (Rio de Janeiro). He is "
-"developing an exploration into minimalistic and procedural practice on "
-"several fronts; one of the creators of the collective <a href='http://"
-"pessoas.cc/' target='blank'>pessoas.cc</a>; he signs as <a href='http://"
-"berin.bandcamp.com/' target='_blank'>berin</a> e  <a href='http://2bonsai."
-"bandcamp.com/' target='_blank'>2bonsai</a> in his works with music tracks;  "
-"and publishes sketches of computational art created at <a href='http://"
-"berinhard.github.io/sketches/' target='_blank'>berinhard.github.io/sketches</"
-"a>. He is responsible for the programming work for the site and experiments "
-"of the project."
+"Computer scientist with a degree from UFF (Rio de Janeiro). He develops an "
+"exploration into minimalistic and procedural practice on several fronts; is "
+"one of the creators of the collective <a href='http://pessoas.cc/' "
+"target='blank'>pessoas.cc</a>; signs as <a href='http://berin.bandcamp.com/' "
+"target='_blank'>berin</a> e <a href='http://2bonsai.bandcamp.com/' "
+"target='_blank'>2bonsai</a> in his works with music tracks; and publishes "
+"sketches of computational art created at <a href='http://berinhard.github.io/"
+"sketches/' target='_blank'>berinhard.github.io/sketches</a>. He is "
+"responsible for the programming work for the site and experiments of the "
+"project."
 
 #: templates/about.html:51
-msgid ""
-"Designer e editor, sua prática em design abrange edição e jornalismo, "
-"educação, a relação entre design e música, além da pesquisa e produção de "
-"autopublicações. É criador do Zine Parasita (2006-), além de fundador da "
-"editora CONTRA (2013-16) e co-fundador d’A Escola Livre. Desde 2016, é "
-"editor de arte do <a href='https://www.nexojornal.com.br/' "
-"target='_blank'>Nexo Jornal</a>. É responsável pelo design do projeto."
-msgstr ""
-"A designer and editor. His practice in design includes publishing and "
-"journalism, education, the relationship between design and music, as well as "
-"research and production of self-publications. He is a creator (2006-) of "
-"Zine Parasita, founder of the publisher CONTRA (2013–16) and co-founder of "
-"d’A Escola Livre. Since 2016 he is the art editor for <a href='https://www."
-"nexojornal.com.br/' target='_blank'>Nexo Jornal</a>. He is responsible for "
-"the design of the project."
-
-#: templates/about.html:58
 msgid ""
 "Produtora cultural formada em artes cênicas pela Universidade do Estado de "
 "Santa Catarina (UDESC). Desenvolve projetos em diversas áreas culturais, "
@@ -559,12 +542,29 @@ msgid ""
 "Impressa. É responsável pelo gerenciamento de ações do projeto. Sabe que foi "
 "golpe."
 msgstr ""
-"A cultural producer with a degree in performing arts from UDESC (Santa "
+"Cultural producer with a degree in performing arts from UDESC (Santa "
 "Catarina). She has developed projects in various cultural areas such as the "
-"Fórum Mundial de Bienais nº 2, the Cultura Inglesa Festival, the Semana "
-"Internacional de Música de São Paulo and the Parque Gráfico – Feira de Arte "
-"Impressa. Nina is responsible for the management of actions of the project "
-"and she knows that Brazil is going through a coup d’état."
+"Fórum Mundial de Bienais 2, Cultura Inglesa Festival, Semana Internacional "
+"de Música de São Paulo and Parque Gráfico – Feira de Arte Impressa. Nina is "
+"responsible for the management of the project's actions and she knows that "
+"Brazil is going through a coup d’état."
+
+#: templates/about.html:56
+msgid ""
+"Designer e editor, sua prática em design abrange edição e jornalismo, "
+"educação, a relação entre design e música, além da pesquisa e produção de "
+"autopublicações. É criador do Zine Parasita (2006-), além de fundador da "
+"editora CONTRA (2013-16) e co-fundador d’A Escola Livre. Desde 2016, é "
+"editor de arte do <a href='https://www.nexojornal.com.br/' "
+"target='_blank'>Nexo Jornal</a>. É responsável pelo design do projeto."
+msgstr ""
+"Designer and publisher. His practice in design includes publishing and "
+"journalism, education, the relation between design and music, as well as the "
+"research and production of self-publishing. He is the creator of Zine "
+"Parasita (2006-), founder of the publishing press CONTRA (2013–16) and co-"
+"founder of A Escola Livre. Since 2016 he is the art director of <a "
+"href='https://www.nexojornal.com.br/' target='_blank'>Nexo Jornal</a>. He is "
+"responsible for the design of the project."
 
 #: templates/base.html:20
 msgid ""
@@ -573,6 +573,10 @@ msgid ""
 msgstr ""
 "Directory for the actions created by the project Another 33rd São Paulo "
 "Biennial"
+
+#: templates/base.html:67
+msgid "Bienal"
+msgstr "Biennial"
 
 #: templates/base.html:71
 msgid "Busca"
