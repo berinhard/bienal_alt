@@ -90,7 +90,6 @@ hr {
   #actions_list hr {
     width: 40%; }
   #actions_list h2 {
-    line-height: 1rem;
     font-size: 1.85rem;
     padding-top: 1em; }
   #actions_list .actions {
@@ -264,8 +263,11 @@ hr {
     margin-bottom: 0.5rem; }
 
   #actions_list .text_content {
-    max-width: 100%; } }
-@media only screen and (max-width: 32em) {
+    max-width: 100%; }
+
+  h2 {
+    line-height: 2rem; }
+
   header .header_link.active {
     padding-bottom: 0.1em;
     border-bottom: 1px solid #111; } }
