@@ -9,11 +9,19 @@ var getEnabled = function(){
 var hideAndDisplay = function(to_hide, to_display, add_hash=true) {
     to_hide.removeClass('active');
     to_display.addClass('active');
-    var img = to_display.find('.carousel_image')[0];
-    resizeCarouselImageDimension(img);
+    var imgs = to_display.find('img[data-src]')
+
+    $.each(imgs, function(index, img) {
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = function() {
+        img.removeAttribute('data-src');
+        resizeCarouselImageDimension(img);
+      };
+    });
     if (add_hash){
         location.href = '#' + to_display.attr('id');
     }
+
 }
 
 var displayToPrevious = function(current, add_hash=true){
