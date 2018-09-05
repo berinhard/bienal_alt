@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% block head_title %}
-    <title>{% trans "Outra 33 Bienal de São Paulo" %}</title>
+    <title>{% trans "Outra 33 Bienal" %}</title>
     {% endblock %}
     <meta name="google" content="notranslate" />
 
@@ -30,6 +30,19 @@
     <script src="{% static "js/base.js" %}"></script>
     <link rel="stylesheet" href="https://fonts.typotheque.com/WF-031670-010387.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+
+    <meta property="og:image" content="http://outra33.bienal.org.br/static/img/dense_cap_logo/densecap-logo-0010.d93ab105024f.png">
+    <meta property="og:image:secure_url" content="https://outra33.bienal.org.br/static/img/dense_cap_logo/densecap-logo-0010.d93ab105024f.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:site_name" content='{% trans "Outra 33 Bienal de São Paulo" %}'>
+    <meta property="og:description" content="{% trans "Diretório de Ações realizadas pelo projeto Outra 33 Bienal de Artes de São Paulo" %}">
+    <meta property="og:locale" content={{ LANGUAGE_CODE }}>
+
+
+    {% block facebook_meta %}
+      <meta property="og:title" content='{% trans "Outra 33 Bienal" %}'>
+      <meta property="og:type" content="website">
+    {% endblock %}
 
     {% block extra_head %}
     {% endblock %}
