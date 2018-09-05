@@ -4,7 +4,14 @@
 {% load content_translation %}
 
 {% block head_title %}
-    <title>{% trans "Outra 33 Bienal de São Paulo" %} - {% trans_field action "title" LANGUAGE_CODE %}</title>
+    <title>{% trans "Outra 33 Bienal de São Paulo" %} | {% trans_field action "title" LANGUAGE_CODE %}</title>
+{% endblock %}
+
+{% block facebook_meta %}
+<meta property="og:type" content="article">
+<meta property="article:author" content="Bruno Moreschi">
+<meta property="article:section" content='{% trans "Ações" %}'>
+<meta property="og:title" content='{% trans "Outra 33 Bienal de São Paulo "%} | {% trans_field action "title" LANGUAGE_CODE %}'>
 {% endblock %}
 
 {% block custom_css %}
