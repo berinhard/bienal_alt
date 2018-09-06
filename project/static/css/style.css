@@ -65,10 +65,6 @@ hr {
     .text_content a:link, .metodologia_content a:link, #action_nav a:link, .carousel_element .carousel_text a:link, #about_content a:link, #contact_session a:link, .text_content a:visited, .metodologia_content a:visited, #action_nav a:visited, .carousel_element .carousel_text a:visited, #about_content a:visited, #contact_session a:visited {
       text-decoration: underline; }
 
-.text_content img {
-  width: 90%;
-  height: auto; }
-
 .metodologia_content p {
   font-size: 0.8em; }
 
@@ -114,6 +110,17 @@ hr {
     font-size: 0.9rem; }
   #action_nav p, #action_nav span {
     font-family: "BienalMono"; }
+
+.action_content .landscape {
+  width: 90%;
+  height: auto; }
+.action_content .portrait {
+  height: 450px;
+  width: auto; }
+@media only screen and (max-width: 64em) {
+  .action_content .portrait {
+    width: 90%;
+    height: auto; } }
 
 .carousel_wrapper {
   text-align: center; }
