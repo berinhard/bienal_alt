@@ -106,11 +106,6 @@ hr {
 
 .text_content {
     @extend %centralized_content;
-
-    img {
-        width: 90%;
-        height: auto;
-    }
 }
 
 .metodologia_content {
@@ -183,6 +178,24 @@ hr {
 
     p, span {
         font-family: "BienalMono";
+    }
+}
+
+.action_content {
+    .landscape {
+        width: 90%;
+        height: auto;
+    }
+
+    .portrait {
+        height: 450px;
+        width: auto;
+    }
+    @media only screen and (max-width: 64em) {
+        .portrait {
+            width: 90%;
+            height: auto;
+        }
     }
 }
 

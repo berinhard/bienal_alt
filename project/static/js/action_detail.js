@@ -107,6 +107,12 @@ $(document).ready(function(){
         return false;
     });
 
+    var imgs = $('.action_content').find('img');
+
+    $.each(imgs, function(index, img) {
+        resizeCarouselImageDimension(img);
+    });
+
     var carouselDiv = $(CAROUSEL_SELECTOR_ID);
     if (carouselDiv.length >= 1) {
         refreshCarousel(carouselDiv.attr('url'));
