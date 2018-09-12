@@ -9,13 +9,15 @@ var getEnabled = function(){
 var hideAndDisplay = function(to_hide, to_display, add_hash=true) {
     to_hide.removeClass('active');
     to_display.addClass('active');
-    var imgs = to_display.find('img[data-src]')
+    var imgs = to_display.find('img[data-src]');
 
     $.each(imgs, function(index, img) {
       img.setAttribute('src', img.getAttribute('data-src'));
+      img.style.visibility = 'hidden';
       img.onload = function() {
         img.removeAttribute('data-src');
         resizeCarouselImageDimension(img);
+        img.style.visibility = 'visible';
       };
     });
     if (add_hash){

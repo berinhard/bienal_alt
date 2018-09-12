@@ -258,6 +258,10 @@ hr {
         display: inline-block;
         text-align: center;
 
+        img {
+            max-height: 700px;
+        }
+
         .landscape {
             width: 95%;
             height: auto;
