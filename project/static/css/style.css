@@ -162,6 +162,8 @@ hr {
     position: relative;
     display: inline-block;
     text-align: center; }
+    .carousel_element .carousel_img img {
+      max-height: 700px; }
     .carousel_element .carousel_img .landscape {
       width: 95%;
       height: auto; }
