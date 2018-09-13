@@ -15,6 +15,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^sobre/$', TemplateView.as_view(template_name='about.html'), name='about'),
+    url(r'^contato/sucesso/$', TemplateView.as_view(template_name='contact_success.html'), name='contact_success'),
     path('', include('src.actions.urls')),
     prefix_default_language=True,
 )
