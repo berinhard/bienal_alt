@@ -249,6 +249,8 @@ hr {
   font-family: "BienalMono";
   margin-bottom: 1em;
   display: block; }
+#contact_session #filename_label {
+  display: block; }
 #contact_session label[for="id_upload"] {
   line-height: 1.25rem;
   font-size: 0.9rem;
