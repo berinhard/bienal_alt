@@ -33,7 +33,11 @@
     <div class="md-col-6 sm-col-12 mx-auto" id="system_log_list">
         <hr/>
         <p>{% trans "ESTE PROJETO ESTÁ EM CONSTANTE ATUALIZAÇÃO" %}</p>
+        {% if LANGUAGE_CODE|lower == 'en' %}
+        <p>{% trans "ÚLTIMO UPDATE" %}: {{ log_entry.action_time|date:"m.d.Y" }}</p>
+        {% else %}
         <p>{% trans "ÚLTIMO UPDATE" %}: {{ log_entry.action_time|date:"d.m.Y" }}</p>
+        {% endif %}
     </div>
 </div>
 

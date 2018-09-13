@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-05 15:00-0300\n"
-"PO-Revision-Date: 2018-09-05 15:05-0300\n"
+"POT-Creation-Date: 2018-09-13 19:00-0300\n"
+"PO-Revision-Date: 2018-09-13 19:01-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -181,7 +181,7 @@ msgid "Envio de Arquivo"
 msgstr ""
 
 #: src/actions/models.py:225 src/actions/templates/actions/contact.html:5
-#: templates/base.html:77
+#: templates/base.html:77 templates/contact_success.html:6
 msgid "Contato"
 msgstr "Contact"
 
@@ -220,6 +220,7 @@ msgstr "No images were found for the selected search."
 #: src/actions/templates/actions/action_detail.html:14
 #: src/actions/templates/actions/contact.html:5 templates/404.html:5
 #: templates/about.html:6 templates/base.html:24 templates/base.html:43
+#: templates/contact_success.html:6
 #, fuzzy
 #| msgid "Outra 33 Bienal de São Paulo"
 msgid "Outra 33 Bienal"
@@ -323,6 +324,7 @@ msgstr ""
 "Intelligences reads images and videos produced in an artistic context."
 
 #: src/actions/templates/actions/contact.html:25
+#: templates/contact_success.html:16
 msgid "Muito obrigado!"
 msgstr "Thank you!"
 
@@ -330,11 +332,11 @@ msgstr "Thank you!"
 msgid "ENVIO DE ARQUIVO"
 msgstr "ARCHIVE"
 
-#: src/actions/templates/actions/contact.html:38
+#: src/actions/templates/actions/contact.html:39
 msgid "selecionar..."
 msgstr "select..."
 
-#: src/actions/templates/actions/contact.html:69
+#: src/actions/templates/actions/contact.html:71
 msgid "ENVIAR"
 msgstr "SUBMIT"
 
@@ -594,6 +596,10 @@ msgstr "Search"
 #: templates/base.html:88
 msgid "Questões"
 msgstr "Questions"
+
+#: templates/contact_success.html:14
+msgid "Sua mensagem foi enviada com sucesso."
+msgstr "Your message was processed with success."
 
 #, fuzzy
 #~| msgid "Outra 33 Bienal de São Paulo"

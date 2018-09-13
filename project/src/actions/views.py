@@ -94,7 +94,7 @@ class AddContactView(CreateView):
     model = Contact
     form_class = ContactForm
     template_name = 'actions/contact.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('contact_success')
 
     def form_valid(self, form):
         if not validate_captcha(self.request.POST):
