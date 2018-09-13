@@ -35,6 +35,7 @@
           <p>
               {% if field.id_for_label == "id_upload" %}
                 <label>{% trans "ENVIO DE ARQUIVO" %}</label>
+                <label id="filename_label"></label>
                 <label for="{{ field.id_for_label }}">{% trans "selecionar..." %}</label>
                 {{ field }}
 
@@ -60,6 +61,7 @@
                 {{ field }}
               {% endif %}
           </p>
+
       {% endfor %}
     <hr>
       <div style='text-align: center;'>
@@ -88,5 +90,12 @@ $(document).ready(function(){
       $("#contact_form").submit();
     }
   });
+
+  $('#id_upload').change(function(e){
+    var fileName = e.target.files[0].name;
+    $("#filename_label").html(fileName);
+    $("#filename_label").show();
+  });
+
 });
 {% endblock %}
