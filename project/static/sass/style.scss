@@ -265,10 +265,12 @@ hr {
         .landscape {
             width: 95%;
             height: auto;
+            max-height: none;
         }
 
         .portrait {
-            height: 700px;
+            height: 800px;
+            max-height: none;
             width: auto;
         }
         @media only screen and (max-width: 64em) {
