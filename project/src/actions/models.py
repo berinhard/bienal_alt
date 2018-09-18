@@ -222,17 +222,16 @@ class AnalyzedImage(models.Model):
 
     def optimize_image(self):
         height, width = self.image.height, self.image.width
-        if height < 800:
-            return
-
         name = self.image.name.split('/')[1].lower()
-        content = BytesIO(self.image.read())
 
-        new_height = 800
-        new_width = int(new_height * width / height)
-        size = (new_width, new_height)
+        content = BytesIO(self.image.read())
         optimized = Image.open(content)
-        optimized = optimized.resize(size, Image.ANTIALIAS)
+
+        if height > 800:
+            new_height = 800
+            new_width = int(new_height * width / height)
+            size = (new_width, new_height)
+            optimized = optimized.resize(size, Image.ANTIALIAS)
 
         self.optimized_image.name = self.CAROUSEL_OPTM_DIR + name
         with self.optimized_image.open('wb') as out:
