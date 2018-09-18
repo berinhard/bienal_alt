@@ -214,10 +214,7 @@ class AnalyzedImage(models.Model):
 
     @property
     def clean_url(self):
-        if self.optimized_image:
-            url = self.optimized_image.url
-        else:
-            url = self.image.url
+        url = self.image.url
         return url.split('?')[0]
 
     def optimize_image(self):
