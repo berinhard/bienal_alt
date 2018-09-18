@@ -19,3 +19,4 @@ requests==2.19.1
 raven==6.9.0
 django-redis==4.9.0
 redis==2.10.6
+tqdm==4.25.0

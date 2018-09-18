@@ -233,7 +233,6 @@ class AnalyzedImage(models.Model):
         self.optimized_image.name = self.CAROUSEL_OPTM_DIR + name
         with self.optimized_image.open('wb') as out:
             optimized.save(out, quality=90)
-        self.save()
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
