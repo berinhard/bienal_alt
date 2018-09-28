@@ -9,7 +9,7 @@ timeout = settings.CACHE_DEFAULT_TIMEOUT
 
 
 urlpatterns = [
-    re_path(r'^$', cache_page(timeout, key_prefix="home")(ListActionsView.as_view()), name='index'),
+    re_path(r'^$', ListActionsView.as_view(), name='index'),
     re_path(r'^contato/$', AddContactView.as_view(), name='contact'),
     re_path(r'preview/(?P<slug>[\w-]+)/$', action_preview_view, name='preview'),
     re_path(r'acao/(?P<slug>[\w-]+)/$', action_detail_view, name='detail'),

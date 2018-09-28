@@ -1,3 +1,7 @@
+from PIL import Image
+from io import BytesIO
+
+from django.core.files.base import ContentFile
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.urls import reverse
@@ -161,12 +165,16 @@ class Action(models.Model):
 
 
 class AnalyzedImage(models.Model):
+    CAROUSEL_DIR = 'carousel/'
+    CAROUSEL_OPTM_DIR = 'carousel-optm/'
+
     title = models.CharField(max_length=100, verbose_name=_("Nome"))
     title_en = models.CharField(max_length=100, verbose_name=_("Nome (EN)"), default='', blank=True)
     author = models.CharField(max_length=100, verbose_name=_("Autor"))
     date = models.DateField(verbose_name=_("Data"))
     action = models.ForeignKey(Action, related_name='carousel', on_delete=models.CASCADE, verbose_name=_('Ação'))
-    image = models.ImageField(upload_to='carousel/', null=False, blank=False, verbose_name=_('Imagem'))
+    image = models.ImageField(upload_to=CAROUSEL_DIR, null=False, blank=False, verbose_name=_('Imagem'))
+    optimized_image = models.ImageField(upload_to=CAROUSEL_OPTM_DIR, null=True, blank=True, verbose_name=_('Imagem otimizada'))
     info = YAMLField(default='', verbose_name=_('Resultados da Análise'))
     info_en = YAMLField(default='', verbose_name=_('Resultados da Análise (EN)'), blank=True)
     order = models.PositiveIntegerField(verbose_name=_('Posição'), default=1)
@@ -206,7 +214,25 @@ class AnalyzedImage(models.Model):
 
     @property
     def clean_url(self):
-        return self.image.url.split('?')[0]
+        url = self.image.url
+        return url.split('?')[0]
+
+    def optimize_image(self):
+        height, width = self.image.height, self.image.width
+        name = self.image.name.split('/')[1].lower()
+
+        content = BytesIO(self.image.read())
+        optimized = Image.open(content)
+
+        if height > 800:
+            new_height = 800
+            new_width = int(new_height * width / height)
+            size = (new_width, new_height)
+            optimized = optimized.resize(size, Image.ANTIALIAS)
+
+        self.optimized_image.name = self.CAROUSEL_OPTM_DIR + name
+        with self.optimized_image.open('wb') as out:
+            optimized.save(out, quality=90)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
