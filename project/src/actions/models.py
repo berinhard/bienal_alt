@@ -117,11 +117,12 @@ class Action(models.Model):
     extra_head = models.TextField(blank=True, default='', verbose_name=_('Extra head'))
     questions = models.ManyToManyField(QuestionTag, related_name='actions', verbose_name=_('Perguntas'))
     published = models.BooleanField(default=False, verbose_name=_('Publicada'))
+    position = models.PositiveIntegerField(default=1, verbose_name=_('Posição'))
 
     class Meta:
         verbose_name = _('Ação')
         verbose_name_plural = _('Ações')
-        ordering = ['title']
+        ordering = ['position', 'title']
 
     def __str__(self):
         return self.title
