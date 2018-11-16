@@ -137,4 +137,21 @@ $(document).ready(function(){
         $(CAROUSEL_SELECTOR_ID).hide();
         $(YEAR_FILTER_ID).show();
     });
+
+
+    var modal = $('#myModal');
+    var modalImg = $("#img01");
+    var captionText = $("#caption");
+    $(".onModal").click(function(){
+        var img = $(this).attr('src');
+        console.log(img);
+
+        modal.css({'display': 'block'});
+
+        modalImg.attr('src', img);
+    });
+
+    $(".close").click(function(){
+        modal.css({'display': 'none'});
+    });
 });
