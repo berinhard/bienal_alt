@@ -22,8 +22,14 @@ var hideAndDisplay = function(to_hide, to_display, add_hash=true) {
     });
     if (add_hash){
         location.href = '#' + to_display.attr('id');
+        scrollToCarousel()
     }
+}
 
+var scrollToCarousel = function() {
+    $('html,body').animate({
+        scrollTop: $("#carousel_nav").offset().top
+    }, 'fast');
 }
 
 var displayToPrevious = function(current, add_hash=true){
@@ -64,7 +70,7 @@ var displayCarousel = function(data){
     var hash = url.substring(url.indexOf("#") + 1);
     var first = $('div[data-position="1"]');
 
-    if (hash.length && hash != url) {
+    if (hash.length && hash != url && hash.startsWith("img-")) {
         hash = '#' + hash;
         var current = $(hash);
         if (current.length >= 1) {
