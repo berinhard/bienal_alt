@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-04 09:50-0200\n"
-"PO-Revision-Date: 2018-09-13 19:01-0300\n"
+"POT-Creation-Date: 2019-03-17 11:46-0300\n"
+"PO-Revision-Date: 2019-03-17 11:54-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -18,46 +18,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: project/src/actions/admin.py:29 project/src/actions/models.py:123
-#: project/src/actions/models.py:176
+#: src/actions/admin.py:29 src/actions/models.py:123 src/actions/models.py:176
 msgid "Ação"
 msgstr "Action"
 
-#: project/src/actions/admin.py:29 project/src/actions/admin.py:47
+#: src/actions/admin.py:29 src/actions/admin.py:47
 msgid "Carrossel de Imagens"
 msgstr ""
 
-#: project/src/actions/admin.py:43
+#: src/actions/admin.py:43
 msgid "Avançados"
 msgstr ""
 
-#: project/src/actions/admin.py:58
+#: src/actions/admin.py:58
 msgid "Preview"
 msgstr ""
 
-#: project/src/actions/admin.py:62
+#: src/actions/admin.py:62
 msgid "Publica as ações"
 msgstr ""
 
-#: project/src/actions/admin.py:73
+#: src/actions/admin.py:73
 msgid "A ação \"{}\" foi salva e publicada com sucesso!"
 msgstr ""
 
-#: project/src/actions/admin.py:90 project/src/actions/models.py:247
+#: src/actions/admin.py:90 src/actions/models.py:247
 msgid "Mensagem"
 msgstr "Message"
 
-#: project/src/actions/forms.py:33 project/src/actions/forms.py:34
+#: src/actions/forms.py:33 src/actions/forms.py:34
 msgid ""
 "Este campo precisa estar num formato YAML válido. Teste aqui http://www."
 "yamllint.com/ para entender o erro e corrigí-lo."
 msgstr ""
 
-#: project/src/actions/forms.py:56
+#: src/actions/forms.py:56
 msgid "Está faltando o campo: {}"
 msgstr ""
 
-#: project/src/actions/forms.py:79
+#: src/actions/forms.py:79
 msgid ""
 "Autorizo o uso do arquivo enviado para ser usado exclusivamente nas ações do "
 "Outra 33ª Bienal de São Paulo. O projeto se compromete a não utilizar os "
@@ -67,198 +66,195 @@ msgstr ""
 "project Another 33rd São Paulo Biennial. The project commits itself not to "
 "use sent files for other purposes, that are not for this artistic research."
 
-#: project/src/actions/forms.py:94
+#: src/actions/forms.py:94
 msgid "É necessário autorização para enviar o arquivo."
 msgstr "You must agree with the file usage authorization to upload it."
 
-#: project/src/actions/models.py:70 project/src/actions/models.py:76
+#: src/actions/models.py:70 src/actions/models.py:76
 msgid "Pergunta"
 msgstr ""
 
-#: project/src/actions/models.py:71
+#: src/actions/models.py:71
 msgid "Descrição"
 msgstr ""
 
-#: project/src/actions/models.py:72
+#: src/actions/models.py:72
 msgid "Pergunta (EN)"
 msgstr ""
 
-#: project/src/actions/models.py:73
+#: src/actions/models.py:73
 msgid "Descrição (EN)"
 msgstr ""
 
-#: project/src/actions/models.py:77 project/src/actions/models.py:118
+#: src/actions/models.py:77 src/actions/models.py:118
 msgid "Perguntas"
 msgstr ""
 
-#: project/src/actions/models.py:110
+#: src/actions/models.py:110
 msgid "Slug"
 msgstr ""
 
-#: project/src/actions/models.py:111
+#: src/actions/models.py:111
 msgid "Título"
 msgstr ""
 
-#: project/src/actions/models.py:112
+#: src/actions/models.py:112
 msgid "Título (EN)"
 msgstr ""
 
-#: project/src/actions/models.py:113
+#: src/actions/models.py:113
 msgid "Conteúdo"
 msgstr ""
 
-#: project/src/actions/models.py:114
+#: src/actions/models.py:114
 msgid "Conteúdo (EN)"
 msgstr ""
 
-#: project/src/actions/models.py:115
+#: src/actions/models.py:115
 msgid "Código Javascript"
 msgstr ""
 
-#: project/src/actions/models.py:116
+#: src/actions/models.py:116
 msgid "CSS Customizado"
 msgstr ""
 
-#: project/src/actions/models.py:117
+#: src/actions/models.py:117
 msgid "Extra head"
 msgstr ""
 
-#: project/src/actions/models.py:119
+#: src/actions/models.py:119
 msgid "Publicada"
 msgstr ""
 
-#: project/src/actions/models.py:120 project/src/actions/models.py:181
+#: src/actions/models.py:120 src/actions/models.py:181
 msgid "Posição"
 msgstr ""
 
-#: project/src/actions/models.py:124
-#: project/src/actions/templates/actions/action_detail.html:13
-#: project/src/actions/templates/actions/list_actions.html:15
-#: project/templates/base.html:71
+#: src/actions/models.py:124
+#: src/actions/templates/actions/action_detail.html:13
+#: src/actions/templates/actions/list_actions.html:15 templates/base.html:71
 msgid "Ações"
 msgstr "Actions"
 
-#: project/src/actions/models.py:172 project/src/actions/models.py:245
+#: src/actions/models.py:172 src/actions/models.py:245
 msgid "Nome"
 msgstr "Name"
 
-#: project/src/actions/models.py:173
+#: src/actions/models.py:173
 msgid "Nome (EN)"
 msgstr ""
 
-#: project/src/actions/models.py:174
+#: src/actions/models.py:174
 msgid "Autor"
 msgstr "Author"
 
-#: project/src/actions/models.py:175 project/src/actions/models.py:249
+#: src/actions/models.py:175 src/actions/models.py:249
 msgid "Data"
 msgstr "Date"
 
-#: project/src/actions/models.py:177
+#: src/actions/models.py:177
 msgid "Imagem"
 msgstr "Image"
 
-#: project/src/actions/models.py:178
+#: src/actions/models.py:178
 msgid "Imagem otimizada"
 msgstr ""
 
-#: project/src/actions/models.py:179
+#: src/actions/models.py:179
 msgid "Resultados da Análise"
 msgstr ""
 
-#: project/src/actions/models.py:180
+#: src/actions/models.py:180
 msgid "Resultados da Análise (EN)"
 msgstr ""
 
-#: project/src/actions/models.py:184
+#: src/actions/models.py:184
 msgid "Imagem Analisada"
 msgstr ""
 
-#: project/src/actions/models.py:185
+#: src/actions/models.py:185
 msgid "Imagens Analisadas"
 msgstr ""
 
-#: project/src/actions/models.py:246
+#: src/actions/models.py:246
 msgid "E-mail"
 msgstr ""
 
-#: project/src/actions/models.py:248
+#: src/actions/models.py:248
 msgid "Envio de Arquivo"
 msgstr ""
 
-#: project/src/actions/models.py:252
-#: project/src/actions/templates/actions/contact.html:5
-#: project/templates/base.html:77 project/templates/contact_success.html:6
+#: src/actions/models.py:252 src/actions/templates/actions/contact.html:5
+#: templates/base.html:77 templates/contact_success.html:6
 msgid "Contato"
 msgstr "Contact"
 
-#: project/src/actions/models.py:253
+#: src/actions/models.py:253
 msgid "Contatos"
 msgstr "Contacts"
 
-#: project/src/actions/templates/actions/action_carousel.html:25
+#: src/actions/templates/actions/action_carousel.html:25
 msgid "IMAGEM"
 msgstr "IMAGE"
 
-#: project/src/actions/templates/actions/action_carousel.html:30
-#: project/src/actions/templates/actions/action_carousel.html:41
+#: src/actions/templates/actions/action_carousel.html:30
+#: src/actions/templates/actions/action_carousel.html:41
 msgid "ANÁLISE"
 msgstr "ANALYSIS"
 
-#: project/src/actions/templates/actions/action_carousel.html:35
-#: project/src/actions/templates/actions/action_carousel.html:46
+#: src/actions/templates/actions/action_carousel.html:35
+#: src/actions/templates/actions/action_carousel.html:46
 msgid "PRODUTOS"
 msgstr "PRODUCTS"
 
-#: project/src/actions/templates/actions/action_carousel.html:38
-#: project/src/actions/templates/actions/action_carousel.html:49
+#: src/actions/templates/actions/action_carousel.html:38
+#: src/actions/templates/actions/action_carousel.html:49
 msgid "CONTEÚDO"
 msgstr "CONTENT"
 
-#: project/src/actions/templates/actions/action_carousel.html:53
+#: src/actions/templates/actions/action_carousel.html:53
 msgid "IMAGENS SEMELHANTES"
 msgstr "SIMILAR IMAGES"
 
-#: project/src/actions/templates/actions/action_carousel.html:64
+#: src/actions/templates/actions/action_carousel.html:64
 msgid "Não foram encontradas imagens para a busca selecionada."
 msgstr "No images were found for the selected search."
 
-#: project/src/actions/templates/actions/action_detail.html:7
-#: project/src/actions/templates/actions/action_detail.html:14
-#: project/src/actions/templates/actions/contact.html:5
-#: project/templates/404.html:5 project/templates/about.html:6
-#: project/templates/base.html:24 project/templates/base.html:43
-#: project/templates/contact_success.html:6
+#: src/actions/templates/actions/action_detail.html:7
+#: src/actions/templates/actions/action_detail.html:14
+#: src/actions/templates/actions/contact.html:5 templates/404.html:5
+#: templates/about.html:6 templates/base.html:24 templates/base.html:43
+#: templates/contact_success.html:6
 #, fuzzy
 #| msgid "Outra 33 Bienal de São Paulo"
 msgid "Outra 33 Bienal"
 msgstr "Another 33rd Biennial"
 
-#: project/src/actions/templates/actions/action_detail.html:103
+#: src/actions/templates/actions/action_detail.html:103
 msgid "VISUALIZAÇÃO"
 msgstr "VISUALIZATION"
 
-#: project/src/actions/templates/actions/action_detail.html:104
+#: src/actions/templates/actions/action_detail.html:104
 msgid "Cronológica"
 msgstr "Chronological"
 
-#: project/src/actions/templates/actions/action_detail.html:105
+#: src/actions/templates/actions/action_detail.html:105
 msgid "Randômica"
 msgstr "Random"
 
-#: project/src/actions/templates/actions/action_detail.html:107
+#: src/actions/templates/actions/action_detail.html:107
 msgid "Filtrar por Edição"
 msgstr "By Edition"
 
-#: project/src/actions/templates/actions/action_detail.html:115
+#: src/actions/templates/actions/action_detail.html:115
 msgid "Bienal de São Paulo"
 msgstr "São Paulo Biennial"
 
-#: project/src/actions/templates/actions/action_detail.html:125
+#: src/actions/templates/actions/action_detail.html:125
 msgid "Metodologia"
 msgstr "Records Methodology"
 
-#: project/src/actions/templates/actions/action_detail.html:129
+#: src/actions/templates/actions/action_detail.html:129
 msgid ""
 "Os resultados das imagens da Bienal apresentados aqui seguiram um modo "
 "metodológico com na intenção de destacar os resultados mais inesperados. "
@@ -272,7 +268,7 @@ msgstr ""
 "intelligences that expand the meanings of the images and/or reveal the "
 "categories of the structures of these platforms."
 
-#: project/src/actions/templates/actions/action_detail.html:131
+#: src/actions/templates/actions/action_detail.html:131
 msgid ""
 "Caso seu interesse seja consultar os resultados brutos, sem o nosso filtro, "
 "visite <a href='https://outra-bienal.github.io/biennal-art-decoder/' "
@@ -287,7 +283,7 @@ msgstr ""
 "constructed exclusively for the project and which presents all the results "
 "of the images produced by the different artificial intelligences."
 
-#: project/src/actions/templates/actions/action_detail.html:133
+#: src/actions/templates/actions/action_detail.html:133
 msgid ""
 "Na categoria \"Conteúdo\" há uma gradação dos resultados – adulto, médico, "
 "provocativo, falsificação e violência – que segue a seguinte ordem: provável "
@@ -301,23 +297,23 @@ msgstr ""
 "unlikely. For its part, the term “Safe for Work” is an Internet expression "
 "used for contents appropriate for viewing in public places or at work."
 
-#: project/src/actions/templates/actions/action_detail.html:142
+#: src/actions/templates/actions/action_detail.html:142
 msgid "Questões Relacionadas"
 msgstr "Related Questions"
 
-#: project/src/actions/templates/actions/action_detail.html:151
+#: src/actions/templates/actions/action_detail.html:151
 msgid "AÇÃO ANTERIOR"
 msgstr "PREVIOUS ACTION"
 
-#: project/src/actions/templates/actions/action_detail.html:155
+#: src/actions/templates/actions/action_detail.html:155
 msgid "PRÓXIMA AÇÃO"
 msgstr "NEXT ACTION"
 
-#: project/src/actions/templates/actions/action_detail.html:170
+#: src/actions/templates/actions/action_detail.html:170
 msgid "Fechar"
 msgstr "Close"
 
-#: project/src/actions/templates/actions/contact.html:23
+#: src/actions/templates/actions/contact.html:23
 msgid ""
 "Fotografias, vídeos curtos, desenhos e outros arquivos relacionados à 33ª "
 "Bienal de São Paulo podem ser enviados para contribuir na construção deste "
@@ -335,114 +331,121 @@ msgstr ""
 "the actions and experiments that seek to understand how Artificial "
 "Intelligences reads images and videos produced in an artistic context."
 
-#: project/src/actions/templates/actions/contact.html:25
-#: project/templates/contact_success.html:16
+#: src/actions/templates/actions/contact.html:25
+#: templates/contact_success.html:16
 msgid "Muito obrigado!"
 msgstr "Thank you!"
 
-#: project/src/actions/templates/actions/contact.html:37
+#: src/actions/templates/actions/contact.html:37
 msgid "ENVIO DE ARQUIVO"
 msgstr "ARCHIVE"
 
-#: project/src/actions/templates/actions/contact.html:39
+#: src/actions/templates/actions/contact.html:39
 msgid "selecionar..."
 msgstr "select..."
 
-#: project/src/actions/templates/actions/contact.html:71
+#: src/actions/templates/actions/contact.html:71
 msgid "ENVIAR"
 msgstr "SUBMIT"
 
-#: project/src/actions/templates/actions/list_actions.html:24
+#: src/actions/templates/actions/list_actions.html:24
 msgid "Nenhum resultado encontrado para a busca "
 msgstr "No results were found for search "
 
-#: project/src/actions/templates/actions/list_actions.html:26
+#: src/actions/templates/actions/list_actions.html:26
 msgid "Nenhum resultado encontrado."
 msgstr "No results were found."
 
-#: project/src/actions/templates/actions/list_actions.html:35
+#: src/actions/templates/actions/list_actions.html:35
 msgid "ESTE PROJETO ESTÁ EM CONSTANTE ATUALIZAÇÃO"
 msgstr "THIS PROJECT IS IN CONSTANT UPDATE"
 
-#: project/src/actions/templates/actions/list_actions.html:37
-#: project/src/actions/templates/actions/list_actions.html:39
+#: src/actions/templates/actions/list_actions.html:37
+#: src/actions/templates/actions/list_actions.html:39
 msgid "ÚLTIMO UPDATE"
 msgstr "LAST UPDATE"
 
-#: project/src/actions/views.py:102
+#: src/actions/views.py:102
 msgid "Erro na validação do Captcha"
 msgstr "Error with Captcha validation"
 
-#: project/src/mce_filebrowser/models.py:9
+#: src/mce_filebrowser/models.py:9
 msgid "Image"
 msgstr ""
 
-#: project/src/mce_filebrowser/models.py:10
+#: src/mce_filebrowser/models.py:10
 msgid "Document"
 msgstr ""
 
-#: project/src/mce_filebrowser/models.py:15
+#: src/mce_filebrowser/models.py:15
 msgid "File / Image"
 msgstr ""
 
-#: project/src/mce_filebrowser/models.py:17
+#: src/mce_filebrowser/models.py:17
 msgid "Create date"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/_paginator.html:7
+#: src/mce_filebrowser/templates/_paginator.html:7
 msgid "Previous"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/_paginator.html:11
+#: src/mce_filebrowser/templates/_paginator.html:11
 msgid "Next"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/filebrowser.html:5
+#: src/mce_filebrowser/templates/filebrowser.html:5
 msgid "File browser"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/filebrowser.html:17
+#: src/mce_filebrowser/templates/filebrowser.html:17
 msgid "Previosly uploaded images"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/filebrowser.html:27
-#: project/src/mce_filebrowser/templates/filebrowser.html:49
+#: src/mce_filebrowser/templates/filebrowser.html:27
+#: src/mce_filebrowser/templates/filebrowser.html:49
 msgid "Remove"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/filebrowser.html:32
+#: src/mce_filebrowser/templates/filebrowser.html:32
 msgid "No images uploaded"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/filebrowser.html:41
+#: src/mce_filebrowser/templates/filebrowser.html:41
 msgid "Previosly uploaded documents"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/filebrowser.html:54
+#: src/mce_filebrowser/templates/filebrowser.html:54
 msgid "No documents uploaded"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/filebrowser.html:63
+#: src/mce_filebrowser/templates/filebrowser.html:63
 msgid "Upload file"
 msgstr ""
 
-#: project/src/mce_filebrowser/templates/filebrowser.html:70
+#: src/mce_filebrowser/templates/filebrowser.html:70
 msgid "Insert"
 msgstr ""
 
-#: project/templates/404.html:5 project/templates/404.html:9
+#: templates/404.html:5 templates/404.html:9
 msgid "Página não encontrada"
 msgstr "Page not found"
 
-#: project/templates/about.html:6 project/templates/base.html:74
+#: templates/about.html:6 templates/base.html:74
 msgid "Sobre"
 msgstr "About"
 
-#: project/templates/about.html:13
+#: templates/about.html:15
+msgid ""
+"Bruno Moreschi explica as ações do projeto Outra 33ª Bienal de São Paulo"
+msgstr ""
+"Bruno Moreschi explains the actions of the Another 33rd São Paulo Biennial "
+"project"
+
+#: templates/about.html:16
 msgid "Sobre o projeto"
 msgstr "About the project"
 
-#: project/templates/about.html:16
+#: templates/about.html:19
 msgid ""
 "Para além do discurso oficial, há outras compreensões possíveis da 33ª "
 "Bienal. O artista Bruno Moreschi, com colaboração do pesquisador Gabriel "
@@ -475,15 +478,15 @@ msgstr ""
 "part of the functioning of the art system and that stimulates experimental "
 "research on the 33rd Biennial."
 
-#: project/templates/about.html:20 project/templates/about.html:22
+#: templates/about.html:23 templates/about.html:25
 msgid "Conversa entre Bruno Moreschi e Laura Consendy"
 msgstr "Conversation between Bruno Moreschi and Laura Consendy"
 
-#: project/templates/about.html:26
+#: templates/about.html:29
 msgid "Participantes"
 msgstr "Participants"
 
-#: project/templates/about.html:30
+#: templates/about.html:33
 msgid ""
 "Artista com projetos relacionados ao sistema das artes visuais, em especial "
 "a seus espaços de legitimação, com interesse na decodificação do campo, "
@@ -506,7 +509,7 @@ msgstr ""
 "Van Abbemuseum. He is an invited artist of the 33rd Bienal de São Paulo and "
 "general coordinator of the project Another 33rd São Paulo Biennial."
 
-#: project/templates/about.html:37
+#: templates/about.html:40
 msgid ""
 "Doutorando na Universidade de Aarhus (Dinamarca), doutorando visitante no "
 "MIT (EUA), e pesquisador do Center for Arts, Design and Social Research (CAD"
@@ -530,7 +533,7 @@ msgstr ""
 "coordinating the conceptualization and implementation of the project’s "
 "digital actions. "
 
-#: project/templates/about.html:44
+#: templates/about.html:47
 msgid ""
 "Cientista da computação formado pela Universidade Federal Fluminense "
 "(Niterói). Programador e explorador do fazer minimalista e processual em "
@@ -553,7 +556,7 @@ msgstr ""
 "responsible for the programming work for the site and experiments of the "
 "project."
 
-#: project/templates/about.html:51
+#: templates/about.html:54
 msgid ""
 "Produtora cultural formada em artes cênicas pela Universidade do Estado de "
 "Santa Catarina (UDESC). Desenvolve projetos em diversas áreas culturais, "
@@ -569,7 +572,7 @@ msgstr ""
 "responsible for the management of the project's actions and she knows that "
 "Brazil is going through a coup d’état."
 
-#: project/templates/about.html:56
+#: templates/about.html:59
 msgid ""
 "Designer e editor, sua prática em design abrange edição e jornalismo, "
 "educação, a relação entre design e música, além da pesquisa e produção de "
@@ -586,7 +589,7 @@ msgstr ""
 "href='https://www.nexojornal.com.br/' target='_blank'>Nexo Jornal</a>. He is "
 "responsible for the design of the project."
 
-#: project/templates/base.html:20 project/templates/base.html:38
+#: templates/base.html:20 templates/base.html:38
 msgid ""
 "Diretório de Ações realizadas pelo projeto Outra 33 Bienal de Artes de São "
 "Paulo"
@@ -594,23 +597,23 @@ msgstr ""
 "Directory for the actions created by the project Another 33rd São Paulo "
 "Biennial"
 
-#: project/templates/base.html:37 project/templates/base.html:69
+#: templates/base.html:37 templates/base.html:69
 msgid "Outra 33 Bienal de São Paulo"
 msgstr "Another 33rd São Paulo Biennial"
 
-#: project/templates/base.html:80
+#: templates/base.html:80
 msgid "Bienal"
 msgstr "Biennial"
 
-#: project/templates/base.html:84
+#: templates/base.html:84
 msgid "Busca"
 msgstr "Search"
 
-#: project/templates/base.html:88
+#: templates/base.html:88
 msgid "Questões"
 msgstr "Questions"
 
-#: project/templates/contact_success.html:14
+#: templates/contact_success.html:14
 msgid "Sua mensagem foi enviada com sucesso."
 msgstr "Your message was processed with success."
 

@@ -10,6 +10,12 @@
   <div class="clearfix mt4">
     <div class="md-col-6 sm-col-12 mx-auto" id="about_content">
       <img width=70%"" src="{% static "img/dense_cap_logo/densecap-logo-0010.png" %}"/>
+
+      <div style="text-align:center">
+      <iframe style="margin-top:4em; border: solid 1px; padding: 1em;" src="https://player.vimeo.com/video/323345917?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+      <p style="font-size: small">{% trans "Bruno Moreschi explica as ações do projeto Outra 33ª Bienal de São Paulo" %}</p>
+      </div>
       <h2 class="mt4" >{% trans "Sobre o projeto" %}</h2>
       <hr/>
 
@@ -17,9 +23,9 @@
 
       <div id="interview">
         {% if LANGUAGE_CODE == 'en' %}
-          <a href="https://estaticos-outra-bienal.s3.amazonaws.com/mce_filebrowser/2018/09/03/Another33Bienal_Sobre.pdf" class="bold" target="_blank">{% trans "Conversa entre Bruno Moreschi e Laura Consendy" %}</a>
+          <a href="https://estaticos-outra-bienal.s3.amazonaws.com/mce_filebrowser/2018/09/03/Another33Bienal_Sobre.pdf" class="bold" target="_blank">{% trans "Conversa entre Bruno Moreschi e Laura Consendy" %} (pdf).</a>
         {% else %}
-          <a class="bold" href="https://estaticos-outra-bienal.s3.amazonaws.com/mce_filebrowser/2018/09/01/Outra33Bienal_Sobre.pdf" target="_blank">{% trans "Conversa entre Bruno Moreschi e Laura Consendy" %}.</a>
+          <a class="bold" href="https://estaticos-outra-bienal.s3.amazonaws.com/mce_filebrowser/2018/09/01/Outra33Bienal_Sobre.pdf" target="_blank">{% trans "Conversa entre Bruno Moreschi e Laura Consendy" %} (pdf).</a>
         {% endif %}
       </div>
 
