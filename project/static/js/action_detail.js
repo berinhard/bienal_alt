@@ -98,9 +98,10 @@ var resizeCarouselImageDimension = function(image){
     var width = image.width;
     var height = image.height;
     var is_landscape = width > height;
-    var has_min_diff = (width - height) > 150;
+    var has_min_diff = (width - height) >= 150;
+    var special_img = image.src.endsWith("Intervencao_B81_3NOS3_1981-5_low.png");  // harcoded to avoid issues
 
-    if (is_landscape && has_min_diff){
+    if ((is_landscape && has_min_diff) || special_img) {
         image.className = image.className + ' landscape';
     } else {
         image.className = image.className + ' portrait';
